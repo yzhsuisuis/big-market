@@ -1,7 +1,11 @@
 package cn.bugstack.domain.strategy.service.armory;
 
 import cn.bugstack.domain.strategy.model.entity.StrategyAwardEntity;
+import cn.bugstack.domain.strategy.model.entity.StrategyEntity;
+import cn.bugstack.domain.strategy.model.entity.StrategyRuleEntity;
 import cn.bugstack.domain.strategy.repository.IStrategyRepository;
+import cn.bugstack.types.enums.ResponseCode;
+import cn.bugstack.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +22,7 @@ import java.util.*;
  */
 @Slf4j
 @Service
-public class StrategyArmory implements IStrategyArmory {
+public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch {
 
     @Resource
     private IStrategyRepository repository;
@@ -36,9 +40,40 @@ public class StrategyArmory implements IStrategyArmory {
 
     @Override
     public boolean assembleLotteryStrategy(Long strategyId) {
-        // 1. 查询策略配置
+        // 1.把策略对应的id全部给装配起来
         List<StrategyAwardEntity> strategyAwardEntities = repository.queryStrategyAwardList(strategyId);
+        assembleLotteryStrategy(String.valueOf(strategyId),strategyAwardEntities);
+        // 2.根据策略id去查对应的规则
+        StrategyEntity strategyEntity = repository.queryStrategyEntityByStrategyId(strategyId);
+        // 这里只查看是否有权重规则
+        String ruleWeight = strategyEntity.getRuleWeight();
+        if (null == ruleWeight) {
+            return true;
+        }
+        //这里是获取4000 : 109,108 ,107 5000: 106,107,108
+        StrategyRuleEntity strategyRuleEntity = repository.queryStrategyRule(strategyId, ruleWeight);
+        if (null == strategyRuleEntity) {
+            throw new AppException(ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getCode(), ResponseCode.STRATEGY_RULE_WEIGHT_IS_NULL.getInfo());
+        }
+        //这是将4000 : 109,108 ,107 5000 : 109,108 ,107转换成
+        //key - 4000   value- 109,108 ,107
+        //key - 5000   value- 109,108 ,107,106
+        Map<String, List<Integer>> ruleWeightValueMap = strategyRuleEntity.getRuleWeightValues();
+        Set<String> keys = ruleWeightValueMap.keySet();
+        for (String key : keys) {
+            List<Integer> ruleWeightValues = ruleWeightValueMap.get(key);
+            ArrayList<StrategyAwardEntity> strategyAwardEntitiesClone = new ArrayList<>(strategyAwardEntities);
+            strategyAwardEntitiesClone.removeIf(strategyAwardEntity -> !ruleWeightValues.contains(strategyAwardEntity.getAwardId()));
+            assembleLotteryStrategy(String.valueOf(strategyId).concat("_").concat(key), strategyAwardEntitiesClone);
 
+
+        }
+
+
+        return true;
+    }
+    public void assembleLotteryStrategy(String key ,List<StrategyAwardEntity> strategyAwardEntities)
+    {
         // 2. 获取最小概率值
         BigDecimal minAwardRate = strategyAwardEntities.stream()
                 .map(StrategyAwardEntity::getAwardRate)
@@ -59,15 +94,15 @@ public class StrategyArmory implements IStrategyArmory {
         List<Integer> strategyAwardSearchRateTables = new ArrayList<>(rateRange.intValue());
         for (StrategyAwardEntity strategyAward : strategyAwardEntities) {
             Integer awardId = strategyAward.getAwardId();
-            //拿到每奖品对应的概率
+        //拿到每奖品对应的概率
             BigDecimal awardRate = strategyAward.getAwardRate();
-            // 计算出每个概率值需要存放到查找表的数量，循环填充
+        // 计算出每个概率值需要存放到查找表的数量，循环填充
             for (int i = 0; i < rateRange.multiply(awardRate).setScale(0, RoundingMode.CEILING).intValue(); i++) {
                 strategyAwardSearchRateTables.add(awardId);
             }
         }
 
-        // 6. 对存储的奖品进行乱序操作
+         // 6. 对存储的奖品进行乱序操作
         Collections.shuffle(strategyAwardSearchRateTables);
 
         // 7. 生成出Map集合，key值，对应的就是后续的概率值。通过概率来获得对应的奖品ID
@@ -77,10 +112,9 @@ public class StrategyArmory implements IStrategyArmory {
             shuffleStrategyAwardSearchRateTable.put(i, strategyAwardSearchRateTables.get(i));
         }
 
-        // 8. 存放到 Redis
-        repository.storeStrategyAwardSearchRateTable(strategyId, shuffleStrategyAwardSearchRateTable.size(), shuffleStrategyAwardSearchRateTable);
+         // 8. 存放到 Redis
+        repository.storeStrategyAwardSearchRateTable(key, shuffleStrategyAwardSearchRateTable.size(), shuffleStrategyAwardSearchRateTable);
 
-        return true;
     }
 
     @Override
@@ -89,7 +123,17 @@ public class StrategyArmory implements IStrategyArmory {
         int rateRange = repository.getRateRange(strategyId);
         // 通过生成的随机值，获取概率值奖品查找表的结果
         //总共就生成了固定长度的
-        return repository.getStrategyAwardAssemble(strategyId, new SecureRandom().nextInt(rateRange));
+        return repository.getStrategyAwardAssemble(String.valueOf(strategyId), new SecureRandom().nextInt(rateRange));
+    }
+
+    @Override
+    public Integer getRandomAwardId(Long strategyId, String ruleWeightValue) {
+        //100002_ 4000: 108,109,110
+        String key = String.valueOf(strategyId).concat("_").concat(ruleWeightValue);
+        int rateRange = repository.getRateRange(key);
+        // 通过生成的随机值，获取概率值奖品查找表的结果
+        //总共就生成了固定长度的
+        return repository.getStrategyAwardAssemble(key, new SecureRandom().nextInt(rateRange));
     }
 
 }

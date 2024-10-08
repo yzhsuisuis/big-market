@@ -2905,3 +2905,507 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 24-10-08.16:30:11.315 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
 24-10-08.16:30:11.646 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.29 seconds (JVM running for 8.175)
 24-10-08.16:30:12.421 [main            ] INFO  StrategyTest           - 测试结果：102 - 奖品ID值
+24-10-08.19:59:26.833 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.19:59:26.849 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 54140 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.19:59:26.849 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.19:59:27.755 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.19:59:27.758 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.19:59:27.786 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+24-10-08.19:59:29.498 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.19:59:30.331 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.19:59:30.383 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.19:59:32.224 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.19:59:32.294 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.903 seconds (JVM running for 6.851)
+24-10-08.19:59:32.769 [main            ] INFO  StrategyTest           - 测试结果：103 - 奖品ID值
+24-10-08.20:00:02.511 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.20:00:02.528 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 52408 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.20:00:02.529 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.20:00:03.602 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.20:00:03.606 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.20:00:03.633 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-10-08.20:00:05.271 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.20:00:06.070 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.20:00:06.122 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.20:00:07.785 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.20:00:07.872 [main            ] INFO  StrategyTest           - Started StrategyTest in 5.796 seconds (JVM running for 6.97)
+24-10-08.20:00:08.436 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-08.20:00:10.791 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-08.20:00:10.930 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-08.20:00:11.396 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-08.20:01:30.229 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.20:01:30.252 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 51732 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.20:01:30.253 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.20:01:31.518 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.20:01:31.521 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.20:01:31.551 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-10-08.20:01:33.367 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.20:01:34.198 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.20:01:34.279 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.20:01:36.761 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.20:01:36.836 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.28 seconds (JVM running for 8.513)
+24-10-08.20:02:07.746 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.20:02:07.792 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 51032 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.20:02:07.793 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.20:02:08.823 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.20:02:08.826 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.20:02:08.858 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-10-08.20:02:10.741 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.20:02:11.674 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.20:02:11.756 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.20:02:14.499 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.20:02:14.587 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.392 seconds (JVM running for 8.428)
+24-10-08.20:02:29.968 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.20:02:29.984 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 52580 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.20:02:29.984 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.20:02:30.778 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.20:02:30.781 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.20:02:30.805 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-10-08.20:02:32.924 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.20:02:33.868 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.20:02:33.951 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.20:02:36.408 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.20:02:36.488 [main            ] INFO  StrategyTest           - Started StrategyTest in 6.991 seconds (JVM running for 8.03)
+24-10-08.20:03:34.170 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.20:03:34.187 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 41624 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.20:03:34.188 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.20:03:35.167 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.20:03:35.170 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.20:03:35.195 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-10-08.20:03:36.969 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.20:03:37.818 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.20:03:37.877 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.20:03:40.236 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.20:03:40.299 [main            ] INFO  StrategyTest           - Started StrategyTest in 6.799 seconds (JVM running for 8.14)
+24-10-08.21:08:30.170 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.21:08:30.187 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 46736 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.21:08:30.189 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.21:08:31.085 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.21:08:31.088 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.21:08:31.122 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+24-10-08.21:08:33.591 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.21:08:34.788 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:08:34.887 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:08:37.713 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.21:08:37.790 [main            ] INFO  StrategyTest           - Started StrategyTest in 8.22 seconds (JVM running for 9.639)
+24-10-08.21:11:37.135 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.21:11:37.153 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 40996 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.21:11:37.153 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.21:11:38.164 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.21:11:38.168 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.21:11:38.209 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+24-10-08.21:11:40.493 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.21:11:41.498 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:11:41.601 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:11:45.138 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.21:11:45.267 [main            ] INFO  StrategyTest           - Started StrategyTest in 9.019 seconds (JVM running for 10.872)
+24-10-08.21:13:34.932 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.21:13:34.957 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 53656 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.21:13:34.958 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.21:13:36.119 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.21:13:36.123 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.21:13:36.151 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+24-10-08.21:13:38.294 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.21:13:39.428 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:13:39.506 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:13:42.626 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.21:13:42.723 [main            ] INFO  StrategyTest           - Started StrategyTest in 8.413 seconds (JVM running for 9.537)
+24-10-08.21:14:49.892 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.21:14:49.914 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 48396 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.21:14:49.914 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.21:14:51.067 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.21:14:51.072 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.21:14:51.108 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+24-10-08.21:14:53.494 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.21:14:54.458 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:14:54.561 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:14:57.890 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.21:14:58.018 [main            ] INFO  StrategyTest           - Started StrategyTest in 8.744 seconds (JVM running for 10.146)
+24-10-08.21:17:00.553 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.21:17:00.577 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 41216 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.21:17:00.578 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.21:17:01.671 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.21:17:01.674 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.21:17:01.705 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-10-08.21:17:03.848 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.21:17:04.874 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:17:04.954 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:17:08.311 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.21:17:08.404 [main            ] INFO  StrategyTest           - Started StrategyTest in 8.386 seconds (JVM running for 9.414)
+24-10-08.21:25:24.118 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.21:25:24.136 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 54232 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.21:25:24.136 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.21:25:25.144 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.21:25:25.148 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.21:25:25.192 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+24-10-08.21:25:27.348 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.21:25:28.256 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:25:28.339 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:25:31.716 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.21:25:32.208 [main            ] INFO  StrategyTest           - Started StrategyTest in 8.666 seconds (JVM running for 10.132)
+24-10-08.21:26:26.963 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-08.21:26:29.731 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-08.21:27:32.388 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s550ms429µs900ns).
+24-10-08.21:27:32.440 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-08.21:27:34.523 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-08.21:27:53.003 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.21:27:53.022 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 51504 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.21:27:53.023 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.21:27:54.006 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.21:27:54.009 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.21:27:54.038 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-10-08.21:27:56.146 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.21:27:57.140 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:27:57.220 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:28:00.391 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.21:28:00.495 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.976 seconds (JVM running for 9.09)
+24-10-08.21:28:16.489 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-08.21:28:19.234 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-08.21:35:21.287 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m1s945ms726µs700ns).
+24-10-08.21:35:21.352 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-08.21:35:21.935 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-08.21:35:42.272 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.21:35:42.291 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 49300 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.21:35:42.292 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.21:35:43.346 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.21:35:43.349 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.21:35:43.381 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+24-10-08.21:35:45.767 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.21:35:46.667 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:35:46.747 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:35:49.771 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.21:35:49.873 [main            ] INFO  StrategyTest           - Started StrategyTest in 8.153 seconds (JVM running for 9.376)
+24-10-08.21:36:04.913 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-08.21:36:07.849 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-08.21:37:40.760 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m32s802ms433µs100ns).
+24-10-08.21:52:54.050 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m13s289ms407µs200ns).
+24-10-08.21:52:54.110 [redisson-netty-2-11] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x05717844, L:/127.0.0.1:55878 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-08.21:52:54.127 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-08.21:52:56.041 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-08.21:53:00.852 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.21:53:00.882 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 54932 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.21:53:00.883 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.21:53:01.969 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.21:53:01.973 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.21:53:02.014 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+24-10-08.21:53:04.538 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.21:53:05.511 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:53:05.586 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:53:08.743 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.21:53:08.871 [main            ] INFO  StrategyTest           - Started StrategyTest in 8.704 seconds (JVM running for 9.999)
+24-10-08.21:53:30.508 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-08.21:53:33.395 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-08.21:54:06.482 [main            ] INFO  StrategyTest           - 测试结果：true
+24-10-08.21:54:06.540 [redisson-netty-2-19] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x6fbb6c52, L:/127.0.0.1:56823 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-08.21:54:06.564 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-08.21:54:06.819 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-08.21:57:16.189 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.21:57:16.204 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 52980 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.21:57:16.205 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.21:57:17.283 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.21:57:17.287 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.21:57:17.316 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+24-10-08.21:57:19.288 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.21:57:20.316 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:57:20.374 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.21:57:23.349 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.21:57:23.463 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.754 seconds (JVM running for 8.699)
+24-10-08.21:57:23.988 [main            ] INFO  StrategyTest           - 测试结果：null - 4000 策略配置
+24-10-08.21:57:23.992 [main            ] INFO  StrategyTest           - 测试结果：null - 5000 策略配置
+24-10-08.21:57:23.994 [main            ] INFO  StrategyTest           - 测试结果：105 - 6000 策略配置
+24-10-08.21:59:59.399 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.21:59:59.423 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 47840 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.21:59:59.424 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.22:00:00.619 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.22:00:00.626 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.22:00:00.659 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+24-10-08.22:00:03.084 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.22:00:04.054 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:00:04.114 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:00:06.767 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.22:00:06.859 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.931 seconds (JVM running for 9.321)
+24-10-08.22:00:07.536 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-08.22:00:09.205 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-08.22:00:09.474 [main            ] INFO  StrategyTest           - 测试结果：true
+24-10-08.22:00:09.519 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-08.22:00:09.814 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-08.22:00:17.474 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.22:00:17.490 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 51888 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.22:00:17.492 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.22:00:18.676 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.22:00:18.680 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.22:00:18.715 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+24-10-08.22:00:20.911 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.22:00:21.898 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:00:21.997 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:00:25.139 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.22:00:25.252 [main            ] INFO  StrategyTest           - Started StrategyTest in 8.445 seconds (JVM running for 9.75)
+24-10-08.22:00:31.787 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-08.22:00:33.220 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-08.22:02:12.954 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.22:02:12.975 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 38080 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.22:02:12.977 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.22:02:14.107 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.22:02:14.111 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.22:02:14.140 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+24-10-08.22:02:16.075 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.22:02:16.978 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:02:17.046 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:02:19.548 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.22:02:19.646 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.23 seconds (JVM running for 8.203)
+24-10-08.22:02:20.104 [main            ] INFO  StrategyTest           - 测试结果：null - 4000 策略配置
+24-10-08.22:02:20.105 [main            ] INFO  StrategyTest           - 测试结果：null - 5000 策略配置
+24-10-08.22:02:20.107 [main            ] INFO  StrategyTest           - 测试结果：102 - 6000 策略配置
+24-10-08.22:02:43.071 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.22:02:43.107 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 53172 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.22:02:43.108 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.22:02:44.677 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.22:02:44.682 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.22:02:44.715 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+24-10-08.22:02:46.716 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.22:02:47.671 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:02:47.739 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:02:50.303 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.22:02:50.395 [main            ] INFO  StrategyTest           - Started StrategyTest in 8.176 seconds (JVM running for 9.992)
+24-10-08.22:02:50.969 [main            ] INFO  StrategyTest           - 测试结果：null - 4000 策略配置
+24-10-08.22:02:50.973 [main            ] INFO  StrategyTest           - 测试结果：null - 5000 策略配置
+24-10-08.22:02:50.974 [main            ] INFO  StrategyTest           - 测试结果：null - 6000 策略配置
+24-10-08.22:04:14.220 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.22:04:14.243 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 52972 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.22:04:14.244 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.22:04:15.384 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.22:04:15.388 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.22:04:15.426 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+24-10-08.22:04:17.651 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.22:04:18.625 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:04:18.703 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:04:21.883 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.22:04:21.978 [main            ] INFO  StrategyTest           - Started StrategyTest in 8.412 seconds (JVM running for 10.634)
+24-10-08.22:05:17.651 [main            ] INFO  StrategyTest           - 测试结果：null - 4000 策略配置
+24-10-08.22:12:02.570 [main            ] INFO  StrategyTest           - 测试结果：null - 5000 策略配置
+24-10-08.22:12:02.573 [main            ] INFO  StrategyTest           - 测试结果：103 - 6000 策略配置
+24-10-08.22:12:11.390 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-08.22:12:11.408 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 21108 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-08.22:12:11.409 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
+24-10-08.22:12:12.582 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-08.22:12:12.591 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-08.22:12:12.653 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+24-10-08.22:12:15.017 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-08.22:12:15.936 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:12:16.021 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-08.22:12:18.716 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-08.22:12:18.816 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.916 seconds (JVM running for 8.904)
+24-10-08.22:12:19.237 [main            ] INFO  StrategyTest           - 测试结果：103 - 4000 策略配置
+24-10-08.22:12:19.240 [main            ] INFO  StrategyTest           - 测试结果：103 - 5000 策略配置
+24-10-08.22:12:19.241 [main            ] INFO  StrategyTest           - 测试结果：105 - 6000 策略配置
