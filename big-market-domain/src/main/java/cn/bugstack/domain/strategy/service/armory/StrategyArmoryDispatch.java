@@ -68,8 +68,6 @@ public class StrategyArmoryDispatch implements IStrategyArmory,IStrategyDispatch
 
 
         }
-
-
         return true;
     }
     public void assembleLotteryStrategy(String key ,List<StrategyAwardEntity> strategyAwardEntities)

@@ -11,40 +11,52 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
+/**
+ * @author Fuzhengwei bugstack.cn @小傅哥
+ * @description 规则工厂
+ * @create 2023-12-31 11:23
+ */
 @Service
 public class DefaultLogicFactory {
-	//用来存rule_model(key) --- 对应的Filter链(value)
+
 	public Map<String, ILogicFilter<?>> logicFilterMap = new ConcurrentHashMap<>();
 
 	public DefaultLogicFactory(List<ILogicFilter<?>> logicFilters) {
 		logicFilters.forEach(logic -> {
-			//这里的AnnotationUtils方法是用来判断logic这个类上面是否存在logicStrategy这个注解
 			LogicStrategy strategy = AnnotationUtils.findAnnotation(logic.getClass(), LogicStrategy.class);
 			if (null != strategy) {
-				//这里的logic才是真正的拦截逻辑链
 				logicFilterMap.put(strategy.logicMode().getCode(), logic);
 			}
 		});
 	}
+
 	public <T extends RuleActionEntity.RaffleEntity> Map<String, ILogicFilter<T>> openLogicFilter() {
 		return (Map<String, ILogicFilter<T>>) (Map<?, ?>) logicFilterMap;
 	}
-
 
 	@Getter
 	@AllArgsConstructor
 	public enum LogicModel {
 
-		RULE_WIGHT("rule_weight","【抽奖前规则】根据抽奖权重返回可抽奖范围KEY"),
-		RULE_BLACKLIST("rule_blacklist","【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回"),
-
+		RULE_WIGHT("rule_weight", "【抽奖前规则】根据抽奖权重返回可抽奖范围KEY", "before"),
+		RULE_BLACKLIST("rule_blacklist", "【抽奖前规则】黑名单规则过滤，命中黑名单则直接返回", "before"),
+		RULE_LOCK("rule_lock", "【抽奖中规则】抽奖n次后，对应奖品可解锁抽奖", "center"),
+		RULE_LUCK_AWARD("rule_luck_award", "【抽奖后规则】抽奖n次后，对应奖品可解锁抽奖", "after"),
 		;
 
 		private final String code;
 		private final String info;
+		private final String type;
+
+		public static boolean isCenter(String code){
+			return "center".equals(LogicModel.valueOf(code.toUpperCase()).type);
+		}
+
+		public static boolean isAfter(String code){
+			return "after".equals(LogicModel.valueOf(code.toUpperCase()).type);
+		}
 
 	}
-
-
 
 }
