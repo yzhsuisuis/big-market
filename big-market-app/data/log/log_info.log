@@ -1,4 +1,4 @@
-24-10-11.09:34:17.917 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+24-10-12.09:08:28.981 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -7,92 +7,24 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-24-10-11.09:34:17.955 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 79588 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.09:34:17.956 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.09:34:19.476 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.09:34:19.480 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.09:34:19.529 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
-24-10-11.09:34:22.396 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.09:34:23.563 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.09:34:23.669 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.09:34:23.818 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultRaffleStrategy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.bugstack.domain.strategy.service.rule.factory.DefaultLogicFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
-24-10-11.09:34:23.912 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-24-10-11.09:34:23.966 [main            ] ERROR LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'cn.bugstack.domain.strategy.service.rule.factory.DefaultLogicFactory' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'cn.bugstack.domain.strategy.service.rule.factory.DefaultLogicFactory' in your configuration.
-
-24-10-11.09:34:23.971 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@445b295b] to prepare test instance [cn.bugstack.test.domain.RaffleStrategyTest@626b639e]
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultRaffleStrategy': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.bugstack.domain.strategy.service.rule.factory.DefaultLogicFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:136)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
-	... 25 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.bugstack.domain.strategy.service.rule.factory.DefaultLogicFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 41 common frames omitted
-24-10-11.15:30:53.628 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+24-10-12.09:08:29.012 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 45504 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-12.09:08:29.013 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-10-12.09:08:30.208 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-12.09:08:30.213 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-12.09:08:30.257 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+24-10-12.09:08:32.760 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-12.09:08:33.668 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-12.09:08:33.735 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-12.09:08:36.303 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-12.09:08:36.395 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 8.013 seconds (JVM running for 9.874)
+24-10-12.09:08:37.037 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-12.09:08:40.402 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-12.09:08:40.622 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-10-12.09:08:47.567 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
+24-10-12.09:09:07.460 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-12.09:09:07.905 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:xiaofuge strategyId:100003 ruleModel:rule_lock
+24-10-12.09:09:08.087 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-12.09:09:14.060 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -101,24 +33,23 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-24-10-11.15:30:53.653 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 31512 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.15:30:53.653 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.15:30:54.670 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.15:30:54.672 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.15:30:54.702 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-24-10-11.15:30:56.709 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.15:30:57.555 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:30:57.660 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:31:00.111 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.15:31:00.208 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.087 seconds (JVM running for 8.303)
-24-10-11.15:31:00.796 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.15:31:03.740 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.15:31:03.904 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:user003 strategyId:100001 ruleModel:rule_blacklist
-24-10-11.15:31:04.161 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"user003"}
-24-10-11.15:31:04.165 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":100}
-24-10-11.15:31:04.210 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.15:31:05.500 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.15:37:17.602 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+24-10-12.09:09:14.075 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 47836 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-12.09:09:14.076 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-10-12.09:09:14.900 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-12.09:09:14.904 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-12.09:09:14.939 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+24-10-12.09:09:17.194 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-12.09:09:18.007 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-12.09:09:18.075 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-12.09:09:20.431 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-12.09:09:20.507 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.93 seconds (JVM running for 8.081)
+24-10-12.09:09:21.007 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-12.09:09:23.921 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-12.09:09:24.131 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-10-12.09:09:28.307 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
+24-10-12.09:10:05.693 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-12.09:10:08.272 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-12.09:13:34.703 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -127,300 +58,22 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-24-10-11.15:37:17.617 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 31192 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.15:37:17.618 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.15:37:18.513 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.15:37:18.516 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.15:37:18.547 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-10-11.15:37:20.192 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.15:37:21.030 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:37:21.085 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:37:23.207 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.15:37:23.293 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.29 seconds (JVM running for 7.277)
-24-10-11.15:37:23.797 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.15:37:26.603 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.15:37:26.798 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:user004 strategyId:100001 ruleModel:rule_blacklist
-24-10-11.15:37:26.908 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:user004 strategyId:100001 ruleModel:rule_weight
-24-10-11.15:37:26.961 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: user004 ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.15:37:27.000 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.15:37:27.677 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.15:43:49.764 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.15:43:49.788 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 30164 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.15:43:49.789 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.15:43:50.740 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.15:43:50.745 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.15:43:50.772 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-24-10-11.15:43:52.445 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.15:43:53.236 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:43:53.304 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:43:55.449 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.15:43:55.531 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.335 seconds (JVM running for 7.625)
-24-10-11.15:43:55.980 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.15:43:58.887 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.15:43:59.023 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:100001 ruleModel:rule_blacklist
-24-10-11.15:43:59.099 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:xiaofuge strategyId:100001 ruleModel:rule_weight
-24-10-11.15:43:59.143 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.15:43:59.179 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.15:44:01.561 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.15:51:07.289 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.15:51:07.307 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 29228 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.15:51:07.308 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.15:51:08.175 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.15:51:08.178 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.15:51:08.207 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-24-10-11.15:51:10.468 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.15:51:11.328 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:51:11.405 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:51:13.529 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.15:51:13.592 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.761 seconds (JVM running for 8.27)
-24-10-11.15:51:20.837 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.15:51:23.833 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.15:51:23.989 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:100001 ruleModel:rule_blacklist
-24-10-11.15:51:24.073 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:xiaofuge strategyId:100001 ruleModel:rule_weight
-24-10-11.15:51:24.131 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.15:53:32.972 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.15:53:33.003 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 17432 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.15:53:33.004 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.15:53:34.143 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.15:53:34.148 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.15:53:34.180 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-10-11.15:53:37.686 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.15:53:38.718 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:53:38.840 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:53:42.431 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.15:53:42.557 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 10.501 seconds (JVM running for 12.108)
-24-10-11.15:55:05.166 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.15:55:07.655 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.15:55:17.888 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:user004 strategyId:100001 ruleModel:rule_blacklist
-24-10-11.15:55:18.010 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:user004 strategyId:100001 ruleModel:rule_weight
-24-10-11.15:55:18.088 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: user004 ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.15:55:44.494 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.15:55:44.809 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.15:58:31.538 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.15:58:31.555 [main            ] INFO  StrategyTest           - Starting StrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 704 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.15:58:31.556 [main            ] INFO  StrategyTest           - The following 1 profile is active: "dev"
-24-10-11.15:58:32.707 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.15:58:32.711 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.15:58:32.743 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-10-11.15:58:35.089 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.15:58:36.052 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:58:36.138 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.15:58:38.320 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.15:58:38.436 [main            ] INFO  StrategyTest           - Started StrategyTest in 7.426 seconds (JVM running for 8.695)
-24-10-11.15:58:39.136 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.15:58:43.137 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.15:58:43.550 [main            ] INFO  StrategyTest           - 测试结果：true
-24-10-11.15:58:43.605 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.15:58:44.313 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.16:00:04.516 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.16:00:04.532 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 31404 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.16:00:04.532 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.16:00:05.575 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.16:00:05.579 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.16:00:05.608 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-10-11.16:00:07.389 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.16:00:08.175 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.16:00:08.243 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.16:00:10.387 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.16:00:10.480 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.445 seconds (JVM running for 7.398)
-24-10-11.16:00:11.034 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.16:00:14.149 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.16:00:14.234 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:user004 strategyId:100001 ruleModel:rule_blacklist
-24-10-11.16:00:14.319 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:user004 strategyId:100001 ruleModel:rule_weight
-24-10-11.16:00:14.382 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: user004 ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.16:00:14.520 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"user004"}
-24-10-11.16:00:14.522 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":102}
-24-10-11.16:00:14.552 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.16:00:14.879 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:26:13.635 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h34m49s683ms354µs100ns).
-24-10-11.21:26:13.901 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.21:26:14.476 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"xiaofuge"}
-24-10-11.21:26:14.481 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":104}
-24-10-11.21:26:16.447 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:33:05.370 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.21:33:05.386 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 34364 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.21:33:05.387 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.21:33:06.364 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.21:33:06.370 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.21:33:06.410 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-24-10-11.21:33:08.191 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.21:33:08.931 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:33:08.997 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:33:11.254 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.21:33:11.335 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.473 seconds (JVM running for 7.59)
-24-10-11.21:33:11.860 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.21:33:16.013 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.21:33:16.263 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.21:33:16.438 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.21:33:17.201 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:34:19.737 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.21:34:19.759 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 37908 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.21:34:19.760 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.21:34:20.711 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.21:34:20.715 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.21:34:20.752 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-10-11.21:34:22.765 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.21:34:23.682 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:34:23.760 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:34:26.374 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.21:34:26.473 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.37 seconds (JVM running for 8.763)
-24-10-11.21:34:27.155 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.21:34:31.405 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.21:34:53.522 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.21:34:59.008 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.21:34:59.770 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:35:49.185 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.21:35:49.200 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 40124 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.21:35:49.201 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.21:35:50.113 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.21:35:50.117 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.21:35:50.152 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
-24-10-11.21:35:51.977 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.21:35:52.752 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:35:52.814 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:35:55.189 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.21:35:55.265 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.559 seconds (JVM running for 7.7)
-24-10-11.21:35:55.720 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.21:35:59.126 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.21:36:05.642 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.21:36:07.626 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.21:36:08.337 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:42:12.958 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.21:42:12.971 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 43220 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.21:42:12.971 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.21:42:13.776 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.21:42:13.779 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.21:42:13.807 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-24-10-11.21:42:15.397 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.21:42:16.181 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:42:16.258 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:42:18.382 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.21:42:18.458 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.92 seconds (JVM running for 6.716)
-24-10-11.21:42:19.313 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.21:42:23.633 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.21:42:23.926 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.21:42:24.036 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.21:42:26.018 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:42:47.263 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.21:42:47.282 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 35764 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.21:42:47.283 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.21:42:48.291 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.21:42:48.296 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.21:42:48.327 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-10-11.21:42:50.222 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.21:42:51.126 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:42:51.209 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:42:53.889 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.21:42:53.963 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.268 seconds (JVM running for 8.306)
-24-10-11.21:42:54.522 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.21:42:57.806 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.21:43:29.190 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.21:45:04.483 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m35s528ms795µs700ns).
-24-10-11.21:45:04.528 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.21:45:09.020 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:45:12.619 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.21:45:12.638 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 42632 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.21:45:12.639 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.21:45:13.541 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.21:45:13.545 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.21:45:13.577 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-24-10-11.21:45:16.023 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.21:45:16.842 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:45:16.919 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:45:19.293 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.21:45:19.363 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.226 seconds (JVM running for 8.388)
-24-10-11.21:45:19.868 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.21:45:23.998 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.21:45:29.316 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.21:45:45.663 [redisson-netty-2-15] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x89598b11, L:/127.0.0.1:64881 - R:localhost/127.0.0.1:6379]
+24-10-12.09:13:34.719 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 46116 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-12.09:13:34.720 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-10-12.09:13:35.568 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-12.09:13:35.571 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-12.09:13:35.608 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+24-10-12.09:13:37.802 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-12.09:13:38.677 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-12.09:13:38.749 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-12.09:13:41.110 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-12.09:13:41.193 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.119 seconds (JVM running for 8.611)
+24-10-12.09:13:41.693 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-12.09:13:45.055 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-12.09:13:45.227 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-10-12.09:14:01.525 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
+24-10-12.09:27:28.007 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m42s841ms447µs700ns).
+24-10-12.09:27:28.022 [redisson-netty-2-9] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xadfb2e2e, L:/127.0.0.1:53875 - R:localhost/127.0.0.1:6379]
 java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at sun.nio.ch.SocketDispatcher.read0(Native Method)
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
@@ -439,7 +92,7 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-24-10-11.21:45:45.663 [redisson-netty-2-19] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xbe7a3a24, L:/127.0.0.1:64899 - R:localhost/127.0.0.1:6379]
+24-10-12.09:27:28.022 [redisson-netty-2-19] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xfff5ed15, L:/127.0.0.1:53880 - R:localhost/127.0.0.1:6379]
 java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at sun.nio.ch.SocketDispatcher.read0(Native Method)
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
@@ -458,7 +111,7 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-24-10-11.21:45:45.663 [redisson-netty-2-9] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xe425969f, L:/127.0.0.1:64878 - R:localhost/127.0.0.1:6379]
+24-10-12.09:27:28.023 [redisson-netty-2-5] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xe15a6536, L:/127.0.0.1:53873 - R:localhost/127.0.0.1:6379]
 java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at sun.nio.ch.SocketDispatcher.read0(Native Method)
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
@@ -477,27 +130,7 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-24-10-11.21:45:45.663 [redisson-netty-2-13] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xc0a9712f, L:/127.0.0.1:64880 - R:localhost/127.0.0.1:6379]
-java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method)
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.buffer.WrappedByteBuf.writeBytes(WrappedByteBuf.java:821)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.lang.Thread.run(Thread.java:748)
-24-10-11.21:45:45.663 [redisson-netty-2-17] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x7f319fac, L:/127.0.0.1:64898 - R:localhost/127.0.0.1:6379]
+24-10-12.09:27:28.023 [redisson-netty-2-13] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x6651ab03, L:/127.0.0.1:53877 - R:localhost/127.0.0.1:6379]
 java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at sun.nio.ch.SocketDispatcher.read0(Native Method)
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
@@ -516,7 +149,7 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-24-10-11.21:45:45.663 [redisson-netty-2-7] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xdf5d3e70, L:/127.0.0.1:64893 - R:localhost/127.0.0.1:6379]
+24-10-12.09:27:28.023 [redisson-netty-2-11] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x38c3e275, L:/127.0.0.1:53876 - R:localhost/127.0.0.1:6379]
 java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at sun.nio.ch.SocketDispatcher.read0(Native Method)
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
@@ -535,7 +168,7 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-24-10-11.21:45:45.663 [redisson-netty-2-3] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x6f947d01, L:/127.0.0.1:64891 - R:localhost/127.0.0.1:6379]
+24-10-12.09:27:28.023 [redisson-netty-2-29] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x77cdf47c, L:/127.0.0.1:53869 - R:localhost/127.0.0.1:6379]
 java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at sun.nio.ch.SocketDispatcher.read0(Native Method)
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
@@ -554,9 +187,218 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-24-10-11.21:45:45.682 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.21:45:46.332 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:46:46.457 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+24-10-12.09:27:28.023 [redisson-netty-2-7] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x84d59cce, L:/127.0.0.1:53858 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-12.09:27:28.023 [redisson-netty-2-23] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xd16583e2, L:/127.0.0.1:53866 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-12.09:27:28.022 [redisson-netty-2-3] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xab33dab5, L:/127.0.0.1:53872 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-12.09:27:28.023 [redisson-netty-2-4] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x51134c24, L:/127.0.0.1:53857 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-12.09:27:28.023 [redisson-netty-2-25] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x374c0365, L:/127.0.0.1:53867 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-12.09:27:28.023 [redisson-netty-2-17] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x9ba98326, L:/127.0.0.1:53863 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-12.09:27:28.024 [redisson-netty-2-31] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x9c95bf09, L:/127.0.0.1:53870 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-12.09:27:28.022 [redisson-netty-2-21] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x680eb690, L:/127.0.0.1:53865 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-12.09:27:28.022 [redisson-netty-2-15] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0xcc74de27, L:/127.0.0.1:53862 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-12.09:27:28.023 [redisson-netty-2-27] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x12c8c0d4, L:/127.0.0.1:53868 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-12.09:27:28.023 [redisson-netty-2-32] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x2c1e33b4, L:/127.0.0.1:53871 - R:localhost/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-10-12.09:27:28.073 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-12.09:27:31.613 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-12.09:27:37.880 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -565,670 +407,24 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-24-10-11.21:46:46.473 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 42140 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.21:46:46.474 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.21:46:47.367 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.21:46:47.371 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.21:46:47.406 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-10-11.21:46:49.434 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.21:46:50.406 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:46:50.532 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:46:52.906 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.21:46:52.993 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.138 seconds (JVM running for 8.415)
-24-10-11.21:46:53.490 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.21:46:56.916 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.21:47:04.366 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.21:47:43.141 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s116ms853µs100ns).
-24-10-11.21:47:43.180 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.21:47:43.606 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:47:48.385 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.21:47:48.406 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 37716 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.21:47:48.408 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.21:47:49.584 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.21:47:49.588 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.21:47:49.618 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-24-10-11.21:47:52.279 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.21:47:53.154 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:47:53.237 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:47:56.218 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.21:47:56.312 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 8.495 seconds (JVM running for 10.133)
-24-10-11.21:49:53.643 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.21:49:56.852 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.21:50:23.112 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.21:54:16.467 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m10s444ms926µs800ns).
-24-10-11.21:54:16.519 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.21:54:18.901 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:54:24.163 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.21:54:24.181 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 32504 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.21:54:24.182 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.21:54:25.163 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.21:54:25.169 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.21:54:25.204 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
-24-10-11.21:54:27.400 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.21:54:28.242 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:54:28.317 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:54:30.982 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.21:54:31.078 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.508 seconds (JVM running for 9.311)
-24-10-11.21:54:34.445 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.21:54:38.628 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.21:54:49.422 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.21:56:40.735 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s810ms83µs500ns).
-24-10-11.21:59:11.876 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.21:59:14.439 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:59:20.220 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.21:59:20.239 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 45964 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.21:59:20.239 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.21:59:21.274 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.21:59:21.277 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.21:59:21.309 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-24-10-11.21:59:23.127 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.21:59:23.928 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:59:23.996 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:59:26.248 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.21:59:26.374 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.623 seconds (JVM running for 7.527)
-24-10-11.21:59:27.082 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.21:59:29.648 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.21:59:29.846 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.21:59:30.027 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.21:59:31.675 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.21:59:44.834 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.21:59:44.849 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 37244 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.21:59:44.850 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.21:59:45.913 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.21:59:45.917 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.21:59:45.959 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-24-10-11.21:59:47.880 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.21:59:48.778 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:59:48.842 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.21:59:51.246 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.21:59:51.321 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.975 seconds (JVM running for 8.037)
-24-10-11.22:00:00.200 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:00:04.630 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:00:20.172 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:04:47.345 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m42s612ms238µs800ns).
-24-10-11.22:04:47.386 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:04:47.504 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:04:52.554 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:04:52.569 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 27100 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:04:52.570 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:04:53.459 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:04:53.463 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:04:53.491 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-24-10-11.22:04:55.138 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:04:55.937 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:04:56.001 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:04:57.727 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:04:57.786 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.618 seconds (JVM running for 6.435)
-24-10-11.22:04:58.325 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:05:01.391 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:05:01.771 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:05:01.858 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:05:04.593 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:05:53.609 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:05:53.628 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 42616 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:05:53.628 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:05:54.672 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:05:54.676 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:05:54.713 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-10-11.22:05:57.023 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:05:57.861 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:05:57.935 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:06:00.114 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:06:00.175 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.16 seconds (JVM running for 8.492)
-24-10-11.22:06:03.557 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:06:07.495 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:07:38.293 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:09:20.254 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m53s50ms983µs500ns).
-24-10-11.22:09:20.338 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:09:23.085 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:09:28.822 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:09:28.838 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 31672 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:09:28.838 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:09:29.693 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:09:29.697 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:09:29.727 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-10-11.22:09:31.664 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:09:32.429 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:09:32.492 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:09:34.718 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:09:34.783 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.426 seconds (JVM running for 7.415)
-24-10-11.22:09:35.224 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:09:38.585 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:09:38.902 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:10:13.002 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:10:15.845 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:11:18.182 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:11:18.210 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 44152 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:11:18.211 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:11:19.521 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:11:19.526 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:11:19.560 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-24-10-11.22:11:21.961 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:11:22.927 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:11:23.003 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:11:25.749 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:11:25.877 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 8.523 seconds (JVM running for 10.137)
-24-10-11.22:11:26.599 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:11:29.442 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:11:29.707 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:12:33.600 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s43ms765µs801ns).
-24-10-11.22:13:09.292 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:13:15.021 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:13:19.441 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:13:19.463 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 32716 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:13:19.464 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:13:20.596 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:13:20.599 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:13:20.629 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-10-11.22:13:22.528 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:13:23.436 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:13:23.516 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:13:26.693 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:13:26.796 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.887 seconds (JVM running for 9.076)
-24-10-11.22:13:27.317 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:13:30.747 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:13:30.997 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:14:40.081 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:14:45.274 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:14:50.456 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:14:50.473 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 35916 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:14:50.473 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:14:51.525 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:14:51.530 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:14:51.567 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-10-11.22:14:53.475 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:14:54.257 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:14:54.323 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:14:56.931 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:14:57.016 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.026 seconds (JVM running for 8.058)
-24-10-11.22:14:57.478 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:15:00.345 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:15:00.580 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:16:12.953 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s496ms974µs201ns).
-24-10-11.22:16:12.955 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
-24-10-11.22:16:29.726 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:16:32.101 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:23:11.156 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:23:11.172 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 41432 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:23:11.172 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:23:12.205 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:23:12.211 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:23:12.258 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
-24-10-11.22:23:14.025 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:23:14.805 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:23:14.868 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:23:16.590 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:23:16.673 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.986 seconds (JVM running for 6.914)
-24-10-11.22:23:17.310 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:23:20.751 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:23:20.961 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:23:21.088 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
-24-10-11.22:23:21.119 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:23:21.965 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:24:07.445 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:24:07.475 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 28488 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:24:07.476 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:24:08.581 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:24:08.584 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:24:08.616 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
-24-10-11.22:24:10.790 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:24:11.746 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:24:11.834 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:24:14.191 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:24:14.269 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.353 seconds (JVM running for 8.496)
-24-10-11.22:24:14.714 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:24:18.119 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:24:18.303 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:24:26.035 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_weight,rule_blacklist)
-24-10-11.22:24:39.962 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:100001 ruleModel:rule_blacklist
-24-10-11.22:24:40.087 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:xiaofuge strategyId:100001 ruleModel:rule_weight
-24-10-11.22:24:40.164 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.22:24:40.341 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"xiaofuge"}
-24-10-11.22:24:40.343 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":105}
-24-10-11.22:24:40.380 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:24:42.705 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:25:17.079 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:25:17.099 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 39268 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:25:17.101 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:25:18.973 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:25:18.977 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:25:19.016 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-24-10-11.22:25:21.337 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:25:22.220 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:25:22.278 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:25:24.133 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:25:24.220 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.841 seconds (JVM running for 8.748)
-24-10-11.22:25:24.910 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:25:28.952 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:25:29.139 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:25:29.236 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_weight,rule_blacklist)
-24-10-11.22:25:29.237 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:100001 ruleModel:rule_blacklist
-24-10-11.22:25:29.318 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:xiaofuge strategyId:100001 ruleModel:rule_weight
-24-10-11.22:25:29.376 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.22:25:29.528 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"xiaofuge"}
-24-10-11.22:25:29.530 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":103}
-24-10-11.22:25:29.560 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:25:29.769 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:26:46.752 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:26:46.769 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 42872 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:26:46.770 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:26:47.616 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:26:47.618 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:26:47.645 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-24-10-11.22:26:49.439 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:26:50.245 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:26:50.332 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:26:52.255 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:26:52.328 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.955 seconds (JVM running for 6.882)
-24-10-11.22:26:52.925 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:26:57.050 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:26:57.256 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:26:57.311 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_weight,rule_blacklist)
-24-10-11.22:26:57.312 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:100001 ruleModel:rule_blacklist
-24-10-11.22:26:57.402 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:xiaofuge strategyId:100001 ruleModel:rule_weight
-24-10-11.22:26:57.469 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.22:26:57.632 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"xiaofuge"}
-24-10-11.22:26:57.635 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":102}
-24-10-11.22:26:57.673 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:26:58.444 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:27:16.758 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:27:16.775 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 30948 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:27:16.776 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:27:17.648 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:27:17.651 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:27:17.682 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-10-11.22:27:19.853 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:27:20.725 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:27:20.789 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:27:23.209 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:27:23.278 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.033 seconds (JVM running for 8.019)
-24-10-11.22:27:23.715 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:27:27.642 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:27:27.826 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:27:33.193 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_weight,rule_blacklist)
-24-10-11.22:27:46.613 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:100001 ruleModel:rule_blacklist
-24-10-11.22:27:46.734 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:xiaofuge strategyId:100001 ruleModel:rule_weight
-24-10-11.22:27:46.823 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.22:27:46.978 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"xiaofuge"}
-24-10-11.22:27:46.981 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":103}
-24-10-11.22:27:47.018 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:27:49.557 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:28:36.419 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:28:36.437 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 37736 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:28:36.437 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:28:37.256 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:28:37.260 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:28:37.291 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-10-11.22:28:39.109 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:28:39.946 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:28:40.031 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:28:42.564 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:28:42.631 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.727 seconds (JVM running for 8.046)
-24-10-11.22:28:43.078 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:28:46.954 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:28:47.165 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:28:52.841 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_weight,rule_blacklist)
-24-10-11.22:28:58.350 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:100001 ruleModel:rule_blacklist
-24-10-11.22:28:58.538 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:xiaofuge strategyId:100001 ruleModel:rule_weight
-24-10-11.22:28:58.632 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.22:28:58.796 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"xiaofuge"}
-24-10-11.22:28:58.799 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":104}
-24-10-11.22:28:58.838 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:29:01.630 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:29:52.720 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:29:52.735 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 42988 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:29:52.736 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:29:53.574 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:29:53.576 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:29:53.609 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-10-11.22:29:55.569 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:29:56.436 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:29:56.526 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:29:59.353 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:29:59.467 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 7.207 seconds (JVM running for 8.22)
-24-10-11.22:30:00.032 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:30:02.893 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:30:03.154 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:30:19.568 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100001, strategyDesc=抽奖策略, ruleModels=rule_weight,rule_blacklist)
-24-10-11.22:30:24.260 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:100001 ruleModel:rule_blacklist
-24-10-11.22:30:24.896 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:xiaofuge strategyId:100001 ruleModel:rule_weight
-24-10-11.22:30:25.194 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.22:43:32.926 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m52s974ms720µs799ns).
-24-10-11.22:43:33.014 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:43:33.155 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100001,"userId":"xiaofuge"}
-24-10-11.22:43:33.159 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":103}
-24-10-11.22:43:36.885 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:43:42.576 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:43:42.595 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 42956 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:43:42.595 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:43:43.508 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:43:43.511 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:43:43.543 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-10-11.22:43:45.542 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:43:46.331 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:43:46.397 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:43:48.892 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:43:48.972 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.88 seconds (JVM running for 8.027)
-24-10-11.22:43:49.598 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:43:54.187 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:43:54.775 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:44:18.662 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
-24-10-11.22:46:41.175 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m46s875ms635µs).
-24-10-11.22:46:41.231 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:46:41.681 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:46:47.587 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:46:47.605 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 4740 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:46:47.605 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:46:48.555 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:46:48.559 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:46:48.591 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-10-11.22:46:50.483 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:46:51.302 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:46:51.392 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:46:53.873 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:46:53.967 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.857 seconds (JVM running for 8.124)
-24-10-11.22:46:54.521 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:46:58.175 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:46:58.397 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:47:03.865 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
-24-10-11.22:50:25.736 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m45s858ms768µs701ns).
-24-10-11.22:50:25.788 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:50:26.967 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:50:33.398 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:50:33.413 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 43076 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:50:33.413 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:50:34.320 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:50:34.324 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:50:34.358 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-10-11.22:50:36.408 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:50:37.233 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:50:37.304 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:50:39.604 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:50:39.678 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.743 seconds (JVM running for 8.107)
-24-10-11.22:50:40.105 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:50:43.895 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:50:44.103 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:50:47.639 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
-24-10-11.22:51:19.040 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:xiaofuge strategyId:100003 ruleModel:rule_lock
-24-10-11.22:51:30.212 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: xiaofuge ruleModel: rule_lock code: 0000 info: 放行；执行后续的流程，不受规则引擎影响
-24-10-11.22:51:39.758 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"xiaofuge"}
-24-10-11.22:51:39.761 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":107}
-24-10-11.22:51:39.796 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:51:40.159 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:55:36.166 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:55:36.185 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 35552 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:55:36.186 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:55:37.181 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:55:37.186 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:55:37.222 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-24-10-11.22:55:39.054 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:55:39.835 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:55:39.910 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:55:42.005 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:55:42.098 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.407 seconds (JVM running for 7.348)
-24-10-11.22:55:42.671 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:55:47.726 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:55:48.032 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:55:48.140 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
-24-10-11.22:55:48.202 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:xiaofuge strategyId:100003 ruleModel:rule_lock
-24-10-11.22:55:48.295 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: xiaofuge ruleModel: rule_lock code: 0000 info: 放行；执行后续的流程，不受规则引擎影响
-24-10-11.22:55:48.433 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"xiaofuge"}
-24-10-11.22:55:48.436 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":107}
-24-10-11.22:55:48.467 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:55:50.022 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:57:29.186 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:57:29.201 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 40736 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:57:29.202 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:57:30.148 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:57:30.151 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:57:30.183 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
-24-10-11.22:57:31.941 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:57:32.778 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:57:32.857 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:57:34.783 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:57:34.866 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.109 seconds (JVM running for 6.953)
-24-10-11.22:57:35.431 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:57:38.912 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:57:39.166 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:57:39.287 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
-24-10-11.22:57:39.340 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:xiaofuge strategyId:100003 ruleModel:rule_lock
-24-10-11.22:57:39.400 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: xiaofuge ruleModel: rule_lock code: 0000 info: 放行；执行后续的流程，不受规则引擎影响
-24-10-11.22:57:39.535 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"xiaofuge"}
-24-10-11.22:57:39.538 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":107}
-24-10-11.22:57:39.569 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:57:40.730 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.22:59:18.497 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.22:59:18.515 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 40124 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.22:59:18.516 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.22:59:19.318 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.22:59:19.321 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.22:59:19.349 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-24-10-11.22:59:21.017 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.22:59:21.764 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:59:21.818 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.22:59:23.728 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.22:59:23.805 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.731 seconds (JVM running for 6.552)
-24-10-11.22:59:24.408 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.22:59:27.984 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.22:59:28.158 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.22:59:28.225 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
-24-10-11.22:59:28.312 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:xiaofuge strategyId:100003 ruleModel:rule_lock
-24-10-11.22:59:28.411 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: xiaofuge ruleModel: rule_lock code: 0000 info: 放行；执行后续的流程，不受规则引擎影响
-24-10-11.22:59:28.565 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"xiaofuge"}
-24-10-11.22:59:28.568 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":107}
-24-10-11.22:59:28.598 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.22:59:29.040 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-10-11.23:00:26.525 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-24-10-11.23:00:26.542 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 42300 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
-24-10-11.23:00:26.542 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-10-11.23:00:27.329 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-10-11.23:00:27.332 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-10-11.23:00:27.361 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
-24-10-11.23:00:28.966 [main            ] INFO  Version                - Redisson 3.23.4
-24-10-11.23:00:29.744 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
-24-10-11.23:00:29.808 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
-24-10-11.23:00:31.771 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-10-11.23:00:31.847 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 5.709 seconds (JVM running for 6.617)
-24-10-11.23:00:32.395 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-10-11.23:00:36.718 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-10-11.23:00:37.374 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-10-11.23:00:37.447 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
-24-10-11.23:00:37.505 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:xiaofuge strategyId:100003 ruleModel:rule_lock
-24-10-11.23:00:37.570 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: xiaofuge ruleModel: rule_lock code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-10-11.23:00:37.570 [main            ] INFO  AbstractRaffleStrategy - 【临时日志】中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。
-24-10-11.23:00:37.707 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"xiaofuge"}
-24-10-11.23:00:37.709 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardDesc":"中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。"}
-24-10-11.23:00:37.737 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-10-11.23:00:40.000 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-12.09:27:37.899 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 49512 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-12.09:27:37.899 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-10-12.09:27:39.066 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-12.09:27:39.071 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-12.09:27:39.116 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+24-10-12.09:27:41.193 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-12.09:27:41.981 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-12.09:27:42.058 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-12.09:27:43.956 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-12.09:27:44.045 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.698 seconds (JVM running for 7.807)
+24-10-12.09:27:44.695 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-12.09:27:49.207 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-12.09:27:49.360 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-10-12.09:27:49.418 [main            ] INFO  AbstractRaffleStrategy -  StrategyEntity(strategyId=100003, strategyDesc=抽奖策略-验证lock, ruleModels=null)
+24-10-12.09:27:49.472 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:xiaofuge strategyId:100003 ruleModel:rule_lock
+24-10-12.09:27:49.527 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: xiaofuge ruleModel: rule_lock code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-10-12.09:27:49.527 [main            ] INFO  AbstractRaffleStrategy - 【临时日志】中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。
+24-10-12.09:27:49.676 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100003,"userId":"xiaofuge"}
+24-10-12.09:27:49.680 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardDesc":"中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。"}
+24-10-12.09:27:49.713 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-12.09:27:50.774 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
