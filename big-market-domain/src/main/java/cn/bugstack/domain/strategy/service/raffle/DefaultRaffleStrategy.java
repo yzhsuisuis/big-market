@@ -5,6 +5,7 @@ import cn.bugstack.domain.strategy.model.entity.RuleActionEntity;
 import cn.bugstack.domain.strategy.model.entity.RuleMatterEntity;
 import cn.bugstack.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import cn.bugstack.domain.strategy.repository.IStrategyRepository;
+import cn.bugstack.domain.strategy.service.AbstractRaffleStrategy;
 import cn.bugstack.domain.strategy.service.armory.IStrategyDispatch;
 import cn.bugstack.domain.strategy.service.rule.filter.ILogicFilter;
 import cn.bugstack.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;

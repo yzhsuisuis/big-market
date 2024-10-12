@@ -583,3 +583,26 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 24-10-12.14:45:40.612 [main            ] INFO  LogicChainTest         - 测试结果：103
 24-10-12.14:45:41.929 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 24-10-12.14:45:45.987 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-12.22:25:19.625 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-12.22:25:19.655 [main            ] INFO  LogicTreeTest          - Starting LogicTreeTest using Java 1.8.0_181 on yangzihesLaptop with PID 18052 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-12.22:25:19.656 [main            ] INFO  LogicTreeTest          - The following 1 profile is active: "dev"
+24-10-12.22:25:20.836 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-12.22:25:20.843 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-12.22:25:20.877 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+24-10-12.22:25:23.055 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-12.22:25:24.034 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-12.22:25:24.131 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-12.22:25:26.871 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-12.22:25:27.020 [main            ] INFO  LogicTreeTest          - Started LogicTreeTest in 7.951 seconds (JVM running for 9.081)
+24-10-12.22:25:27.632 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_lock code:0000
+24-10-12.22:25:27.632 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_stock code:0001
+24-10-12.22:25:27.633 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【决策树规则；增加dall-e-3画图模型】treeId:100000001 node:rule_luck_award code:0001
+24-10-12.22:25:27.843 [main            ] INFO  LogicTreeTest          - 测试结果：{"awardId":101,"awardRuleValue":"1,100"}
