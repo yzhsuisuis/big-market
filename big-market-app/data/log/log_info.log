@@ -428,3 +428,158 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 24-10-12.09:27:49.680 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardDesc":"中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。"}
 24-10-12.09:27:49.713 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 24-10-12.09:27:50.774 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-12.14:35:01.577 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-12.14:35:01.593 [main            ] INFO  LogicChainTest         - Starting LogicChainTest using Java 1.8.0_181 on yangzihesLaptop with PID 38536 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-12.14:35:01.594 [main            ] INFO  LogicChainTest         - The following 1 profile is active: "dev"
+24-10-12.14:35:02.546 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-12.14:35:02.549 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-12.14:35:02.584 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+24-10-12.14:35:04.460 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-12.14:35:05.287 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:35:05.353 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:35:07.231 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-12.14:35:07.359 [main            ] INFO  LogicChainTest         - Started LogicChainTest in 6.286 seconds (JVM running for 7.259)
+24-10-12.14:35:07.960 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-12.14:35:10.265 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-12.14:35:10.449 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-10-12.14:35:10.567 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-12.14:35:11.642 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-12.14:37:24.775 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-12.14:37:24.796 [main            ] INFO  LogicChainTest         - Starting LogicChainTest using Java 1.8.0_181 on yangzihesLaptop with PID 44996 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-12.14:37:24.796 [main            ] INFO  LogicChainTest         - The following 1 profile is active: "dev"
+24-10-12.14:37:25.845 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-12.14:37:25.850 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-12.14:37:25.890 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+24-10-12.14:37:28.048 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-12.14:37:29.056 [redisson-netty-2-6] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:37:29.156 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:37:31.708 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-12.14:37:31.841 [main            ] INFO  LogicChainTest         - Started LogicChainTest in 7.599 seconds (JVM running for 8.677)
+24-10-12.14:37:32.529 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-12.14:37:35.706 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-12.14:37:35.874 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-10-12.14:37:35.970 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-12.14:37:37.237 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-12.14:38:22.229 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-12.14:38:22.265 [main            ] INFO  LogicChainTest         - Starting LogicChainTest using Java 1.8.0_181 on yangzihesLaptop with PID 31020 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-12.14:38:22.268 [main            ] INFO  LogicChainTest         - The following 1 profile is active: "dev"
+24-10-12.14:38:23.433 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-12.14:38:23.437 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-12.14:38:23.473 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+24-10-12.14:38:25.563 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-12.14:38:26.477 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:38:26.540 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:38:28.772 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-12.14:38:28.881 [main            ] INFO  LogicChainTest         - Started LogicChainTest in 7.438 seconds (JVM running for 8.81)
+24-10-12.14:38:29.472 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-12.14:38:32.648 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-12.14:38:39.004 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-10-12.14:39:33.511 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s693ms366µs).
+24-10-12.14:39:33.577 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-12.14:39:35.721 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-12.14:39:39.511 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-12.14:39:39.530 [main            ] INFO  LogicChainTest         - Starting LogicChainTest using Java 1.8.0_181 on yangzihesLaptop with PID 50864 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-12.14:39:39.531 [main            ] INFO  LogicChainTest         - The following 1 profile is active: "dev"
+24-10-12.14:39:40.406 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-12.14:39:40.409 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-12.14:39:40.444 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+24-10-12.14:39:42.378 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-12.14:39:43.154 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:39:43.242 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:39:46.114 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-12.14:39:46.189 [main            ] INFO  LogicChainTest         - Started LogicChainTest in 7.165 seconds (JVM running for 8.165)
+24-10-12.14:39:46.641 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-12.14:39:49.600 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-12.14:40:12.222 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-10-12.14:43:03.095 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m6s655ms744µs700ns).
+24-10-12.14:43:03.142 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-12.14:43:05.970 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-12.14:43:11.557 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-12.14:43:11.578 [main            ] INFO  LogicChainTest         - Starting LogicChainTest using Java 1.8.0_181 on yangzihesLaptop with PID 34000 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-12.14:43:11.578 [main            ] INFO  LogicChainTest         - The following 1 profile is active: "dev"
+24-10-12.14:43:12.563 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-12.14:43:12.567 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-12.14:43:12.616 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+24-10-12.14:43:14.925 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-12.14:43:15.771 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:43:15.841 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:43:18.373 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-12.14:43:18.444 [main            ] INFO  LogicChainTest         - Started LogicChainTest in 7.462 seconds (JVM running for 8.724)
+24-10-12.14:43:18.924 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-12.14:43:22.388 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-12.14:43:25.247 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-10-12.14:43:25.498 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-10-12.14:43:25.709 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-10-12.14:44:22.130 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: user001 strategyId: 100003 ruleModel: default awardId: 108
+24-10-12.14:44:24.160 [main            ] INFO  LogicChainTest         - 测试结果：108
+24-10-12.14:44:26.358 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-12.14:44:30.377 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-12.14:44:59.543 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-12.14:44:59.568 [main            ] INFO  LogicChainTest         - Starting LogicChainTest using Java 1.8.0_181 on yangzihesLaptop with PID 44048 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-12.14:44:59.569 [main            ] INFO  LogicChainTest         - The following 1 profile is active: "dev"
+24-10-12.14:45:00.625 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-12.14:45:00.629 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-12.14:45:00.665 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+24-10-12.14:45:02.782 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-12.14:45:03.710 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:45:03.793 [redisson-netty-2-20] INFO  MasterConnectionPool   - 24 connections initialized for localhost/127.0.0.1:6379
+24-10-12.14:45:06.301 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-12.14:45:06.382 [main            ] INFO  LogicChainTest         - Started LogicChainTest in 7.912 seconds (JVM running for 9.234)
+24-10-12.14:45:06.854 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-12.14:45:09.714 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-12.14:45:14.381 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-10-12.14:45:14.641 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-10-12.14:45:14.919 [main            ] INFO  LogicChainTest         - 测试结果：true
+24-10-12.14:45:38.912 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重开始 userId: xiaofuge strategyId: 100001 ruleModel: rule_weight
+24-10-12.14:45:39.099 [main            ] INFO  RuleWeightLogicChain   - 抽奖责任链-权重接管 userId: xiaofuge strategyId: 100001 ruleModel: rule_weight awardId: 103
+24-10-12.14:45:40.612 [main            ] INFO  LogicChainTest         - 测试结果：103
+24-10-12.14:45:41.929 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-12.14:45:45.987 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

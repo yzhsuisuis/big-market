@@ -138,6 +138,10 @@ public class StrategyRepository implements IStrategyRepository {
         strategyRule.setRuleModel(ruleModel);
         return strategyRuleDao.queryStrategyRuleValue(strategyRule);
     }
+    @Override
+    public String queryStrategyRuleValue(Long strategyId, String ruleModel) {
+        return this.queryStrategyRuleValue(strategyId,null,ruleModel);
+    }
 
     @Override
     public StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId) {
@@ -147,5 +151,7 @@ public class StrategyRepository implements IStrategyRepository {
         String ruleModels = strategyAwardDao.queryStrategyAwardRuleModels(strategyAward);
         return StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
     }
+
+
 
 }
