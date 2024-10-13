@@ -54,7 +54,7 @@ public class LogicChainTest {
 
         ILogicChain logicChain = defaultChainFactory.openLogicChain(100001L);
         Integer awardId = logicChain.logic("xiaofuge", 100001L);
-        log.info("测试结果：{}", awardId);
+        log.info("测试结果：{}",awardId );
     }
 
     @Test
