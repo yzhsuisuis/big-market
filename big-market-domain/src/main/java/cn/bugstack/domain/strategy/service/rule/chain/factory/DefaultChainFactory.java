@@ -36,7 +36,7 @@ public class DefaultChainFactory {
 
         // 如果未配置策略规则，则只装填一个默认责任链
         if (null == ruleModels || 0 == ruleModels.length) {
-            return logicChainGroup.get("default");
+            return logicChainGroup.get(LogicModel.RULE_DEFAULT.getCode());
         }
 
         // 按照配置顺序装填用户配置的责任链；rule_blacklist、rule_weight 「注意此数据从Redis缓存中获取，如果更新库表，记得在测试阶段手动处理缓存」
