@@ -38,7 +38,7 @@ mybatis:
 redis:
   sdk:
     config:
-      host: 106.54.235.189
+      host: 127.0.0.1
       port: 6379
       pool-size: 10
       min-idle-size: 5
@@ -49,9 +49,6 @@ redis:
       ping-interval: 60000
       keep-alive: true
       password: 123456
-
-
-
 # 日志
 logging:
   level:
