@@ -49,3 +49,6 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 24-10-21.11:20:04.330 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 xiaofuge 100006 105 null
 24-10-21.11:20:04.330 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100006,"userId":"xiaofuge"}
 24-10-21.11:20:04.330 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":105}
+24-10-21.16:02:46.284 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m36s655ms422µs700ns).
+24-10-21.17:31:52.354 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-21.17:31:52.371 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
