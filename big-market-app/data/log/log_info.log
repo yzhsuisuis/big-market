@@ -1,3 +1,51 @@
 24-10-21.08:11:18.504 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h13m18s562ms92µs500ns).
 24-10-21.09:18:40.894 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
 24-10-21.09:18:40.907 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-21.11:19:52.019 [main            ] WARN  DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/mavenJar/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/D:/mavenJar/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+24-10-21.11:19:52.035 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_181 on yangzihesLaptop with PID 86304 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-10-21.11:19:52.036 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-10-21.11:19:53.014 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-21.11:19:53.018 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-21.11:19:53.066 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+24-10-21.11:19:55.053 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-21.11:19:55.848 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-10-21.11:19:55.867 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-10-21.11:19:58.255 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-21.11:19:58.359 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 6.811 seconds (JVM running for 7.737)
+24-10-21.11:19:58.905 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-21.11:20:03.300 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-21.11:20:03.556 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-10-21.11:20:03.566 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: xiaofuge strategyId: 100006 ruleModel: rule_default awardId: 108
+24-10-21.11:20:03.567 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 xiaofuge 100006 108 rule_default
+24-10-21.11:20:03.853 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:xiaofuge strategyId:100006 awardId:108
+24-10-21.11:20:03.854 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock_2 node:rule_lock code:0000
+24-10-21.11:20:03.854 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:xiaofuge strategyId:100006 awardId:108
+24-10-21.11:20:03.855 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:xiaofuge strategyId:100006 awardId:108
+24-10-21.11:20:03.877 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock_2 node:rule_stock code:0001
+24-10-21.11:20:03.877 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 xiaofuge 100006 108 null
+24-10-21.11:20:04.027 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100006,"userId":"xiaofuge"}
+24-10-21.11:20:04.030 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":108}
+24-10-21.11:20:04.032 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: xiaofuge strategyId: 100006 ruleModel: rule_default awardId: 103
+24-10-21.11:20:04.032 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 xiaofuge 100006 103 rule_default
+24-10-21.11:20:04.266 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:xiaofuge strategyId:100006 awardId:103
+24-10-21.11:20:04.267 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:xiaofuge strategyId:100006 awardId:103
+24-10-21.11:20:04.267 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树-兜底奖励】treeId:tree_luck_award node:rule_stock code:0001
+24-10-21.11:20:04.267 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 xiaofuge 100006 103 null
+24-10-21.11:20:04.267 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100006,"userId":"xiaofuge"}
+24-10-21.11:20:04.267 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":103}
+24-10-21.11:20:04.269 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: xiaofuge strategyId: 100006 ruleModel: rule_default awardId: 105
+24-10-21.11:20:04.269 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 xiaofuge 100006 105 rule_default
+24-10-21.11:20:04.328 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:xiaofuge strategyId:100006 awardId:105
+24-10-21.11:20:04.329 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:xiaofuge strategyId:100006 awardId:105
+24-10-21.11:20:04.330 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树-兜底奖励】treeId:tree_luck_award node:rule_stock code:0001
+24-10-21.11:20:04.330 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 xiaofuge 100006 105 null
+24-10-21.11:20:04.330 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":100006,"userId":"xiaofuge"}
+24-10-21.11:20:04.330 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":105}
