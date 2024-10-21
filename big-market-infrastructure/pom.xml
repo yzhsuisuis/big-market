@@ -28,6 +28,7 @@
             <groupId>cn.bugstack</groupId>
             <artifactId>big-market-domain</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>
