@@ -30,7 +30,7 @@ spring:
   datasource:
     username: root
     password: ziheyang123
-    url: jdbc:mysql://127.0.0.1:3306/big_market?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
+    url: jdbc:mysql://106.54.235.189:3306/big_market?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   hikari:
     pool-name: Retail_HikariCP
@@ -61,6 +61,7 @@ redis:
       retry-interval: 1000
       ping-interval: 60000
       keep-alive: true
+      password: 123456
 
 # 日志
 logging:
