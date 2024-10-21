@@ -25,7 +25,6 @@
         <dependency>
             <groupId>cn.bugstack</groupId>
             <artifactId>big-market-types</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
