@@ -12,7 +12,7 @@ import cn.bugstack.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
-/**
+/*
  * @author Fuzhengwei bugstack.cn @小傅哥
  * @description 抽奖策略抽象类，定义抽奖的标准流程
  * @create 2024-01-06 09:26
