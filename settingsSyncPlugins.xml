@@ -1,0 +1,13 @@
+<application>
+  <component name="SettingsSyncPlugins">
+    <option name="plugins">
+      <map>
+        <entry key="idea.plugin.protoeditor">
+          <value>
+            <PluginData />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>
