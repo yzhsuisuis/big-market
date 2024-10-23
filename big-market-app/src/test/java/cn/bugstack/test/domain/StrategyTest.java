@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import org.redisson.api.RMap;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import redis.clients.jedis.Jedis;
+
 
 import javax.annotation.Resource;
 import java.util.*;
@@ -66,15 +66,7 @@ public class StrategyTest {
 
     @Resource
     private IRedisService redisService;
-    @Test
-    public void test01()
-    {
-        Jedis jedis = new Jedis("106.54.235.189", 6379);
-        jedis.auth("123456");
-        jedis.set("yangbo","1234");
-        jedis.get("yangbo");
-        jedis.close();
-    }
+
 
     @Test
     public void test_map() {

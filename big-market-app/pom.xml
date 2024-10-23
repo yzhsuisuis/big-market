@@ -87,6 +87,12 @@
         <dependency>
             <groupId>cn.bugstack</groupId>
             <artifactId>big-market-trigger</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.bugstack</groupId>
+            <artifactId>big-market-infrastructure</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>cn.bugstack</groupId>
