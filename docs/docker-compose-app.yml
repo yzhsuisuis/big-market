@@ -2,7 +2,7 @@ version: '3.8'
 # 命令执行 docker-compose -f docker-compose-app.yml up -d
 services:
   big-market-app:
-    image: fuzhengwei/big-market-app:1.0
+    image: yangzihe/big-market-app:1.0
     container_name: big-market-app
     restart: always
     ports:
@@ -30,7 +30,7 @@ services:
         max-file: "3"
   big-market-front-app:
     container_name: big-market-front-app
-    image: fuzhengwei/big-market-front-app:1.0
+    image: yangzihe/big-market-front-app:1.0
     restart: always
     networks:
       - my-network
