@@ -13,6 +13,7 @@
         <module>big-market-trigger</module>
         <module>big-market-infrastructure</module>
         <module>big-market-types</module>
+        <module>big-market-api</module>
     </modules>
 
     <properties>
@@ -103,7 +104,7 @@
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
-                <version>3.23.4</version>
+                <version>3.26.0</version>
             </dependency>
             <dependency>
                 <groupId>redis.clients</groupId>
