@@ -3,4 +3,8 @@
     <option name="IS_WHEEL_FONTCHANGE_ENABLED" value="true" />
     <option name="IS_WHEEL_FONTCHANGE_PERSISTENT" value="true" />
   </component>
+  <component name="TodoConfiguration">
+    <pattern pattern="\btodo\b.*" />
+    <pattern pattern="\bfixme\b.*" />
+  </component>
 </application>
