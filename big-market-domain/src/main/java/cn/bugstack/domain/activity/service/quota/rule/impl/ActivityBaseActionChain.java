@@ -1,10 +1,10 @@
-package cn.bugstack.domain.activity.service.rule.impl;
+package cn.bugstack.domain.activity.service.quota.rule.impl;
 
 import cn.bugstack.domain.activity.model.entity.ActivityCountEntity;
 import cn.bugstack.domain.activity.model.entity.ActivityEntity;
 import cn.bugstack.domain.activity.model.entity.ActivitySkuEntity;
 import cn.bugstack.domain.activity.model.valobj.ActivityStateVO;
-import cn.bugstack.domain.activity.service.rule.AbstractActionChain;
+import cn.bugstack.domain.activity.service.quota.rule.AbstractActionChain;
 import cn.bugstack.types.enums.ResponseCode;
 import cn.bugstack.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +20,6 @@ import java.util.Date;
 @Slf4j
 @Component("activity_base_action")
 public class ActivityBaseActionChain extends AbstractActionChain {
-    //这里传来的是老三样
 
     @Override
     public boolean action(ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity) {
