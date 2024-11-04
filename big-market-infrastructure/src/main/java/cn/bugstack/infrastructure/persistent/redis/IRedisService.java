@@ -74,6 +74,7 @@ public interface IRedisService {
     /**
      * 获取值
      *
+     * @param key   key 键
      * @param key key 键
      */
     Long getAtomicLong(String key);
@@ -268,3 +269,4 @@ public interface IRedisService {
     Boolean setNx(String key, long expired, TimeUnit timeUnit);
 
 }
+
