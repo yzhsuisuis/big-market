@@ -191,7 +191,7 @@ public class ActivityRepository implements IActivityRepository {
         if (surplus == 0) {
             // 库存消耗没了以后，发送MQ消息，更新数据库库存
             eventPublisher.publish(activitySkuStockZeroMessageEvent.topic(), activitySkuStockZeroMessageEvent.buildEventMessage(sku));
-            return false;
+//            return false;
         } else if (surplus < 0) {
             // 库存小于0，恢复为0个
             redisService.setAtomicLong(cacheKey, 0);
