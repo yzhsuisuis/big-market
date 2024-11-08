@@ -95,3 +95,5 @@
 24-11-08.13:57:16.803 [main            ] INFO  ActivitySkuStockActionChain - 活动责任链-商品库存处理【有效期、状态、库存(sku)】开始。sku:9011 activityId:100301
 24-11-08.13:57:16.999 [main            ] INFO  EventPublisher         - 发送MQ消息 topic:activity_sku_stock_zero message:{"data":9011,"id":"12880678130","timestamp":1731045436805}
 24-11-08.13:57:17.001 [main            ] WARN  RaffleActivityAccountQuotaServiceTest - 活动库存不足
+24-11-08.15:05:58.397 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] INFO  SendAwardCustomer      - 监听用户奖品发送消息 topic: send_award message: {"data":{"awardId":104,"awardTitle":"5等奖","userId":"xiaofuge"},"id":"43367523472","timestamp":1731049553376}
+24-11-08.15:09:47.545 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] INFO  SendAwardCustomer      - 监听用户奖品发送消息 topic: send_award message: {"data":{"awardId":103,"awardTitle":"6等奖","userId":"xiaofuge"},"id":"07205263161","timestamp":1731049787133}
