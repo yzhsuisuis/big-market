@@ -28,6 +28,11 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
     private IStrategyRepository repository;
 
     private final SecureRandom secureRandom = new SecureRandom();
+    @Override
+    public boolean assembleLotteryStrategyByActivityId(Long activityId) {
+        Long strategyId = repository.queryStrategyIdByActivityId(activityId);
+         return assembleLotteryStrategy(strategyId);
+    }
 
     @Override
     public boolean assembleLotteryStrategy(Long strategyId) {
@@ -66,6 +71,8 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
 
         return true;
     }
+
+
 
     /**
      * 计算公式；

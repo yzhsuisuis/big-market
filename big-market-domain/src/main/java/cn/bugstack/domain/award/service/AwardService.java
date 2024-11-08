@@ -26,6 +26,17 @@ public class AwardService implements IAwardService {
 
     @Override
     public void saveUserAwardRecord(UserAwardRecordEntity userAwardRecordEntity) {
+        //这里相当于从用户-奖品实体里,抽出来一个task对象
+        /*
+        * userId
+        * strategyId(策略id)
+        * awardId(奖品号)
+        * orderId(订单号)
+        * awardTitle(奖品标题)
+        *
+        * userId和awaid 被当成消息发出 ,被接受后用来发放奖品
+        *
+        * */
 
         // 构建消息对象
         SendAwardMessageEvent.SendAwardMessage sendAwardMessage = new SendAwardMessageEvent.SendAwardMessage();
