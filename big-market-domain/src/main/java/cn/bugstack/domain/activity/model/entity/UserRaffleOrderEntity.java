@@ -34,4 +34,6 @@ public class UserRaffleOrderEntity {
     /** 创建时间 */
     private UserRaffleOrderStateVO orderState;
 
+    private Date endDateTime;
+
 }
