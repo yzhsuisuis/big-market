@@ -115,6 +115,7 @@ public class RaffleStrategyController implements IRaffleStrategyService {
                 Integer awardRuleLockCount = ruleLockMap.get(strategyAwardEntity.getRuleModels());
                 raffleAwardListResponseDTOS.add(RaffleAwardListResponseDTO.builder()
                         .awardId(strategyAwardEntity.getAwardId())
+                        .awardTitle(strategyAwardEntity.getAwardTitle())
                         .awardSubtitle(strategyAwardEntity.getAwardSubtitle())
                         .sort(strategyAwardEntity.getSort())
                         //解锁共需多少次
