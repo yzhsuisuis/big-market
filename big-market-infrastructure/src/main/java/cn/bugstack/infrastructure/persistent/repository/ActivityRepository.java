@@ -244,6 +244,7 @@ public class ActivityRepository implements IActivityRepository {
 
     @Override
     public UserRaffleOrderEntity queryNoUsedRaffleOrder(PartakeRaffleActivityEntity partakeRaffleActivityEntity) {
+//        userId和activityId
         // 查询数据
         UserRaffleOrder userRaffleOrderReq = new UserRaffleOrder();
         userRaffleOrderReq.setUserId(partakeRaffleActivityEntity.getUserId());
