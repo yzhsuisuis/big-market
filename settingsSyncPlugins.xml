@@ -2,28 +2,6 @@
   <component name="SettingsSyncPlugins">
     <option name="plugins">
       <map>
-        <entry key="Key Promoter X">
-          <value>
-            <PluginData>
-              <option name="dependencies">
-                <set>
-                  <option value="com.intellij.modules.lang" />
-                </set>
-              </option>
-            </PluginData>
-          </value>
-        </entry>
-        <entry key="com.baomidou.plugin.idea.mybatisx">
-          <value>
-            <PluginData>
-              <option name="dependencies">
-                <set>
-                  <option value="com.intellij.modules.java" />
-                </set>
-              </option>
-            </PluginData>
-          </value>
-        </entry>
         <entry key="idea.plugin.protoeditor">
           <value>
             <PluginData />
