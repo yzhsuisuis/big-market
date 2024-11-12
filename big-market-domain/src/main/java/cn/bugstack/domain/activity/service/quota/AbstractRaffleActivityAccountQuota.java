@@ -23,8 +23,19 @@ public abstract class AbstractRaffleActivityAccountQuota extends RaffleActivityA
         super(activityRepository, defaultActivityChainFactory);
     }
 
+    /**
+     *
+     * @param skuRechargeEntity 活动商品充值实体对象
+     * userId ,sku,outBussinessOn
+     * @return
+     */
     @Override
     public String createOrder(SkuRechargeEntity skuRechargeEntity) {
+        //这里是属于额度模块,然后createOrder是有有两种的,一种是抽奖的,这里的createOrder属于额度模块
+        //这里涉及那三个表
+        //raffle_activity_order
+        //activity_sku
+        //activity_
         // 1. 参数校验
         String userId = skuRechargeEntity.getUserId();
         Long sku = skuRechargeEntity.getSku();
