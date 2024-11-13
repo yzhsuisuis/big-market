@@ -1,7 +1,7 @@
 package cn.bugstack.domain.rebate.model.entity;
 
+import cn.bugstack.domain.award.model.valobj.TaskStateVO;
 import cn.bugstack.domain.rebate.event.SendRebateMessageEvent;
-import cn.bugstack.domain.rebate.model.valobj.TaskStateVO;
 import cn.bugstack.types.event.BaseEvent;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
