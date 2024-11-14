@@ -1,1 +1,17 @@
 24-11-08.13:57:17.001 [main            ] WARN  RaffleActivityAccountQuotaServiceTest - 活动库存不足
+24-11-08.18:06:52.392 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m14s492ms797µs400ns).
+24-11-08.18:06:53.779 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=1m14s493ms102µs600ns).
+24-11-08.18:55:47.537 [redisson-timer-4-1] ERROR PingConnectionHandler  - Unable to send PING command over channel: [id: 0x078c5896, L:/127.0.0.1:50434 - R:127.0.0.1/127.0.0.1:16379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://127.0.0.1:16379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:715)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:703)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:790)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+24-11-08.18:56:00.523 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=36m37s927ms733µs800ns).
+24-11-08.18:56:01.900 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=36m37s933ms213µs100ns).
+24-11-08.20:53:59.926 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=16m57s870ms634µs500ns).
+24-11-08.20:54:01.356 [Retail_HikariCP housekeeper] WARN  HikariPool             - Retail_HikariCP - Thread starvation or clock leap detected (housekeeper delta=16m57s866ms62µs).
