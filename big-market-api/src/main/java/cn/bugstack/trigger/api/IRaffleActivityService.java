@@ -25,4 +25,5 @@ public interface IRaffleActivityService {
      */
     Response<ActivityDrawResponseDTO> draw(ActivityDrawRequestDTO request);
 
+    Response<Boolean> calendarSignRebate(String userId);
 }
