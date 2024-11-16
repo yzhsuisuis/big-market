@@ -175,6 +175,7 @@ public class ActivityRepository implements IActivityRepository {
             // 编程式事务
             transactionTemplate.execute(status -> {
                 try {
+                    log.info("订单成功写入---------");
                     // 1. 写入订单
                     raffleActivityOrderDao.insert(raffleActivityOrder);
                     // 2. 更新账户
