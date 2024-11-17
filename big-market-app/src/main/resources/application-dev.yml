@@ -1,5 +1,5 @@
 server:
-  port: 8091
+  port: 8092
   tomcat:
     threads:
       max: 200        # 设定处理客户请求的线程的最大数目，决定了服务器可以同时响应客户请求的数,默认200
@@ -26,6 +26,7 @@ spring:
     topic:
       activity_sku_stock_zero: activity_sku_stock_zero
       send_award: send_award
+      send_rebate: send_rebate
 # 线程池配置
 thread:
   pool:

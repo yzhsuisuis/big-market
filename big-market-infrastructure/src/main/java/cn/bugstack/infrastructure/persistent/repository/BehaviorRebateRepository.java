@@ -1,0 +1,123 @@
+package cn.bugstack.infrastructure.persistent.repository;
+
+import cn.bugstack.domain.rebate.aggregate.BehaviorRebateAggregate;
+import cn.bugstack.domain.rebate.model.entity.BehaviorRebateOrderEntity;
+import cn.bugstack.domain.rebate.model.entity.TaskEntity;
+import cn.bugstack.domain.rebate.model.valobj.BehaviorTypeVO;
+import cn.bugstack.domain.rebate.model.valobj.DailyBehaviorRebateVO;
+import cn.bugstack.domain.rebate.repository.IBehaviorRebateRepository;
+import cn.bugstack.infrastructure.event.EventPublisher;
+import cn.bugstack.infrastructure.persistent.dao.IDailyBehaviorRebateDao;
+import cn.bugstack.infrastructure.persistent.dao.ITaskDao;
+import cn.bugstack.infrastructure.persistent.dao.IUserBehaviorRebateOrderDao;
+import cn.bugstack.infrastructure.persistent.po.DailyBehaviorRebate;
+import cn.bugstack.infrastructure.persistent.po.Task;
+import cn.bugstack.infrastructure.persistent.po.UserBehaviorRebateOrder;
+import cn.bugstack.middleware.db.router.strategy.IDBRouterStrategy;
+import cn.bugstack.types.enums.ResponseCode;
+import cn.bugstack.types.exception.AppException;
+import com.alibaba.fastjson.JSON;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DuplicateKeyException;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.support.TransactionTemplate;
+
+import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
+@Slf4j
+@Component
+public class BehaviorRebateRepository implements IBehaviorRebateRepository {
+    @Resource
+    private IDailyBehaviorRebateDao dailyBehaviorRebateDao;
+    @Resource
+    private IDBRouterStrategy dbRouter;
+    @Resource
+    private ITaskDao taskDao;
+    @Resource
+    private TransactionTemplate transactionTemplate;
+
+    @Resource
+    private IUserBehaviorRebateOrderDao userBehaviorRebateOrderDao;
+    @Resource
+    private EventPublisher eventPublisher;
+    @Override
+    public List<DailyBehaviorRebateVO> queryDailyBehaviorRebateConfig(BehaviorTypeVO behaviorTypeVO) {
+        //去查状态为open的
+        List<DailyBehaviorRebate> dailyBehaviorRebates = dailyBehaviorRebateDao.queryDailyBehaviorRebateByBehaviorType(behaviorTypeVO.getCode());
+        //不需要在这里进行判空,因为这个只是一个仓储类型
+        ArrayList<DailyBehaviorRebateVO> dailyBehaviorRebateVOS = new ArrayList<>(dailyBehaviorRebates.size());
+        for (DailyBehaviorRebate dailyBehaviorRebate : dailyBehaviorRebates) {
+            dailyBehaviorRebateVOS.add(DailyBehaviorRebateVO.builder()
+                            .behaviorType(dailyBehaviorRebate.getBehaviorType())
+                            .rebateConfig(dailyBehaviorRebate.getRebateConfig())
+                            .rebateDesc(dailyBehaviorRebate.getRebateDesc())
+                            .rebateType(dailyBehaviorRebate.getRebateType())
+                    .build());
+
+
+        }
+        return dailyBehaviorRebateVOS;
+    }
+
+    @Override
+    public void saveUserRebateRecord(String userId, List<BehaviorRebateAggregate> behaviorRebateAggregates) {
+        try {
+            dbRouter.doRouter(userId);
+            transactionTemplate.execute(status -> {
+                try {
+                    for (BehaviorRebateAggregate behaviorRebateAggregate : behaviorRebateAggregates) {
+                        BehaviorRebateOrderEntity behaviorRebateOrderEntity = behaviorRebateAggregate.getBehaviorRebateOrderEntity();
+                        // 用户行为返利订单对象
+                        UserBehaviorRebateOrder userBehaviorRebateOrder = new UserBehaviorRebateOrder();
+                        userBehaviorRebateOrder.setUserId(behaviorRebateOrderEntity.getUserId());
+                        userBehaviorRebateOrder.setOrderId(behaviorRebateOrderEntity.getOrderId());
+                        userBehaviorRebateOrder.setBehaviorType(behaviorRebateOrderEntity.getBehaviorType());
+                        userBehaviorRebateOrder.setRebateDesc(behaviorRebateOrderEntity.getRebateDesc());
+                        userBehaviorRebateOrder.setRebateType(behaviorRebateOrderEntity.getRebateType());
+                        userBehaviorRebateOrder.setRebateConfig(behaviorRebateOrderEntity.getRebateConfig());
+                        //这里我之前居然发现,任何订单都是存在防幂等的配置的
+                        userBehaviorRebateOrder.setOutBusinessNo(behaviorRebateOrderEntity.getOutBusinessNo());
+                        userBehaviorRebateOrder.setBizId(behaviorRebateOrderEntity.getBizId());
+                        userBehaviorRebateOrderDao.insert(userBehaviorRebateOrder);
+
+                        // 任务对象
+                        TaskEntity taskEntity = behaviorRebateAggregate.getTaskEntity();
+                        Task task = new Task();
+                        task.setUserId(taskEntity.getUserId());
+                        task.setTopic(taskEntity.getTopic());
+                        task.setMessageId(taskEntity.getMessageId());
+                        task.setMessage(JSON.toJSONString(taskEntity.getMessage()));
+                        task.setState(taskEntity.getState().getCode());
+                        taskDao.insert(task);
+                    }
+                    return 1;
+                } catch (DuplicateKeyException e) {
+                    status.setRollbackOnly();
+                    log.error("写入返利记录，唯一索引冲突 userId: {}", userId, e);
+                    throw new AppException(ResponseCode.INDEX_DUP.getCode(), ResponseCode.INDEX_DUP.getInfo());
+                }
+            });
+        } finally {
+            dbRouter.clear();
+        }
+
+        // 同步发送MQ消息
+        for (BehaviorRebateAggregate behaviorRebateAggregate : behaviorRebateAggregates) {
+            TaskEntity taskEntity = behaviorRebateAggregate.getTaskEntity();
+            Task task = new Task();
+            task.setUserId(taskEntity.getUserId());
+            task.setMessageId(taskEntity.getMessageId());
+            try {
+                // 发送消息【在事务外执行，如果失败还有任务补偿】
+                eventPublisher.publish(taskEntity.getTopic(), taskEntity.getMessage());
+                // 更新数据库记录，task 任务表
+                taskDao.updateTaskSendMessageCompleted(task);
+            } catch (Exception e) {
+                log.error("写入返利记录，发送MQ消息失败 userId: {} topic: {}", userId, task.getTopic());
+                taskDao.updateTaskSendMessageFail(task);
+            }
+        }
+
+    }
+}

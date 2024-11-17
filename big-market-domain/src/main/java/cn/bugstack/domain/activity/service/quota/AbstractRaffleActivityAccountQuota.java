@@ -34,8 +34,10 @@ public abstract class AbstractRaffleActivityAccountQuota extends RaffleActivityA
         //这里是属于额度模块,然后createOrder是有有两种的,一种是抽奖的,这里的createOrder属于额度模块
         //这里涉及那三个表
         //raffle_activity_order
-        //activity_sku
-        //activity_
+
+        //raffle_activity_sku
+        //raffle_activity_count
+        //raffle_activit
         // 1. 参数校验
         String userId = skuRechargeEntity.getUserId();
         Long sku = skuRechargeEntity.getSku();
@@ -46,6 +48,7 @@ public abstract class AbstractRaffleActivityAccountQuota extends RaffleActivityA
 
         // 2. 查询基础信息
         // 2.1 通过sku查询活动信息
+        //
         ActivitySkuEntity activitySkuEntity = queryActivitySku(sku);
         // 2.2 查询活动信息
         ActivityEntity activityEntity = queryRaffleActivityByActivityId(activitySkuEntity.getActivityId());
