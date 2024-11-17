@@ -19,7 +19,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class RaffleActivityAccountDay {
 
-    private final SimpleDateFormat dateFormatDay = new SimpleDateFormat("yyyy-MM-dd");
+    private final static SimpleDateFormat dateFormatDay = new SimpleDateFormat("yyyy-MM-dd");
 
     /** 自增ID */
     private String id;
@@ -38,7 +38,7 @@ public class RaffleActivityAccountDay {
     /** 更新时间 */
     private Date updateTime;
 
-    public String currentDay() {
+    public static String currentDay() {
         return dateFormatDay.format(new Date());
     }
 
