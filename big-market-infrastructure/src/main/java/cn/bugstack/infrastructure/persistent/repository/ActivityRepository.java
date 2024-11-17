@@ -554,4 +554,14 @@ public class ActivityRepository implements IActivityRepository {
         return activityAccountEntity;
     }
 
+    @Override
+    public Integer queryRaffleActivityAccountPartakeCount(Long activityId, String userId) {
+        //raffle_activity_account 表中的 total_count - total_conplus
+        RaffleActivityAccount raffleActivityAccount = raffleActivityAccountDao.queryActivityAccountByUserId(RaffleActivityAccount.builder()
+                .userId(userId)
+                .activityId(activityId
+                ).build());
+        return raffleActivityAccount.getTotalCount() -raffleActivityAccount.getTotalCountSurplus();
+    }
+
 }

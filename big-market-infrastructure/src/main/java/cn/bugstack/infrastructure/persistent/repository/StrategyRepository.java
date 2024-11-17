@@ -351,4 +351,9 @@ public class StrategyRepository implements IStrategyRepository {
 
 
     }
+
+    @Override
+    public List<RuleWeightVO> queryAwardRuleWeight(Long strategyId) {
+
+    }
 }
