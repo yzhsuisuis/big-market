@@ -51,6 +51,7 @@ public class BehaviorRebateService implements IBehaviorRebateService {
                     .rebateDesc(dailyBehaviorRebateVO.getRebateDesc())
                     .rebateType(dailyBehaviorRebateVO.getRebateType())
                     .rebateConfig(dailyBehaviorRebateVO.getRebateConfig())
+                    .outBusinessNo(behaviorEntity.getOutBusinessNo())
                     .bizId(bizId)
                     .build();
             orderIds.add(behaviorRebateOrderEntity.getOrderId());
