@@ -91,4 +91,9 @@ public class BehaviorRebateService implements IBehaviorRebateService {
         return orderIds;
     }
 
+    @Override
+    public List<BehaviorRebateOrderEntity> queryOrderByOutBusinessNo(String userId, String outBusinessNo) {
+        return behaviorRebateRepository.queryOrderByOutBusinessNo(userId, outBusinessNo);
+    }
+
 }
