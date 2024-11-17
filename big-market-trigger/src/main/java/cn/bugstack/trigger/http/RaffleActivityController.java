@@ -187,15 +187,16 @@ public class RaffleActivityController implements IRaffleActivityService {
     @Override
     public Response<Boolean> calendarSignRebate(@RequestParam String userId) {
         try {
+            log.info("日历签到返利开始 userId:{}", userId);
             BehaviorEntity behaviorEntity = new BehaviorEntity();
             behaviorEntity.setUserId(userId);
             behaviorEntity.setBehaviorTypeVO(BehaviorTypeVO.SIGN);
             behaviorEntity.setOutBusinessNo(dateFormatDay.format(new Date()));
             List<String> orderIds = behaviorRebateService.createOrder(behaviorEntity);
-
+            log.info("日历签到返利完成 userId:{} orderIds: {}", userId, JSON.toJSONString(orderIds));
             return Response.<Boolean>builder()
                     .code(ResponseCode.SUCCESS.getCode())
-                    .code(ResponseCode.SUCCESS.getInfo())
+                    .info(ResponseCode.SUCCESS.getInfo())
                     .data(true)
                     .build();
         } catch (AppException e) {

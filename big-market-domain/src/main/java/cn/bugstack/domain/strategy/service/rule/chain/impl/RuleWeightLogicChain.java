@@ -64,6 +64,7 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
          *      .max(Comparator.naturalOrder())
          *      .orElse(null);
          */
+        Integer userScore = repository.queryActivityAccountTotalUseCount(userId, strategyId);
         Long nextValue = analyticalSortedKeys.stream()
                 .sorted(Comparator.reverseOrder())
                 .filter(analyticalSortedKeyValue -> userScore >= analyticalSortedKeyValue)

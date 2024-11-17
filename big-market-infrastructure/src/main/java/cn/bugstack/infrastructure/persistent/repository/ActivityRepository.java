@@ -514,16 +514,18 @@ public class ActivityRepository implements IActivityRepository {
                     .build();
         }
 
-        // 2. 查询月账户额度
+        // 2. 查询月账户额度,注意这里查日用户和月用户的时候,记得填一下时间
         RaffleActivityAccountMonth raffleActivityAccountMonth = raffleActivityAccountMonthDao.queryActivityAccountMonthByUserId(RaffleActivityAccountMonth.builder()
                 .activityId(activityId)
                 .userId(userId)
+                .month(RaffleActivityAccountMonth.currentMonth())
                 .build());
 
         // 3. 查询日账户额度
         RaffleActivityAccountDay raffleActivityAccountDay = raffleActivityAccountDayDao.queryActivityAccountDayByUserId(RaffleActivityAccountDay.builder()
                 .activityId(activityId)
                 .userId(userId)
+                        .day(RaffleActivityAccountDay.currentDay())
                 .build());
 
         // 组装对象
