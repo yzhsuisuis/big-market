@@ -1,5 +1,6 @@
 package cn.bugstack.test.domain.award;
 
+import cn.bugstack.domain.award.model.entity.DistributeAwardEntity;
 import cn.bugstack.domain.award.model.entity.UserAwardRecordEntity;
 import cn.bugstack.domain.award.model.valobj.AwardStateVO;
 import cn.bugstack.domain.award.service.IAwardService;
@@ -49,4 +50,21 @@ public class AwardServiceTest {
         new CountDownLatch(1).await();
     }
 
+    /**
+     * 发放奖品接口是在监听器listener里面写的
+     * 1.发真实的奖品
+     * 2.黑名单发积分,兜底奖励发积分--->如果是发积分的话,还要单独写到积分账户里面
+     * 具体细节请看award表,如果抽到的是兜底奖品
+     * @throws InterruptedException
+     */
+    @Test
+    public void test_distributeAward() throws InterruptedException {
+        DistributeAwardEntity distributeAwardEntity = new DistributeAwardEntity();
+        distributeAwardEntity.setUserId("xiaofuge");
+        distributeAwardEntity.setOrderId("690124733440");
+        distributeAwardEntity.setAwardId(101);
+        distributeAwardEntity.setAwardConfig("0.01,1"); // 0.01,1 黑名单指定积分值
+
+        awardService.distributeAward(distributeAwardEntity);
+    }
 }

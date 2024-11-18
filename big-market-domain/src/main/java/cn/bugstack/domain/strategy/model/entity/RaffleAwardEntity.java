@@ -20,7 +20,9 @@ public class RaffleAwardEntity {
     private Integer awardId;
     /** 抽奖奖品标题 */
     private String awardTitle;
-    /** 奖品配置信息 */
+    /** 奖品配置信息
+     * 为的就是给黑名单拦截够,透传随机积分的规则
+     * */
     private String awardConfig;
     /** 奖品顺序号 */
     private Integer sort;

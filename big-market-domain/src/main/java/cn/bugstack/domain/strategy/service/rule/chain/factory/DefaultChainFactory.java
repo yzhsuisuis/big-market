@@ -61,6 +61,11 @@ public class DefaultChainFactory {
         private Integer awardId;
         /**  */
         private String logicModel;
+
+        /**
+         * 抽奖奖品规则(发奖阶段才补全)
+         */
+        private String awardRuleValue;
     }
 
     @Getter

@@ -1,15 +1,18 @@
 package cn.bugstack.infrastructure.persistent.repository;
 
+import cn.bugstack.domain.award.model.aggregate.GiveOutPrizesAggregate;
 import cn.bugstack.domain.award.model.aggregate.UserAwardRecordAggregate;
 import cn.bugstack.domain.award.model.entity.TaskEntity;
 import cn.bugstack.domain.award.model.entity.UserAwardRecordEntity;
+import cn.bugstack.domain.award.model.entity.UserCreditAwardEntity;
+import cn.bugstack.domain.award.model.valobj.AccountStatusVO;
 import cn.bugstack.domain.award.repository.IAwardRepository;
+import cn.bugstack.domain.award.service.AwardService;
 import cn.bugstack.infrastructure.event.EventPublisher;
-import cn.bugstack.infrastructure.persistent.dao.ITaskDao;
-import cn.bugstack.infrastructure.persistent.dao.IUserAwardRecordDao;
-import cn.bugstack.infrastructure.persistent.dao.IUserRaffleOrderDao;
+import cn.bugstack.infrastructure.persistent.dao.*;
 import cn.bugstack.infrastructure.persistent.po.Task;
 import cn.bugstack.infrastructure.persistent.po.UserAwardRecord;
+import cn.bugstack.infrastructure.persistent.po.UserCreditAccount;
 import cn.bugstack.infrastructure.persistent.po.UserRaffleOrder;
 import cn.bugstack.middleware.db.router.strategy.IDBRouterStrategy;
 import cn.bugstack.types.enums.ResponseCode;
@@ -34,6 +37,8 @@ public class AwardRepository implements IAwardRepository {
     @Resource
     private ITaskDao taskDao;
     @Resource
+    private IAwardDao awardDao;
+    @Resource
     private IUserAwardRecordDao userAwardRecordDao;
     @Resource
     private IUserRaffleOrderDao userRaffleOrderDao;
@@ -43,6 +48,8 @@ public class AwardRepository implements IAwardRepository {
     private TransactionTemplate transactionTemplate;
     @Resource
     private EventPublisher eventPublisher;
+    @Resource
+    private IUserCreditAccountDao userCreditAccountDao;
 
     @Override
     public void saveUserAwardRecord(UserAwardRecordAggregate userAwardRecordAggregate) {
@@ -109,6 +116,72 @@ public class AwardRepository implements IAwardRepository {
             log.error("写入中奖记录，发送MQ消息失败 userId: {} topic: {}", userId, task.getTopic());
             taskDao.updateTaskSendMessageFail(task);
         }
+
+    }
+
+    @Override
+    public String queryAwardKeyByAwardId(Integer awardId) {
+        return awardDao.queryAwardKeyByAwardId(awardId);
+    }
+
+    @Override
+    public String queryAwardConfig(Integer awardId) {
+        return awardDao.queryAwardConfigByAwardId(awardId);
+    }
+
+    @Override
+    public void saveGiveOutPrizesAggregate(GiveOutPrizesAggregate giveOutPrizesAggregate) {
+        //user_credit_account,用户的积分额度
+        //total_credit  , total_complus_credit,总的剩余
+        String userId = giveOutPrizesAggregate.getUserId();
+        UserAwardRecordEntity userAwardRecordEntity = giveOutPrizesAggregate.getUserAwardRecordEntity();
+        UserCreditAwardEntity userCreditAwardEntity = giveOutPrizesAggregate.getUserCreditAwardEntity();
+
+        //更新发奖记录
+        UserAwardRecord userAwardRecordReq = new UserAwardRecord();
+        userAwardRecordReq.setUserId(userId);
+        userAwardRecordReq.setOrderId(userAwardRecordEntity.getOrderId());
+        userAwardRecordReq.setAwardState(userAwardRecordEntity.getAwardState().getCode());
+
+        //插入积分记录
+        // 更新用户积分 「首次则插入数据」
+        UserCreditAccount userCreditAccountReq = new UserCreditAccount();
+        userCreditAccountReq.setUserId(userCreditAwardEntity.getUserId());
+        userCreditAccountReq.setTotalAmount(userCreditAwardEntity.getCreditAmount());
+        userCreditAccountReq.setAvailableAmount(userCreditAwardEntity.getCreditAmount());
+        userCreditAccountReq.setAccountStatus(AccountStatusVO.open.getCode());
+
+        try {
+            dbRouter.doRouter(userId);
+            transactionTemplate.execute(status -> {
+                //再来一遍try..catch
+                try {
+                    // 更新积分 || 创建积分账户
+                    int updateAccountCount = userCreditAccountDao.updateAddAmount(userCreditAccountReq);
+                    if (0 == updateAccountCount) {
+                        userCreditAccountDao.insert(userCreditAccountReq);
+                    }
+                    // 更新奖品记录
+                    int updateAwardCount = userAwardRecordDao.updateAwardRecordCompletedState(userAwardRecordReq);
+                    if (0 == updateAwardCount) {
+                        log.warn("更新中奖记录，重复更新拦截 userId:{} giveOutPrizesAggregate:{}", userId, JSON.toJSONString(giveOutPrizesAggregate));
+                        status.setRollbackOnly();
+                    }
+                    return 1;
+                } catch (DuplicateKeyException e) {
+                    //字段重复是在这里体现的
+                    status.setRollbackOnly();
+                    log.error("更新中奖记录，唯一索引冲突 userId: {} ", userId, e);
+                    throw new AppException(ResponseCode.INDEX_DUP.getCode(), e);
+                }
+
+
+            });
+        } finally {
+            dbRouter.clear();
+
+        }
+
 
     }
 

@@ -7,7 +7,7 @@
 #
 # 主机: 127.0.0.1 (MySQL 5.6.39)
 # 数据库: big_market_01
-# 生成时间: 2024-04-30 10:18:45 +0000
+# 生成时间: 2024-05-25 02:56:28 +0000
 # ************************************************************
 
 
@@ -48,7 +48,11 @@ LOCK TABLES `raffle_activity_account` WRITE;
 
 INSERT INTO `raffle_activity_account` (`id`, `user_id`, `activity_id`, `total_count`, `total_count_surplus`, `day_count`, `day_count_surplus`, `month_count`, `month_count_surplus`, `create_time`, `update_time`)
 VALUES
-	(3,'xiaofuge',100301,10000,10000,10000,10000,10000,10000,'2024-03-23 16:38:57','2024-04-27 15:49:56');
+	(3,'xiaofuge',100301,160,67,160,105,160,105,'2024-03-23 16:38:57','2024-05-04 15:29:56'),
+	(4,'12345',100301,10,10,10,10,10,10,'2024-05-01 15:28:50','2024-05-01 15:28:50'),
+	(5,'liergou',100301,20,6,20,6,20,6,'2024-05-04 15:30:21','2024-05-04 15:34:10'),
+	(6,'liergou2',100301,100,86,100,86,100,86,'2024-05-04 15:35:52','2024-05-04 15:37:37'),
+	(7,'user003',100301,100,98,100,98,100,98,'2024-05-25 10:52:19','2024-05-25 10:54:30');
 
 /*!40000 ALTER TABLE `raffle_activity_account` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -80,7 +84,13 @@ VALUES
 	(2,'xiaofuge',100301,'2024-04-05',45,44,'2024-04-05 17:10:31','2024-04-05 17:10:31'),
 	(3,'xiaofuge',100301,'2024-04-08',45,44,'2024-04-08 22:52:47','2024-04-08 22:52:47'),
 	(4,'xiaofuge',100301,'2024-04-13',45,23,'2024-04-13 11:44:10','2024-04-20 10:51:09'),
-	(7,'xiaofuge',100301,'2024-04-20',45,13,'2024-04-20 16:50:38','2024-04-20 16:50:38');
+	(7,'xiaofuge',100301,'2024-04-20',45,13,'2024-04-20 16:50:38','2024-04-20 16:50:38'),
+	(11,'xiaofuge',100301,'2024-05-01',60,40,'2024-05-01 14:51:45','2024-05-01 17:45:10'),
+	(12,'xiaofuge',100301,'2024-05-03',90,86,'2024-05-03 09:00:28','2024-05-03 13:28:42'),
+	(13,'xiaofuge',100301,'2024-05-04',160,131,'2024-05-04 09:32:02','2024-05-04 15:29:56'),
+	(14,'liergou',100301,'2024-05-04',20,6,'2024-05-04 15:30:36','2024-05-04 15:34:10'),
+	(15,'liergou2',100301,'2024-05-04',100,86,'2024-05-04 15:35:56','2024-05-04 15:37:37'),
+	(16,'user003',100301,'2024-05-25',100,98,'2024-05-25 10:53:19','2024-05-25 10:54:30');
 
 /*!40000 ALTER TABLE `raffle_activity_account_day` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -104,6 +114,18 @@ CREATE TABLE `raffle_activity_account_month` (
   UNIQUE KEY `uq_user_id_activity_id_month` (`user_id`,`activity_id`,`month`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='抽奖活动账户表-月次数';
 
+LOCK TABLES `raffle_activity_account_month` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_account_month` DISABLE KEYS */;
+
+INSERT INTO `raffle_activity_account_month` (`id`, `user_id`, `activity_id`, `month`, `month_count`, `month_count_surplus`, `create_time`, `update_time`)
+VALUES
+	(7,'xiaofuge',100301,'2024-05',140,85,'2024-05-01 14:51:45','2024-05-04 15:29:56'),
+	(8,'liergou',100301,'2024-05',20,6,'2024-05-04 15:30:36','2024-05-04 15:34:10'),
+	(9,'liergou2',100301,'2024-05',100,86,'2024-05-04 15:35:56','2024-05-04 15:37:37'),
+	(10,'user003',100301,'2024-05',100,98,'2024-05-25 10:53:19','2024-05-25 10:54:30');
+
+/*!40000 ALTER TABLE `raffle_activity_account_month` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # 转储表 raffle_activity_order_000
@@ -171,7 +193,17 @@ VALUES
 	(72,'xiaofuge',9011,100301,'测试活动',100006,'837744050164','2024-04-21 10:40:25',1,1,1,'completed','613036507854','2024-04-21 18:40:25','2024-04-21 18:40:25'),
 	(73,'xiaofuge',9011,100301,'测试活动',100006,'766742523760','2024-04-21 10:40:25',1,1,1,'completed','649099837249','2024-04-21 18:40:25','2024-04-21 18:40:25'),
 	(74,'xiaofuge',9011,100301,'测试活动',100006,'856474163547','2024-04-21 10:40:25',1,1,1,'completed','652903372986','2024-04-21 18:40:25','2024-04-21 18:40:25'),
-	(75,'xiaofuge',9011,100301,'测试活动',100006,'668775949799','2024-04-21 10:40:25',1,1,1,'completed','097066347980','2024-04-21 18:40:25','2024-04-21 18:40:25');
+	(75,'xiaofuge',9011,100301,'测试活动',100006,'668775949799','2024-04-21 10:40:25',1,1,1,'completed','097066347980','2024-04-21 18:40:25','2024-04-21 18:40:25'),
+	(76,'xiaofuge',9011,100301,'测试活动',100006,'164452591012','2024-05-01 06:44:26',10,10,10,'completed','xiaofuge_sku_2024042903','2024-05-01 14:44:26','2024-05-01 14:44:26'),
+	(77,'xiaofuge',9011,100301,'测试活动',100006,'492597085813','2024-05-01 06:51:45',10,10,10,'completed','xiaofuge_sku_2024042904','2024-05-01 14:51:45','2024-05-01 14:51:45'),
+	(78,'xiaofuge',9011,100301,'测试活动',100006,'031706643902','2024-05-01 06:54:36',10,10,10,'completed','xiaofuge_sku_2024042905','2024-05-01 14:54:36','2024-05-01 14:54:36'),
+	(79,'xiaofuge',9011,100301,'测试活动',100006,'460855930969','2024-05-01 07:00:12',10,10,10,'completed','xiaofuge_sku_2024042906','2024-05-01 15:00:12','2024-05-01 15:00:12'),
+	(1096,'xiaofuge',9011,100301,'测试活动',100006,'364757830401','2024-05-01 09:14:43',10,10,10,'completed','xiaofuge_sku_20240501','2024-05-01 17:14:43','2024-05-01 17:14:43'),
+	(1097,'xiaofuge',9011,100301,'测试活动',100006,'157026402583','2024-05-01 09:39:40',10,10,10,'completed','xiaofuge_sku_20240420','2024-05-01 17:39:40','2024-05-01 17:39:40'),
+	(1098,'xiaofuge',9011,100301,'测试活动',100006,'481116019750','2024-05-01 09:41:53',10,10,10,'completed','xiaofuge_sku_20240401','2024-05-01 17:41:53','2024-05-01 17:41:53'),
+	(1099,'xiaofuge',9011,100301,'测试活动',100006,'639151059221','2024-05-01 09:45:10',10,10,10,'completed','xiaofuge_sku_20240402','2024-05-01 17:45:10','2024-05-01 17:45:10'),
+	(4234,'xiaofuge',9011,100301,'测试活动',100006,'129360973197','2024-05-03 05:28:43',10,10,10,'completed','xiaofuge_sku_20240503','2024-05-03 13:28:42','2024-05-03 13:28:42'),
+	(4247,'liergou',9011,100301,'测试活动',100006,'151494600661','2024-05-04 07:32:26',10,10,10,'completed','liergou_sku_20240504','2024-05-04 15:32:25','2024-05-04 15:32:25');
 
 /*!40000 ALTER TABLE `raffle_activity_order_001` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -204,6 +236,16 @@ CREATE TABLE `raffle_activity_order_002` (
   KEY `idx_user_id_activity_id` (`user_id`,`activity_id`,`state`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='抽奖活动单';
 
+LOCK TABLES `raffle_activity_order_002` WRITE;
+/*!40000 ALTER TABLE `raffle_activity_order_002` DISABLE KEYS */;
+
+INSERT INTO `raffle_activity_order_002` (`id`, `user_id`, `sku`, `activity_id`, `activity_name`, `strategy_id`, `order_id`, `order_time`, `total_count`, `day_count`, `month_count`, `state`, `out_business_no`, `create_time`, `update_time`)
+VALUES
+	(1,'liergou2',9011,100301,'测试活动',100006,'987026967898','2024-05-04 07:35:53',100,100,100,'completed','liergou2_sku_20240504','2024-05-04 15:35:52','2024-05-04 15:35:52'),
+	(2,'user003',9011,100301,'测试活动',100006,'700446814309','2024-05-25 02:52:20',100,100,100,'completed','user003_sku_20240525','2024-05-25 10:52:19','2024-05-25 10:52:19');
+
+/*!40000 ALTER TABLE `raffle_activity_order_002` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # 转储表 raffle_activity_order_003
@@ -344,7 +386,155 @@ VALUES
 	(82,'xiaofuge','send_award','05612212348','{\"data\":{\"awardId\":104,\"awardTitle\":\"小米台灯\",\"userId\":\"xiaofuge\"},\"id\":\"05612212348\",\"timestamp\":1714201222825}','completed','2024-04-27 15:00:22','2024-04-27 15:00:22'),
 	(83,'xiaofuge','send_rebate','35170430024','{\"data\":{\"bizId\":\"xiaofuge_sku_20240430\",\"rebateConfig\":\"9011\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"35170430024\",\"timestamp\":1714471292871}','completed','2024-04-30 18:01:33','2024-04-30 18:01:33'),
 	(84,'xiaofuge','send_rebate','33541289034','{\"data\":{\"bizId\":\"xiaofuge_sku_20240430\",\"rebateConfig\":\"9011\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"33541289034\",\"timestamp\":1714471544134}','completed','2024-04-30 18:05:44','2024-04-30 18:05:44'),
-	(85,'xiaofuge','send_rebate','42019106000','{\"data\":{\"bizId\":\"xiaofuge_integral_20240430\",\"rebateConfig\":\"10\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"42019106000\",\"timestamp\":1714471544137}','completed','2024-04-30 18:05:44','2024-04-30 18:05:44');
+	(85,'xiaofuge','send_rebate','42019106000','{\"data\":{\"bizId\":\"xiaofuge_integral_20240430\",\"rebateConfig\":\"10\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"42019106000\",\"timestamp\":1714471544137}','completed','2024-04-30 18:05:44','2024-04-30 18:05:44'),
+	(86,'xiaofuge','send_rebate','19381004535','{\"data\":{\"bizId\":\"xiaofuge_sku_20240429\",\"rebateConfig\":\"9011\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"19381004535\",\"timestamp\":1714472470563}','completed','2024-04-30 18:21:10','2024-04-30 18:21:10'),
+	(87,'xiaofuge','send_rebate','64076325441','{\"data\":{\"bizId\":\"xiaofuge_integral_20240429\",\"rebateConfig\":\"10\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"64076325441\",\"timestamp\":1714472470567}','completed','2024-04-30 18:21:10','2024-04-30 18:21:10'),
+	(88,'xiaofuge','send_rebate','68231201640','{\"data\":{\"bizId\":\"xiaofuge_sku_20240501\",\"rebateConfig\":\"9011\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"68231201640\",\"timestamp\":1714528145559}','completed','2024-05-01 09:49:06','2024-05-01 09:50:45'),
+	(89,'xiaofuge','send_rebate','50111005352','{\"data\":{\"bizId\":\"xiaofuge_integral_20240501\",\"rebateConfig\":\"10\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"50111005352\",\"timestamp\":1714528145563}','completed','2024-05-01 09:49:06','2024-05-01 09:50:45'),
+	(90,'xiaofuge','send_rebate','75682316589','{\"data\":{\"bizId\":\"xiaofuge_sku_20240502\",\"rebateConfig\":\"9011\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"75682316589\",\"timestamp\":1714528244315}','completed','2024-05-01 09:50:44','2024-05-01 09:50:44'),
+	(91,'xiaofuge','send_rebate','15910602537','{\"data\":{\"bizId\":\"xiaofuge_integral_20240502\",\"rebateConfig\":\"10\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"15910602537\",\"timestamp\":1714528244322}','completed','2024-05-01 09:50:44','2024-05-01 09:50:44'),
+	(92,'xiaofuge','send_rebate','84186056749','{\"data\":{\"bizId\":\"xiaofuge_sku_2024042901\",\"rebateConfig\":\"9011\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"84186056749\",\"timestamp\":1714543316732}','completed','2024-05-01 14:01:57','2024-05-01 14:01:57'),
+	(93,'xiaofuge','send_rebate','96465813570','{\"data\":{\"bizId\":\"xiaofuge_integral_2024042901\",\"rebateConfig\":\"10\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"96465813570\",\"timestamp\":1714543316735}','completed','2024-05-01 14:01:57','2024-05-01 14:01:57'),
+	(94,'xiaofuge','send_rebate','52282173291','{\"data\":{\"bizId\":\"xiaofuge_sku_2024042902\",\"rebateConfig\":\"9011\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"52282173291\",\"timestamp\":1714545280296}','completed','2024-05-01 14:34:40','2024-05-01 14:34:40'),
+	(95,'xiaofuge','send_rebate','57252028754','{\"data\":{\"bizId\":\"xiaofuge_integral_2024042902\",\"rebateConfig\":\"10\",\"rebateType\":\"sign\",\"userId\":\"xiaofuge\"},\"id\":\"57252028754\",\"timestamp\":1714545280298}','completed','2024-05-01 14:34:40','2024-05-01 14:34:40'),
+	(96,'xiaofuge','send_rebate','49677315112','{\"data\":{\"bizId\":\"xiaofuge_sku_2024042903\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"49677315112\",\"timestamp\":1714545434013}','completed','2024-05-01 14:37:14','2024-05-01 14:37:14'),
+	(97,'xiaofuge','send_rebate','29687183027','{\"data\":{\"bizId\":\"xiaofuge_integral_2024042903\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"29687183027\",\"timestamp\":1714545434017}','completed','2024-05-01 14:37:14','2024-05-01 14:37:14'),
+	(98,'xiaofuge','send_rebate','55494780983','{\"data\":{\"bizId\":\"xiaofuge_sku_2024042904\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"55494780983\",\"timestamp\":1714546304733}','completed','2024-05-01 14:51:45','2024-05-01 14:51:45'),
+	(99,'xiaofuge','send_rebate','63676464061','{\"data\":{\"bizId\":\"xiaofuge_integral_2024042904\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"63676464061\",\"timestamp\":1714546304736}','completed','2024-05-01 14:51:45','2024-05-01 14:51:45'),
+	(100,'xiaofuge','send_rebate','97069945042','{\"data\":{\"bizId\":\"xiaofuge_sku_2024042905\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"97069945042\",\"timestamp\":1714546475883}','completed','2024-05-01 14:54:36','2024-05-01 14:54:36'),
+	(101,'xiaofuge','send_rebate','25711583274','{\"data\":{\"bizId\":\"xiaofuge_integral_2024042905\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"25711583274\",\"timestamp\":1714546475885}','completed','2024-05-01 14:54:36','2024-05-01 14:54:36'),
+	(102,'xiaofuge','send_award','42156280709','{\"data\":{\"awardId\":108,\"awardTitle\":\"暴走玩偶\",\"userId\":\"xiaofuge\"},\"id\":\"42156280709\",\"timestamp\":1714546659050}','completed','2024-05-01 14:57:39','2024-05-01 14:57:39'),
+	(103,'xiaofuge','send_award','78085050648','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"xiaofuge\"},\"id\":\"78085050648\",\"timestamp\":1714546688551}','completed','2024-05-01 14:58:08','2024-05-01 14:58:08'),
+	(104,'xiaofuge','send_award','55842869580','{\"data\":{\"awardId\":107,\"awardTitle\":\"小霸王游戏机\",\"userId\":\"xiaofuge\"},\"id\":\"55842869580\",\"timestamp\":1714546773027}','completed','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(105,'xiaofuge','send_award','86587566543','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"xiaofuge\"},\"id\":\"86587566543\",\"timestamp\":1714546773422}','completed','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(106,'xiaofuge','send_award','88267642020','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"xiaofuge\"},\"id\":\"88267642020\",\"timestamp\":1714546773490}','completed','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(107,'xiaofuge','send_award','03348496593','{\"data\":{\"awardId\":106,\"awardTitle\":\"轻奢办公椅\",\"userId\":\"xiaofuge\"},\"id\":\"03348496593\",\"timestamp\":1714546773570}','completed','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(108,'xiaofuge','send_award','20140993483','{\"data\":{\"awardId\":104,\"awardTitle\":\"小米台灯\",\"userId\":\"xiaofuge\"},\"id\":\"20140993483\",\"timestamp\":1714546773661}','completed','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(109,'xiaofuge','send_award','95682596295','{\"data\":{\"awardId\":107,\"awardTitle\":\"小霸王游戏机\",\"userId\":\"xiaofuge\"},\"id\":\"95682596295\",\"timestamp\":1714546773713}','completed','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(110,'xiaofuge','send_award','95939034377','{\"data\":{\"awardId\":107,\"awardTitle\":\"小霸王游戏机\",\"userId\":\"xiaofuge\"},\"id\":\"95939034377\",\"timestamp\":1714546773772}','completed','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(111,'xiaofuge','send_award','28569395651','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"xiaofuge\"},\"id\":\"28569395651\",\"timestamp\":1714546773829}','completed','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(112,'xiaofuge','send_award','37713199996','{\"data\":{\"awardId\":108,\"awardTitle\":\"暴走玩偶\",\"userId\":\"xiaofuge\"},\"id\":\"37713199996\",\"timestamp\":1714546773889}','completed','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(113,'xiaofuge','send_award','39729736863','{\"data\":{\"awardId\":108,\"awardTitle\":\"暴走玩偶\",\"userId\":\"xiaofuge\"},\"id\":\"39729736863\",\"timestamp\":1714546773937}','completed','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(114,'xiaofuge','send_award','63571397739','{\"data\":{\"awardId\":108,\"awardTitle\":\"暴走玩偶\",\"userId\":\"xiaofuge\"},\"id\":\"63571397739\",\"timestamp\":1714546774008}','completed','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(115,'xiaofuge','send_award','41779666583','{\"data\":{\"awardId\":107,\"awardTitle\":\"小霸王游戏机\",\"userId\":\"xiaofuge\"},\"id\":\"41779666583\",\"timestamp\":1714546774083}','completed','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(116,'xiaofuge','send_award','35122333142','{\"data\":{\"awardId\":107,\"awardTitle\":\"小霸王游戏机\",\"userId\":\"xiaofuge\"},\"id\":\"35122333142\",\"timestamp\":1714546774144}','completed','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(117,'xiaofuge','send_award','07007092150','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"07007092150\",\"timestamp\":1714546774211}','completed','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(118,'xiaofuge','send_award','08460963032','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"xiaofuge\"},\"id\":\"08460963032\",\"timestamp\":1714546774278}','completed','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(119,'xiaofuge','send_award','06210115971','{\"data\":{\"awardId\":108,\"awardTitle\":\"暴走玩偶\",\"userId\":\"xiaofuge\"},\"id\":\"06210115971\",\"timestamp\":1714546774344}','completed','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(120,'xiaofuge','send_award','78110342017','{\"data\":{\"awardId\":104,\"awardTitle\":\"小米台灯\",\"userId\":\"xiaofuge\"},\"id\":\"78110342017\",\"timestamp\":1714546774404}','completed','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(121,'xiaofuge','send_award','34349719655','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"xiaofuge\"},\"id\":\"34349719655\",\"timestamp\":1714546774481}','completed','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(122,'xiaofuge','send_award','16795012327','{\"data\":{\"awardId\":108,\"awardTitle\":\"暴走玩偶\",\"userId\":\"xiaofuge\"},\"id\":\"16795012327\",\"timestamp\":1714546774537}','completed','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(123,'xiaofuge','send_rebate','01343683507','{\"data\":{\"bizId\":\"xiaofuge_sku_2024042906\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"01343683507\",\"timestamp\":1714546811980}','completed','2024-05-01 15:00:12','2024-05-01 15:00:12'),
+	(124,'xiaofuge','send_rebate','22675851113','{\"data\":{\"bizId\":\"xiaofuge_integral_2024042906\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"22675851113\",\"timestamp\":1714546811983}','completed','2024-05-01 15:00:12','2024-05-01 15:00:12'),
+	(125,'xiaofuge','send_rebate','72790041499','{\"data\":{\"bizId\":\"xiaofuge_sku_20240501\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"72790041499\",\"timestamp\":1714547646310}','completed','2024-05-01 15:14:06','2024-05-01 15:14:06'),
+	(126,'xiaofuge','send_rebate','07532513295','{\"data\":{\"bizId\":\"xiaofuge_integral_20240501\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"07532513295\",\"timestamp\":1714547646312}','completed','2024-05-01 15:14:06','2024-05-01 15:14:06'),
+	(127,'12345','send_rebate','44168301206','{\"data\":{\"bizId\":\"12345_sku_20240501\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"12345\"},\"id\":\"44168301206\",\"timestamp\":1714548524834}','completed','2024-05-01 15:28:45','2024-05-01 15:28:45'),
+	(128,'12345','send_rebate','77696087444','{\"data\":{\"bizId\":\"12345_integral_20240501\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"12345\"},\"id\":\"77696087444\",\"timestamp\":1714548524845}','completed','2024-05-01 15:28:45','2024-05-01 15:28:45'),
+	(129,'xiaofuge','send_rebate','53358221321','{\"data\":{\"bizId\":\"xiaofuge_sku_20240501\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"53358221321\",\"timestamp\":1714554815882}','completed','2024-05-01 17:13:36','2024-05-01 17:13:36'),
+	(130,'xiaofuge','send_rebate','29895043546','{\"data\":{\"bizId\":\"xiaofuge_integral_20240501\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"29895043546\",\"timestamp\":1714554815884}','completed','2024-05-01 17:13:36','2024-05-01 17:13:36'),
+	(131,'xiaofuge','send_rebate','97779206565','{\"data\":{\"bizId\":\"xiaofuge_sku_20240420\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"97779206565\",\"timestamp\":1714556371985}','completed','2024-05-01 17:39:32','2024-05-01 17:39:35'),
+	(132,'xiaofuge','send_rebate','63122692373','{\"data\":{\"bizId\":\"xiaofuge_integral_20240420\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"63122692373\",\"timestamp\":1714556371994}','completed','2024-05-01 17:39:32','2024-05-01 17:39:35'),
+	(133,'xiaofuge','send_rebate','64655129366','{\"data\":{\"bizId\":\"xiaofuge_sku_20240401\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"64655129366\",\"timestamp\":1714556504378}','completed','2024-05-01 17:41:45','2024-05-01 17:41:45'),
+	(134,'xiaofuge','send_rebate','38396244073','{\"data\":{\"bizId\":\"xiaofuge_integral_20240401\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"38396244073\",\"timestamp\":1714556504389}','completed','2024-05-01 17:41:45','2024-05-01 17:41:45'),
+	(135,'xiaofuge','send_rebate','08184105296','{\"data\":{\"bizId\":\"xiaofuge_sku_20240402\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"08184105296\",\"timestamp\":1714556709389}','completed','2024-05-01 17:45:09','2024-05-01 17:45:09'),
+	(136,'xiaofuge','send_rebate','16417473546','{\"data\":{\"bizId\":\"xiaofuge_integral_20240402\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"16417473546\",\"timestamp\":1714556709391}','completed','2024-05-01 17:45:09','2024-05-01 17:45:09'),
+	(137,'xiaofuge','send_rebate','04164162705','{\"data\":{\"bizId\":\"xiaofuge_sku_20240501\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"04164162705\",\"timestamp\":1714557266867}','completed','2024-05-01 17:54:27','2024-05-01 17:54:27'),
+	(138,'xiaofuge','send_rebate','79924892493','{\"data\":{\"bizId\":\"xiaofuge_integral_20240501\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"79924892493\",\"timestamp\":1714557266870}','completed','2024-05-01 17:54:27','2024-05-01 17:54:27'),
+	(139,'xiaofuge','send_award','90576859616','{\"data\":{\"awardId\":104,\"awardTitle\":\"小米台灯\",\"userId\":\"xiaofuge\"},\"id\":\"90576859616\",\"timestamp\":1714698137578}','completed','2024-05-03 09:02:17','2024-05-03 09:02:17'),
+	(140,'xiaofuge','send_award','65620335186','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"xiaofuge\"},\"id\":\"65620335186\",\"timestamp\":1714698596791}','completed','2024-05-03 09:09:57','2024-05-03 09:09:57'),
+	(141,'xiaofuge','send_award','37556739286','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"37556739286\",\"timestamp\":1714698634894}','completed','2024-05-03 09:10:35','2024-05-03 09:10:35'),
+	(142,'xiaofuge','send_award','55348135802','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"55348135802\",\"timestamp\":1714698697948}','completed','2024-05-03 09:11:38','2024-05-03 09:11:38'),
+	(143,'xiaofuge','send_rebate','72638302928','{\"data\":{\"bizId\":\"xiaofuge_sku_20240503\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"72638302928\",\"timestamp\":1714714122098}','completed','2024-05-03 13:28:42','2024-05-03 13:28:42'),
+	(144,'xiaofuge','send_rebate','72714070579','{\"data\":{\"bizId\":\"xiaofuge_integral_20240503\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"72714070579\",\"timestamp\":1714714122101}','completed','2024-05-03 13:28:42','2024-05-03 13:28:42'),
+	(145,'xiaofuge','send_award','16274942215','{\"data\":{\"awardId\":107,\"awardTitle\":\"小霸王游戏机\",\"userId\":\"xiaofuge\"},\"id\":\"16274942215\",\"timestamp\":1714786330913}','completed','2024-05-04 09:32:10','2024-05-04 09:32:10'),
+	(146,'xiaofuge','send_award','11783185223','{\"data\":{\"awardId\":105,\"awardTitle\":\"小米su7周体验\",\"userId\":\"xiaofuge\"},\"id\":\"11783185223\",\"timestamp\":1714786931187}','completed','2024-05-04 09:42:11','2024-05-04 09:42:11'),
+	(147,'xiaofuge','send_award','34265015511','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"34265015511\",\"timestamp\":1714788400164}','completed','2024-05-04 10:06:40','2024-05-04 10:06:40'),
+	(148,'xiaofuge','send_award','11011728809','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"11011728809\",\"timestamp\":1714788456611}','completed','2024-05-04 10:07:36','2024-05-04 10:07:36'),
+	(149,'xiaofuge','send_award','53652403098','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"53652403098\",\"timestamp\":1714788464629}','completed','2024-05-04 10:07:44','2024-05-04 10:07:44'),
+	(150,'xiaofuge','send_award','51640617337','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"51640617337\",\"timestamp\":1714788921450}','completed','2024-05-04 10:15:21','2024-05-04 10:15:21'),
+	(151,'xiaofuge','send_award','32259543619','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"32259543619\",\"timestamp\":1714788929172}','completed','2024-05-04 10:15:29','2024-05-04 10:15:29'),
+	(152,'xiaofuge','send_award','00793022201','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"00793022201\",\"timestamp\":1714789011304}','completed','2024-05-04 10:16:51','2024-05-04 10:16:51'),
+	(153,'xiaofuge','send_award','99216566028','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"99216566028\",\"timestamp\":1714789039582}','completed','2024-05-04 10:17:19','2024-05-04 10:17:19'),
+	(154,'xiaofuge','send_award','04877391204','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"04877391204\",\"timestamp\":1714789089075}','completed','2024-05-04 10:18:09','2024-05-04 10:18:09'),
+	(155,'xiaofuge','send_award','91534655048','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"91534655048\",\"timestamp\":1714789246122}','completed','2024-05-04 10:20:46','2024-05-04 10:20:46'),
+	(156,'xiaofuge','send_award','60332832674','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"60332832674\",\"timestamp\":1714789254207}','completed','2024-05-04 10:20:54','2024-05-04 10:20:54'),
+	(157,'xiaofuge','send_award','40483872758','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"40483872758\",\"timestamp\":1714790192823}','completed','2024-05-04 10:36:32','2024-05-04 10:36:32'),
+	(158,'xiaofuge','send_award','11486109864','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"11486109864\",\"timestamp\":1714790245060}','completed','2024-05-04 10:37:25','2024-05-04 10:37:25'),
+	(159,'xiaofuge','send_award','76753189160','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"76753189160\",\"timestamp\":1714790252173}','completed','2024-05-04 10:37:32','2024-05-04 10:37:32'),
+	(160,'xiaofuge','send_award','58351463446','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"58351463446\",\"timestamp\":1714790259659}','completed','2024-05-04 10:37:39','2024-05-04 10:37:39'),
+	(161,'xiaofuge','send_award','23537323373','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"23537323373\",\"timestamp\":1714790321485}','completed','2024-05-04 10:38:41','2024-05-04 10:38:41'),
+	(162,'xiaofuge','send_award','94019822881','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"94019822881\",\"timestamp\":1714790329428}','completed','2024-05-04 10:38:49','2024-05-04 10:38:49'),
+	(163,'xiaofuge','send_rebate','27195595790','{\"data\":{\"bizId\":\"xiaofuge_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"27195595790\",\"timestamp\":1714791759648}','completed','2024-05-04 11:02:39','2024-05-04 11:02:39'),
+	(164,'xiaofuge','send_rebate','61629814089','{\"data\":{\"bizId\":\"xiaofuge_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"61629814089\",\"timestamp\":1714791759660}','completed','2024-05-04 11:02:39','2024-05-04 11:02:39'),
+	(165,'xiaofuge','send_rebate','11862182444','{\"data\":{\"bizId\":\"xiaofuge_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"11862182444\",\"timestamp\":1714792313049}','completed','2024-05-04 11:11:53','2024-05-04 11:11:53'),
+	(166,'xiaofuge','send_rebate','15679450368','{\"data\":{\"bizId\":\"xiaofuge_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"15679450368\",\"timestamp\":1714792313050}','completed','2024-05-04 11:11:53','2024-05-04 11:11:53'),
+	(167,'xiaofuge','send_rebate','43063729637','{\"data\":{\"bizId\":\"xiaofuge_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"43063729637\",\"timestamp\":1714792339076}','completed','2024-05-04 11:12:19','2024-05-04 11:12:19'),
+	(168,'xiaofuge','send_rebate','98996977753','{\"data\":{\"bizId\":\"xiaofuge_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"98996977753\",\"timestamp\":1714792339076}','completed','2024-05-04 11:12:19','2024-05-04 11:12:19'),
+	(169,'xiaofuge','send_rebate','27475864066','{\"data\":{\"bizId\":\"xiaofuge_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"27475864066\",\"timestamp\":1714792521633}','completed','2024-05-04 11:15:21','2024-05-04 11:15:21'),
+	(170,'xiaofuge','send_rebate','92639713795','{\"data\":{\"bizId\":\"xiaofuge_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"92639713795\",\"timestamp\":1714792521636}','completed','2024-05-04 11:15:21','2024-05-04 11:15:21'),
+	(171,'xiaofuge','send_rebate','99203819313','{\"data\":{\"bizId\":\"xiaofuge_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"99203819313\",\"timestamp\":1714792620935}','completed','2024-05-04 11:17:00','2024-05-04 11:17:01'),
+	(172,'xiaofuge','send_rebate','74660956883','{\"data\":{\"bizId\":\"xiaofuge_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"74660956883\",\"timestamp\":1714792620937}','completed','2024-05-04 11:17:00','2024-05-04 11:17:01'),
+	(173,'xiaofuge','send_rebate','25704016034','{\"data\":{\"bizId\":\"xiaofuge_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"25704016034\",\"timestamp\":1714793089441}','completed','2024-05-04 11:24:49','2024-05-04 11:24:49'),
+	(174,'xiaofuge','send_rebate','22457985518','{\"data\":{\"bizId\":\"xiaofuge_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"22457985518\",\"timestamp\":1714793089453}','completed','2024-05-04 11:24:49','2024-05-04 11:24:49'),
+	(175,'xiaofuge','send_award','47589004216','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"47589004216\",\"timestamp\":1714793447481}','completed','2024-05-04 11:30:47','2024-05-04 11:30:47'),
+	(176,'xiaofuge','send_rebate','42725365297','{\"data\":{\"bizId\":\"xiaofuge_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"42725365297\",\"timestamp\":1714793669228}','completed','2024-05-04 11:34:29','2024-05-04 11:34:29'),
+	(177,'xiaofuge','send_rebate','87435787450','{\"data\":{\"bizId\":\"xiaofuge_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"87435787450\",\"timestamp\":1714793669228}','completed','2024-05-04 11:34:29','2024-05-04 11:34:29'),
+	(178,'xiaofuge','send_rebate','49417412468','{\"data\":{\"bizId\":\"xiaofuge_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"49417412468\",\"timestamp\":1714793834886}','completed','2024-05-04 11:37:14','2024-05-04 11:37:14'),
+	(179,'xiaofuge','send_rebate','62113651314','{\"data\":{\"bizId\":\"xiaofuge_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"62113651314\",\"timestamp\":1714793834886}','completed','2024-05-04 11:37:14','2024-05-04 11:37:14'),
+	(180,'xiaofuge','send_rebate','72477008662','{\"data\":{\"bizId\":\"xiaofuge_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"72477008662\",\"timestamp\":1714793967664}','completed','2024-05-04 11:39:27','2024-05-04 11:39:27'),
+	(181,'xiaofuge','send_rebate','21764530878','{\"data\":{\"bizId\":\"xiaofuge_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"21764530878\",\"timestamp\":1714793967664}','completed','2024-05-04 11:39:27','2024-05-04 11:39:27'),
+	(182,'xiaofuge','send_rebate','81400180382','{\"data\":{\"bizId\":\"xiaofuge_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"xiaofuge\"},\"id\":\"81400180382\",\"timestamp\":1714794000070}','completed','2024-05-04 11:40:00','2024-05-04 11:40:00'),
+	(183,'xiaofuge','send_rebate','54229506227','{\"data\":{\"bizId\":\"xiaofuge_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"xiaofuge\"},\"id\":\"54229506227\",\"timestamp\":1714794000070}','completed','2024-05-04 11:40:00','2024-05-04 11:40:00'),
+	(184,'xiaofuge','send_award','65328722154','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"65328722154\",\"timestamp\":1714794009904}','completed','2024-05-04 11:40:09','2024-05-04 11:40:09'),
+	(185,'xiaofuge','send_award','24734850097','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"xiaofuge\"},\"id\":\"24734850097\",\"timestamp\":1714794017003}','completed','2024-05-04 11:40:17','2024-05-04 11:40:17'),
+	(186,'xiaofuge','send_award','83062798647','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"xiaofuge\"},\"id\":\"83062798647\",\"timestamp\":1714798160372}','completed','2024-05-04 12:49:20','2024-05-04 12:49:20'),
+	(187,'xiaofuge','send_award','17077466970','{\"data\":{\"awardId\":105,\"awardTitle\":\"小米su7周体验\",\"userId\":\"xiaofuge\"},\"id\":\"17077466970\",\"timestamp\":1714798170291}','completed','2024-05-04 12:49:30','2024-05-04 12:49:30'),
+	(188,'xiaofuge','send_award','96584733524','{\"data\":{\"awardId\":104,\"awardTitle\":\"小米台灯\",\"userId\":\"xiaofuge\"},\"id\":\"96584733524\",\"timestamp\":1714798182051}','completed','2024-05-04 12:49:42','2024-05-04 12:49:42'),
+	(189,'xiaofuge','send_award','96383900014','{\"data\":{\"awardId\":104,\"awardTitle\":\"小米台灯\",\"userId\":\"xiaofuge\"},\"id\":\"96383900014\",\"timestamp\":1714798235777}','completed','2024-05-04 12:50:35','2024-05-04 12:50:35'),
+	(190,'xiaofuge','send_award','75247980575','{\"data\":{\"awardId\":104,\"awardTitle\":\"小米台灯\",\"userId\":\"xiaofuge\"},\"id\":\"75247980575\",\"timestamp\":1714798244410}','completed','2024-05-04 12:50:44','2024-05-04 12:50:44'),
+	(191,'xiaofuge','send_award','83936855188','{\"data\":{\"awardId\":107,\"awardTitle\":\"小霸王游戏机\",\"userId\":\"xiaofuge\"},\"id\":\"83936855188\",\"timestamp\":1714807768291}','completed','2024-05-04 15:29:28','2024-05-04 15:29:28'),
+	(192,'xiaofuge','send_award','05844230229','{\"data\":{\"awardId\":106,\"awardTitle\":\"轻奢办公椅\",\"userId\":\"xiaofuge\"},\"id\":\"05844230229\",\"timestamp\":1714807775839}','completed','2024-05-04 15:29:35','2024-05-04 15:29:35'),
+	(193,'xiaofuge','send_award','34200100481','{\"data\":{\"awardId\":107,\"awardTitle\":\"小霸王游戏机\",\"userId\":\"xiaofuge\"},\"id\":\"34200100481\",\"timestamp\":1714807782994}','completed','2024-05-04 15:29:42','2024-05-04 15:29:43'),
+	(194,'xiaofuge','send_award','51137440950','{\"data\":{\"awardId\":106,\"awardTitle\":\"轻奢办公椅\",\"userId\":\"xiaofuge\"},\"id\":\"51137440950\",\"timestamp\":1714807789760}','completed','2024-05-04 15:29:49','2024-05-04 15:29:49'),
+	(195,'xiaofuge','send_award','74638782814','{\"data\":{\"awardId\":107,\"awardTitle\":\"小霸王游戏机\",\"userId\":\"xiaofuge\"},\"id\":\"74638782814\",\"timestamp\":1714807796220}','completed','2024-05-04 15:29:56','2024-05-04 15:29:56'),
+	(196,'liergou','send_rebate','36637930434','{\"data\":{\"bizId\":\"liergou_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"liergou\"},\"id\":\"36637930434\",\"timestamp\":1714807821210}','completed','2024-05-04 15:30:21','2024-05-04 15:30:21'),
+	(197,'liergou','send_rebate','34715403057','{\"data\":{\"bizId\":\"liergou_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"liergou\"},\"id\":\"34715403057\",\"timestamp\":1714807821216}','completed','2024-05-04 15:30:21','2024-05-04 15:30:21'),
+	(198,'liergou','send_award','41597520105','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"liergou\"},\"id\":\"41597520105\",\"timestamp\":1714807836090}','completed','2024-05-04 15:30:36','2024-05-04 15:30:36'),
+	(199,'liergou','send_award','58675423754','{\"data\":{\"awardId\":104,\"awardTitle\":\"小米台灯\",\"userId\":\"liergou\"},\"id\":\"58675423754\",\"timestamp\":1714807877112}','completed','2024-05-04 15:31:17','2024-05-04 15:31:17'),
+	(200,'liergou','send_award','99730641621','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"liergou\"},\"id\":\"99730641621\",\"timestamp\":1714807884267}','completed','2024-05-04 15:31:24','2024-05-04 15:31:24'),
+	(201,'liergou','send_award','92898084117','{\"data\":{\"awardId\":108,\"awardTitle\":\"暴走玩偶\",\"userId\":\"liergou\"},\"id\":\"92898084117\",\"timestamp\":1714807891073}','completed','2024-05-04 15:31:31','2024-05-04 15:31:31'),
+	(202,'liergou','send_award','86334494433','{\"data\":{\"awardId\":106,\"awardTitle\":\"轻奢办公椅\",\"userId\":\"liergou\"},\"id\":\"86334494433\",\"timestamp\":1714807898099}','completed','2024-05-04 15:31:38','2024-05-04 15:31:38'),
+	(203,'liergou','send_award','51619066227','{\"data\":{\"awardId\":104,\"awardTitle\":\"小米台灯\",\"userId\":\"liergou\"},\"id\":\"51619066227\",\"timestamp\":1714807905011}','completed','2024-05-04 15:31:45','2024-05-04 15:31:45'),
+	(204,'liergou','send_award','05800486959','{\"data\":{\"awardId\":107,\"awardTitle\":\"小霸王游戏机\",\"userId\":\"liergou\"},\"id\":\"05800486959\",\"timestamp\":1714807911983}','completed','2024-05-04 15:31:51','2024-05-04 15:31:51'),
+	(205,'liergou','send_award','94809887830','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"liergou\"},\"id\":\"94809887830\",\"timestamp\":1714807919539}','completed','2024-05-04 15:31:59','2024-05-04 15:31:59'),
+	(206,'liergou','send_award','45867676557','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"liergou\"},\"id\":\"45867676557\",\"timestamp\":1714807926510}','completed','2024-05-04 15:32:06','2024-05-04 15:32:06'),
+	(207,'liergou','send_award','06153737578','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"liergou\"},\"id\":\"06153737578\",\"timestamp\":1714807933146}','completed','2024-05-04 15:32:13','2024-05-04 15:32:13'),
+	(208,'liergou','send_rebate','70974160126','{\"data\":{\"bizId\":\"liergou_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"liergou\"},\"id\":\"70974160126\",\"timestamp\":1714807945762}','completed','2024-05-04 15:32:25','2024-05-04 15:32:25'),
+	(209,'liergou','send_rebate','02138996837','{\"data\":{\"bizId\":\"liergou_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"liergou\"},\"id\":\"02138996837\",\"timestamp\":1714807945762}','completed','2024-05-04 15:32:25','2024-05-04 15:32:25'),
+	(210,'liergou','send_award','94421726702','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"liergou\"},\"id\":\"94421726702\",\"timestamp\":1714807949401}','completed','2024-05-04 15:32:29','2024-05-04 15:32:29'),
+	(211,'liergou','send_award','39472863610','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"liergou\"},\"id\":\"39472863610\",\"timestamp\":1714807955879}','completed','2024-05-04 15:32:35','2024-05-04 15:32:35'),
+	(212,'liergou','send_award','87066045962','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"liergou\"},\"id\":\"87066045962\",\"timestamp\":1714807962247}','completed','2024-05-04 15:32:42','2024-05-04 15:32:42'),
+	(213,'liergou','send_award','71295562520','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"liergou\"},\"id\":\"71295562520\",\"timestamp\":1714808050789}','completed','2024-05-04 15:34:10','2024-05-04 15:34:10'),
+	(214,'liergou2','send_rebate','69657914070','{\"data\":{\"bizId\":\"liergou2_sku_20240504\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"liergou2\"},\"id\":\"69657914070\",\"timestamp\":1714808152671}','completed','2024-05-04 15:35:52','2024-05-04 15:35:52'),
+	(215,'liergou2','send_rebate','98631727300','{\"data\":{\"bizId\":\"liergou2_integral_20240504\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"liergou2\"},\"id\":\"98631727300\",\"timestamp\":1714808152672}','completed','2024-05-04 15:35:52','2024-05-04 15:35:52'),
+	(216,'liergou2','send_award','04455448797','{\"data\":{\"awardId\":108,\"awardTitle\":\"暴走玩偶\",\"userId\":\"liergou2\"},\"id\":\"04455448797\",\"timestamp\":1714808156560}','completed','2024-05-04 15:35:56','2024-05-04 15:35:56'),
+	(217,'liergou2','send_award','70112884978','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"liergou2\"},\"id\":\"70112884978\",\"timestamp\":1714808163337}','completed','2024-05-04 15:36:03','2024-05-04 15:36:03'),
+	(218,'liergou2','send_award','20013321724','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"liergou2\"},\"id\":\"20013321724\",\"timestamp\":1714808170383}','completed','2024-05-04 15:36:10','2024-05-04 15:36:10'),
+	(219,'liergou2','send_award','69158770194','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"liergou2\"},\"id\":\"69158770194\",\"timestamp\":1714808182013}','completed','2024-05-04 15:36:22','2024-05-04 15:36:22'),
+	(220,'liergou2','send_award','79778986609','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"liergou2\"},\"id\":\"79778986609\",\"timestamp\":1714808192767}','completed','2024-05-04 15:36:32','2024-05-04 15:36:32'),
+	(221,'liergou2','send_award','99484906329','{\"data\":{\"awardId\":104,\"awardTitle\":\"小米台灯\",\"userId\":\"liergou2\"},\"id\":\"99484906329\",\"timestamp\":1714808199757}','completed','2024-05-04 15:36:39','2024-05-04 15:36:39'),
+	(222,'liergou2','send_award','71461913030','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"liergou2\"},\"id\":\"71461913030\",\"timestamp\":1714808206546}','completed','2024-05-04 15:36:46','2024-05-04 15:36:46'),
+	(223,'liergou2','send_award','65660637245','{\"data\":{\"awardId\":101,\"awardTitle\":\"随机积分\",\"userId\":\"liergou2\"},\"id\":\"65660637245\",\"timestamp\":1714808213101}','completed','2024-05-04 15:36:53','2024-05-04 15:36:53'),
+	(224,'liergou2','send_award','65599834779','{\"data\":{\"awardId\":108,\"awardTitle\":\"暴走玩偶\",\"userId\":\"liergou2\"},\"id\":\"65599834779\",\"timestamp\":1714808219849}','completed','2024-05-04 15:36:59','2024-05-04 15:36:59'),
+	(225,'liergou2','send_award','56578189655','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"liergou2\"},\"id\":\"56578189655\",\"timestamp\":1714808226524}','completed','2024-05-04 15:37:06','2024-05-04 15:37:06'),
+	(226,'liergou2','send_award','93238638633','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"liergou2\"},\"id\":\"93238638633\",\"timestamp\":1714808233335}','completed','2024-05-04 15:37:13','2024-05-04 15:37:13'),
+	(227,'liergou2','send_award','08920326769','{\"data\":{\"awardId\":103,\"awardTitle\":\"支付优惠券\",\"userId\":\"liergou2\"},\"id\":\"08920326769\",\"timestamp\":1714808240830}','completed','2024-05-04 15:37:20','2024-05-04 15:37:20'),
+	(228,'liergou2','send_award','23064270642','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"liergou2\"},\"id\":\"23064270642\",\"timestamp\":1714808248052}','completed','2024-05-04 15:37:28','2024-05-04 15:37:28'),
+	(229,'liergou2','send_award','25530792328','{\"data\":{\"awardId\":102,\"awardTitle\":\"OpenAI会员卡\",\"userId\":\"liergou2\"},\"id\":\"25530792328\",\"timestamp\":1714808257717}','completed','2024-05-04 15:37:37','2024-05-04 15:37:37'),
+	(230,'user003','send_rebate','76631988985','{\"data\":{\"bizId\":\"user003_sku_20240525\",\"rebateConfig\":\"9011\",\"rebateType\":\"sku\",\"userId\":\"user003\"},\"id\":\"76631988985\",\"timestamp\":1716605538812}','completed','2024-05-25 10:52:19','2024-05-25 10:52:19'),
+	(231,'user003','send_rebate','97630347951','{\"data\":{\"bizId\":\"user003_integral_20240525\",\"rebateConfig\":\"10\",\"rebateType\":\"integral\",\"userId\":\"user003\"},\"id\":\"97630347951\",\"timestamp\":1716605538817}','completed','2024-05-25 10:52:19','2024-05-25 10:52:19'),
+	(232,'user003','send_award','22110596663','{\"data\":{\"awardConfig\":\"0.01,1\",\"awardId\":101,\"awardTitle\":\"随机积分\",\"orderId\":\"248641902208\",\"userId\":\"user003\"},\"id\":\"22110596663\",\"timestamp\":1716605600148}','completed','2024-05-25 10:53:20','2024-05-25 10:53:20'),
+	(233,'user003','send_award','55709995622','{\"data\":{\"awardConfig\":\"0.01,1\",\"awardId\":101,\"awardTitle\":\"随机积分\",\"orderId\":\"020196190863\",\"userId\":\"user003\"},\"id\":\"55709995622\",\"timestamp\":1716605670613}','completed','2024-05-25 10:54:31','2024-05-25 10:54:31');
 
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -486,7 +676,77 @@ VALUES
 	(82,'xiaofuge',100301,100006,'410701479648',101,'随机积分','2024-04-27 05:39:18','create','2024-04-27 13:39:18','2024-04-27 13:39:18'),
 	(83,'xiaofuge',100301,100006,'521226371540',101,'随机积分','2024-04-27 06:59:56','create','2024-04-27 14:59:56','2024-04-27 14:59:56'),
 	(84,'xiaofuge',100301,100006,'167000751553',102,'OpenAI会员卡','2024-04-27 07:00:14','create','2024-04-27 15:00:14','2024-04-27 15:00:14'),
-	(85,'xiaofuge',100301,100006,'685179511666',104,'小米台灯','2024-04-27 07:00:23','create','2024-04-27 15:00:22','2024-04-27 15:00:22');
+	(85,'xiaofuge',100301,100006,'685179511666',104,'小米台灯','2024-04-27 07:00:23','create','2024-04-27 15:00:22','2024-04-27 15:00:22'),
+	(86,'xiaofuge',100301,100006,'308424817839',108,'暴走玩偶','2024-05-01 06:57:39','create','2024-05-01 14:57:39','2024-05-01 14:57:39'),
+	(87,'xiaofuge',100301,100006,'116865823300',101,'随机积分','2024-05-01 06:58:09','create','2024-05-01 14:58:08','2024-05-01 14:58:08'),
+	(88,'xiaofuge',100301,100006,'272157347851',107,'小霸王游戏机','2024-05-01 06:59:33','create','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(89,'xiaofuge',100301,100006,'400772556300',103,'支付优惠券','2024-05-01 06:59:33','create','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(90,'xiaofuge',100301,100006,'494705137752',101,'随机积分','2024-05-01 06:59:33','create','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(91,'xiaofuge',100301,100006,'728609897262',106,'轻奢办公椅','2024-05-01 06:59:34','create','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(92,'xiaofuge',100301,100006,'085750418120',104,'小米台灯','2024-05-01 06:59:34','create','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(93,'xiaofuge',100301,100006,'884615410376',107,'小霸王游戏机','2024-05-01 06:59:34','create','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(94,'xiaofuge',100301,100006,'380693771158',107,'小霸王游戏机','2024-05-01 06:59:34','create','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(95,'xiaofuge',100301,100006,'801793933954',103,'支付优惠券','2024-05-01 06:59:34','create','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(96,'xiaofuge',100301,100006,'153569048026',108,'暴走玩偶','2024-05-01 06:59:34','create','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(97,'xiaofuge',100301,100006,'239541957386',108,'暴走玩偶','2024-05-01 06:59:34','create','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(98,'xiaofuge',100301,100006,'417247136950',108,'暴走玩偶','2024-05-01 06:59:34','create','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(99,'xiaofuge',100301,100006,'556248667355',107,'小霸王游戏机','2024-05-01 06:59:34','create','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(100,'xiaofuge',100301,100006,'828955445464',107,'小霸王游戏机','2024-05-01 06:59:34','create','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(101,'xiaofuge',100301,100006,'756110942449',102,'OpenAI会员卡','2024-05-01 06:59:34','create','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(102,'xiaofuge',100301,100006,'440069371435',101,'随机积分','2024-05-01 06:59:34','completed','2024-05-01 14:59:34','2024-05-24 22:11:59'),
+	(103,'xiaofuge',100301,100006,'421594084633',108,'暴走玩偶','2024-05-01 06:59:34','create','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(104,'xiaofuge',100301,100006,'500905040429',104,'小米台灯','2024-05-01 06:59:34','create','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(105,'xiaofuge',100301,100006,'712386571628',101,'随机积分','2024-05-01 06:59:34','create','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(106,'xiaofuge',100301,100006,'095923542021',108,'暴走玩偶','2024-05-01 06:59:35','create','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(107,'xiaofuge',100301,100006,'306233708878',104,'小米台灯','2024-05-03 01:02:18','create','2024-05-03 09:02:17','2024-05-03 09:02:17'),
+	(108,'xiaofuge',100301,100006,'690124733440',101,'随机积分','2024-05-03 01:09:57','completed','2024-05-03 09:09:57','2024-05-24 22:14:22'),
+	(109,'xiaofuge',100301,100006,'190487161872',102,'OpenAI会员卡','2024-05-03 01:10:35','create','2024-05-03 09:10:35','2024-05-03 09:10:35'),
+	(110,'xiaofuge',100301,100006,'693117324295',102,'OpenAI会员卡','2024-05-03 01:11:38','create','2024-05-03 09:11:38','2024-05-03 09:11:38'),
+	(111,'xiaofuge',100301,100006,'216557006872',107,'小霸王游戏机','2024-05-04 01:32:11','create','2024-05-04 09:32:10','2024-05-04 09:32:10'),
+	(112,'xiaofuge',100301,100006,'769208157430',105,'小米su7周体验','2024-05-04 01:42:11','create','2024-05-04 09:42:11','2024-05-04 09:42:11'),
+	(113,'xiaofuge',100301,100006,'122549611053',102,'OpenAI会员卡','2024-05-04 02:06:40','create','2024-05-04 10:06:40','2024-05-04 10:06:40'),
+	(114,'xiaofuge',100301,100006,'098077770962',102,'OpenAI会员卡','2024-05-04 02:07:37','create','2024-05-04 10:07:36','2024-05-04 10:07:36'),
+	(115,'xiaofuge',100301,100006,'783440464441',102,'OpenAI会员卡','2024-05-04 02:07:45','create','2024-05-04 10:07:44','2024-05-04 10:07:44'),
+	(116,'xiaofuge',100301,100006,'311741760661',102,'OpenAI会员卡','2024-05-04 02:15:21','create','2024-05-04 10:15:21','2024-05-04 10:15:21'),
+	(117,'xiaofuge',100301,100006,'882852499238',102,'OpenAI会员卡','2024-05-04 02:15:29','create','2024-05-04 10:15:29','2024-05-04 10:15:29'),
+	(118,'xiaofuge',100301,100006,'815259576049',102,'OpenAI会员卡','2024-05-04 02:16:51','create','2024-05-04 10:16:51','2024-05-04 10:16:51'),
+	(119,'xiaofuge',100301,100006,'398933081979',102,'OpenAI会员卡','2024-05-04 02:17:20','create','2024-05-04 10:17:19','2024-05-04 10:17:19'),
+	(120,'xiaofuge',100301,100006,'724477812186',102,'OpenAI会员卡','2024-05-04 02:18:09','create','2024-05-04 10:18:09','2024-05-04 10:18:09'),
+	(121,'xiaofuge',100301,100006,'963415104251',102,'OpenAI会员卡','2024-05-04 02:20:46','create','2024-05-04 10:20:46','2024-05-04 10:20:46'),
+	(122,'xiaofuge',100301,100006,'406832687477',102,'OpenAI会员卡','2024-05-04 02:20:54','create','2024-05-04 10:20:54','2024-05-04 10:20:54'),
+	(123,'xiaofuge',100301,100006,'683420026858',102,'OpenAI会员卡','2024-05-04 02:36:33','create','2024-05-04 10:36:32','2024-05-04 10:36:32'),
+	(124,'xiaofuge',100301,100006,'022379743786',102,'OpenAI会员卡','2024-05-04 02:37:25','create','2024-05-04 10:37:25','2024-05-04 10:37:25'),
+	(125,'xiaofuge',100301,100006,'005727284053',102,'OpenAI会员卡','2024-05-04 02:37:32','create','2024-05-04 10:37:32','2024-05-04 10:37:32'),
+	(126,'xiaofuge',100301,100006,'157097996505',102,'OpenAI会员卡','2024-05-04 02:37:40','create','2024-05-04 10:37:39','2024-05-04 10:37:39'),
+	(127,'xiaofuge',100301,100006,'286115274205',102,'OpenAI会员卡','2024-05-04 02:38:41','create','2024-05-04 10:38:41','2024-05-04 10:38:41'),
+	(128,'xiaofuge',100301,100006,'714442509117',102,'OpenAI会员卡','2024-05-04 02:38:49','create','2024-05-04 10:38:49','2024-05-04 10:38:49'),
+	(129,'xiaofuge',100301,100006,'124268508437',102,'OpenAI会员卡','2024-05-04 03:30:47','create','2024-05-04 11:30:47','2024-05-04 11:30:47'),
+	(130,'xiaofuge',100301,100006,'024028065395',102,'OpenAI会员卡','2024-05-04 03:40:10','create','2024-05-04 11:40:09','2024-05-04 11:40:09'),
+	(131,'xiaofuge',100301,100006,'011132554981',102,'OpenAI会员卡','2024-05-04 03:40:17','create','2024-05-04 11:40:17','2024-05-04 11:40:17'),
+	(132,'xiaofuge',100301,100006,'748409799526',103,'支付优惠券','2024-05-04 04:49:20','create','2024-05-04 12:49:20','2024-05-04 12:49:20'),
+	(133,'xiaofuge',100301,100006,'514483431161',105,'小米su7周体验','2024-05-04 04:49:30','create','2024-05-04 12:49:30','2024-05-04 12:49:30'),
+	(134,'xiaofuge',100301,100006,'401352928023',104,'小米台灯','2024-05-04 04:49:42','create','2024-05-04 12:49:42','2024-05-04 12:49:42'),
+	(135,'xiaofuge',100301,100006,'569764837195',104,'小米台灯','2024-05-04 04:50:36','create','2024-05-04 12:50:35','2024-05-04 12:50:35'),
+	(136,'xiaofuge',100301,100006,'653239020479',104,'小米台灯','2024-05-04 04:50:44','create','2024-05-04 12:50:44','2024-05-04 12:50:44'),
+	(137,'xiaofuge',100301,100006,'407172497549',107,'小霸王游戏机','2024-05-04 07:29:28','create','2024-05-04 15:29:28','2024-05-04 15:29:28'),
+	(138,'xiaofuge',100301,100006,'799188603085',106,'轻奢办公椅','2024-05-04 07:29:36','create','2024-05-04 15:29:35','2024-05-04 15:29:35'),
+	(139,'xiaofuge',100301,100006,'528987104958',107,'小霸王游戏机','2024-05-04 07:29:43','create','2024-05-04 15:29:42','2024-05-04 15:29:42'),
+	(140,'xiaofuge',100301,100006,'966648280772',106,'轻奢办公椅','2024-05-04 07:29:50','create','2024-05-04 15:29:49','2024-05-04 15:29:49'),
+	(141,'xiaofuge',100301,100006,'087190703146',107,'小霸王游戏机','2024-05-04 07:29:56','create','2024-05-04 15:29:56','2024-05-04 15:29:56'),
+	(142,'liergou',100301,100006,'844440368058',101,'随机积分','2024-05-04 07:30:36','create','2024-05-04 15:30:36','2024-05-04 15:30:36'),
+	(143,'liergou',100301,100006,'390787212758',104,'小米台灯','2024-05-04 07:31:17','create','2024-05-04 15:31:17','2024-05-04 15:31:17'),
+	(144,'liergou',100301,100006,'640363472357',103,'支付优惠券','2024-05-04 07:31:24','create','2024-05-04 15:31:24','2024-05-04 15:31:24'),
+	(145,'liergou',100301,100006,'974075965572',108,'暴走玩偶','2024-05-04 07:31:31','create','2024-05-04 15:31:31','2024-05-04 15:31:31'),
+	(146,'liergou',100301,100006,'682189502378',106,'轻奢办公椅','2024-05-04 07:31:38','create','2024-05-04 15:31:38','2024-05-04 15:31:38'),
+	(147,'liergou',100301,100006,'267171522488',104,'小米台灯','2024-05-04 07:31:45','create','2024-05-04 15:31:45','2024-05-04 15:31:45'),
+	(148,'liergou',100301,100006,'840617006609',107,'小霸王游戏机','2024-05-04 07:31:52','create','2024-05-04 15:31:51','2024-05-04 15:31:51'),
+	(149,'liergou',100301,100006,'412882808007',103,'支付优惠券','2024-05-04 07:32:00','create','2024-05-04 15:31:59','2024-05-04 15:31:59'),
+	(150,'liergou',100301,100006,'909193532035',101,'随机积分','2024-05-04 07:32:07','create','2024-05-04 15:32:06','2024-05-04 15:32:06'),
+	(151,'liergou',100301,100006,'941421834903',103,'支付优惠券','2024-05-04 07:32:13','create','2024-05-04 15:32:13','2024-05-04 15:32:13'),
+	(152,'liergou',100301,100006,'502088692031',103,'支付优惠券','2024-05-04 07:32:29','create','2024-05-04 15:32:29','2024-05-04 15:32:29'),
+	(153,'liergou',100301,100006,'983938339728',103,'支付优惠券','2024-05-04 07:32:36','create','2024-05-04 15:32:35','2024-05-04 15:32:35'),
+	(154,'liergou',100301,100006,'300359343610',103,'支付优惠券','2024-05-04 07:32:42','create','2024-05-04 15:32:42','2024-05-04 15:32:42'),
+	(155,'liergou',100301,100006,'205701271412',102,'OpenAI会员卡','2024-05-04 07:34:11','create','2024-05-04 15:34:10','2024-05-04 15:34:10');
 
 /*!40000 ALTER TABLE `user_award_record_001` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -516,6 +776,30 @@ CREATE TABLE `user_award_record_002` (
   KEY `idx_award_id` (`strategy_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户中奖记录表';
 
+LOCK TABLES `user_award_record_002` WRITE;
+/*!40000 ALTER TABLE `user_award_record_002` DISABLE KEYS */;
+
+INSERT INTO `user_award_record_002` (`id`, `user_id`, `activity_id`, `strategy_id`, `order_id`, `award_id`, `award_title`, `award_time`, `award_state`, `create_time`, `update_time`)
+VALUES
+	(1,'liergou2',100301,100006,'319771078666',108,'暴走玩偶','2024-05-04 07:35:57','create','2024-05-04 15:35:56','2024-05-04 15:35:56'),
+	(2,'liergou2',100301,100006,'953580004772',101,'随机积分','2024-05-04 07:36:03','create','2024-05-04 15:36:03','2024-05-04 15:36:03'),
+	(3,'liergou2',100301,100006,'002033127656',103,'支付优惠券','2024-05-04 07:36:10','create','2024-05-04 15:36:10','2024-05-04 15:36:10'),
+	(4,'liergou2',100301,100006,'786106818681',101,'随机积分','2024-05-04 07:36:22','create','2024-05-04 15:36:22','2024-05-04 15:36:22'),
+	(5,'liergou2',100301,100006,'903521978453',101,'随机积分','2024-05-04 07:36:33','create','2024-05-04 15:36:32','2024-05-04 15:36:32'),
+	(6,'liergou2',100301,100006,'599563157264',104,'小米台灯','2024-05-04 07:36:40','create','2024-05-04 15:36:39','2024-05-04 15:36:39'),
+	(7,'liergou2',100301,100006,'236230739530',101,'随机积分','2024-05-04 07:36:47','create','2024-05-04 15:36:46','2024-05-04 15:36:46'),
+	(8,'liergou2',100301,100006,'284065292342',101,'随机积分','2024-05-04 07:36:53','create','2024-05-04 15:36:53','2024-05-04 15:36:53'),
+	(9,'liergou2',100301,100006,'667428166119',108,'暴走玩偶','2024-05-04 07:37:00','create','2024-05-04 15:36:59','2024-05-04 15:36:59'),
+	(10,'liergou2',100301,100006,'320484285041',103,'支付优惠券','2024-05-04 07:37:07','create','2024-05-04 15:37:06','2024-05-04 15:37:06'),
+	(11,'liergou2',100301,100006,'048048925549',102,'OpenAI会员卡','2024-05-04 07:37:13','create','2024-05-04 15:37:13','2024-05-04 15:37:13'),
+	(12,'liergou2',100301,100006,'536732336372',103,'支付优惠券','2024-05-04 07:37:21','create','2024-05-04 15:37:20','2024-05-04 15:37:20'),
+	(13,'liergou2',100301,100006,'378120929272',102,'OpenAI会员卡','2024-05-04 07:37:28','create','2024-05-04 15:37:28','2024-05-04 15:37:28'),
+	(14,'liergou2',100301,100006,'368599869327',102,'OpenAI会员卡','2024-05-04 07:37:38','create','2024-05-04 15:37:37','2024-05-04 15:37:37'),
+	(15,'user003',100301,100006,'248641902208',101,'随机积分','2024-05-25 02:53:20','completed','2024-05-25 10:53:20','2024-05-25 10:53:20'),
+	(16,'user003',100301,100006,'020196190863',101,'随机积分','2024-05-25 02:54:31','completed','2024-05-25 10:54:31','2024-05-25 10:54:31');
+
+/*!40000 ALTER TABLE `user_award_record_002` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # 转储表 user_award_record_003
@@ -557,7 +841,8 @@ CREATE TABLE `user_behavior_rebate_order_000` (
   `rebate_desc` varchar(128) NOT NULL COMMENT '返利描述',
   `rebate_type` varchar(16) NOT NULL COMMENT '返利类型（sku 活动库存充值商品、integral 用户活动积分）',
   `rebate_config` varchar(32) NOT NULL COMMENT '返利配置【sku值，积分值】',
-  `biz_id` varchar(64) NOT NULL COMMENT '业务ID - 拼接的唯一值',
+  `out_business_no` varchar(64) NOT NULL COMMENT '业务仿重ID - 外部透传，方便查询使用',
+  `biz_id` varchar(128) NOT NULL COMMENT '业务ID - 拼接的唯一值。拼接 out_business_no + 自身枚举',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`),
@@ -581,7 +866,8 @@ CREATE TABLE `user_behavior_rebate_order_001` (
   `rebate_desc` varchar(128) NOT NULL COMMENT '返利描述',
   `rebate_type` varchar(16) NOT NULL COMMENT '返利类型（sku 活动库存充值商品、integral 用户活动积分）',
   `rebate_config` varchar(32) NOT NULL COMMENT '返利配置【sku值，积分值】',
-  `biz_id` varchar(64) NOT NULL COMMENT '业务ID - 拼接的唯一值',
+  `out_business_no` varchar(64) NOT NULL COMMENT '业务仿重ID - 外部透传，方便查询使用',
+  `biz_id` varchar(128) NOT NULL COMMENT '业务ID - 拼接的唯一值。拼接 out_business_no + 自身枚举',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`),
@@ -593,10 +879,12 @@ CREATE TABLE `user_behavior_rebate_order_001` (
 LOCK TABLES `user_behavior_rebate_order_001` WRITE;
 /*!40000 ALTER TABLE `user_behavior_rebate_order_001` DISABLE KEYS */;
 
-INSERT INTO `user_behavior_rebate_order_001` (`id`, `user_id`, `order_id`, `behavior_type`, `rebate_desc`, `rebate_type`, `rebate_config`, `biz_id`, `create_time`, `update_time`)
+INSERT INTO `user_behavior_rebate_order_001` (`id`, `user_id`, `order_id`, `behavior_type`, `rebate_desc`, `rebate_type`, `rebate_config`, `out_business_no`, `biz_id`, `create_time`, `update_time`)
 VALUES
-	(1,'xiaofuge','833814327101','sign','签到返利','sku','9011','xiaofuge_sku_20240430','2024-04-30 18:01:32','2024-04-30 18:01:32'),
-	(3,'xiaofuge','509399206701','sign','签到返利-积分','integral','10','xiaofuge_integral_20240430','2024-04-30 18:05:44','2024-04-30 18:05:44');
+	(5,'xiaofuge','630841674684','sign','签到返利-sku额度','sku','9011','20240503','xiaofuge_sku_20240503','2024-05-03 13:28:42','2024-05-03 13:28:42'),
+	(6,'xiaofuge','552413408368','sign','签到返利-积分','integral','10','20240503','xiaofuge_integral_20240503','2024-05-03 13:28:42','2024-05-03 13:28:42'),
+	(33,'liergou','658660043956','sign','签到返利-sku额度','sku','9011','20240504','liergou_sku_20240504','2024-05-04 15:32:25','2024-05-04 15:32:25'),
+	(34,'liergou','659440313972','sign','签到返利-积分','integral','10','20240504','liergou_integral_20240504','2024-05-04 15:32:25','2024-05-04 15:32:25');
 
 /*!40000 ALTER TABLE `user_behavior_rebate_order_001` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -615,7 +903,8 @@ CREATE TABLE `user_behavior_rebate_order_002` (
   `rebate_desc` varchar(128) NOT NULL COMMENT '返利描述',
   `rebate_type` varchar(16) NOT NULL COMMENT '返利类型（sku 活动库存充值商品、integral 用户活动积分）',
   `rebate_config` varchar(32) NOT NULL COMMENT '返利配置【sku值，积分值】',
-  `biz_id` varchar(64) NOT NULL COMMENT '业务ID - 拼接的唯一值',
+  `out_business_no` varchar(64) NOT NULL COMMENT '业务仿重ID - 外部透传，方便查询使用',
+  `biz_id` varchar(128) NOT NULL COMMENT '业务ID - 拼接的唯一值。拼接 out_business_no + 自身枚举',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`),
@@ -624,6 +913,18 @@ CREATE TABLE `user_behavior_rebate_order_002` (
   KEY `idx_user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户行为返利流水订单表';
 
+LOCK TABLES `user_behavior_rebate_order_002` WRITE;
+/*!40000 ALTER TABLE `user_behavior_rebate_order_002` DISABLE KEYS */;
+
+INSERT INTO `user_behavior_rebate_order_002` (`id`, `user_id`, `order_id`, `behavior_type`, `rebate_desc`, `rebate_type`, `rebate_config`, `out_business_no`, `biz_id`, `create_time`, `update_time`)
+VALUES
+	(5,'liergou2','274252392446','sign','签到返利-sku额度','sku','9011','20240504','liergou2_sku_20240504','2024-05-04 15:35:52','2024-05-04 15:35:52'),
+	(6,'liergou2','687741770429','sign','签到返利-积分','integral','10','20240504','liergou2_integral_20240504','2024-05-04 15:35:52','2024-05-04 15:35:52'),
+	(7,'user003','317965139211','sign','签到返利-sku额度','sku','9011','20240525','user003_sku_20240525','2024-05-25 10:52:18','2024-05-25 10:52:18'),
+	(8,'user003','429627541291','sign','签到返利-积分','integral','10','20240525','user003_integral_20240525','2024-05-25 10:52:19','2024-05-25 10:52:19');
+
+/*!40000 ALTER TABLE `user_behavior_rebate_order_002` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # 转储表 user_behavior_rebate_order_003
@@ -639,7 +940,8 @@ CREATE TABLE `user_behavior_rebate_order_003` (
   `rebate_desc` varchar(128) NOT NULL COMMENT '返利描述',
   `rebate_type` varchar(16) NOT NULL COMMENT '返利类型（sku 活动库存充值商品、integral 用户活动积分）',
   `rebate_config` varchar(32) NOT NULL COMMENT '返利配置【sku值，积分值】',
-  `biz_id` varchar(64) NOT NULL COMMENT '业务ID - 拼接的唯一值',
+  `out_business_no` varchar(64) NOT NULL COMMENT '业务仿重ID - 外部透传，方便查询使用',
+  `biz_id` varchar(128) NOT NULL COMMENT '业务ID - 拼接的唯一值。拼接 out_business_no + 自身枚举',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`),
@@ -648,6 +950,34 @@ CREATE TABLE `user_behavior_rebate_order_003` (
   KEY `idx_user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户行为返利流水订单表';
 
+
+
+# 转储表 user_credit_account
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `user_credit_account`;
+
+CREATE TABLE `user_credit_account` (
+  `id` bigint(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `user_id` varchar(32) NOT NULL COMMENT '用户ID',
+  `total_amount` decimal(10,2) NOT NULL COMMENT '总积分，显示总账户值，记得一个人获得的总积分',
+  `available_amount` decimal(10,2) NOT NULL COMMENT '可用积分，每次扣减的值',
+  `account_status` varchar(8) NOT NULL COMMENT '账户状态【open - 可用，close - 冻结】',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户积分账户';
+
+LOCK TABLES `user_credit_account` WRITE;
+/*!40000 ALTER TABLE `user_credit_account` DISABLE KEYS */;
+
+INSERT INTO `user_credit_account` (`id`, `user_id`, `total_amount`, `available_amount`, `account_status`, `create_time`, `update_time`)
+VALUES
+	(1,'xiaofuge',52.19,52.19,'open','2024-05-24 22:11:59','2024-05-24 22:14:22'),
+	(2,'user003',0.96,0.96,'open','2024-05-25 10:53:20','2024-05-25 10:54:31');
+
+/*!40000 ALTER TABLE `user_credit_account` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # 转储表 user_raffle_order_000
@@ -745,7 +1075,77 @@ VALUES
 	(48,'xiaofuge',100301,'测试活动',100006,'410701479648','2024-04-27 05:39:18','used','2024-04-27 13:39:18','2024-04-27 13:39:18'),
 	(49,'xiaofuge',100301,'测试活动',100006,'521226371540','2024-04-27 06:59:56','used','2024-04-27 14:59:56','2024-04-27 14:59:56'),
 	(50,'xiaofuge',100301,'测试活动',100006,'167000751553','2024-04-27 07:00:14','used','2024-04-27 15:00:14','2024-04-27 15:00:14'),
-	(51,'xiaofuge',100301,'测试活动',100006,'685179511666','2024-04-27 07:00:23','used','2024-04-27 15:00:22','2024-04-27 15:00:22');
+	(51,'xiaofuge',100301,'测试活动',100006,'685179511666','2024-04-27 07:00:23','used','2024-04-27 15:00:22','2024-04-27 15:00:22'),
+	(52,'xiaofuge',100301,'测试活动',100006,'308424817839','2024-05-01 06:33:42','used','2024-05-01 14:33:43','2024-05-01 14:57:39'),
+	(53,'xiaofuge',100301,'测试活动',100006,'116865823300','2024-05-01 06:58:08','used','2024-05-01 14:58:08','2024-05-01 14:58:08'),
+	(54,'xiaofuge',100301,'测试活动',100006,'272157347851','2024-05-01 06:59:32','used','2024-05-01 14:59:32','2024-05-01 14:59:33'),
+	(55,'xiaofuge',100301,'测试活动',100006,'400772556300','2024-05-01 06:59:33','used','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(56,'xiaofuge',100301,'测试活动',100006,'494705137752','2024-05-01 06:59:33','used','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(57,'xiaofuge',100301,'测试活动',100006,'728609897262','2024-05-01 06:59:34','used','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(58,'xiaofuge',100301,'测试活动',100006,'085750418120','2024-05-01 06:59:34','used','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(59,'xiaofuge',100301,'测试活动',100006,'884615410376','2024-05-01 06:59:34','used','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(60,'xiaofuge',100301,'测试活动',100006,'380693771158','2024-05-01 06:59:34','used','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(61,'xiaofuge',100301,'测试活动',100006,'801793933954','2024-05-01 06:59:34','used','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(62,'xiaofuge',100301,'测试活动',100006,'153569048026','2024-05-01 06:59:34','used','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(63,'xiaofuge',100301,'测试活动',100006,'239541957386','2024-05-01 06:59:34','used','2024-05-01 14:59:33','2024-05-01 14:59:33'),
+	(64,'xiaofuge',100301,'测试活动',100006,'417247136950','2024-05-01 06:59:34','used','2024-05-01 14:59:33','2024-05-01 14:59:34'),
+	(65,'xiaofuge',100301,'测试活动',100006,'556248667355','2024-05-01 06:59:34','used','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(66,'xiaofuge',100301,'测试活动',100006,'828955445464','2024-05-01 06:59:34','used','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(67,'xiaofuge',100301,'测试活动',100006,'756110942449','2024-05-01 06:59:34','used','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(68,'xiaofuge',100301,'测试活动',100006,'440069371435','2024-05-01 06:59:34','used','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(69,'xiaofuge',100301,'测试活动',100006,'421594084633','2024-05-01 06:59:34','used','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(70,'xiaofuge',100301,'测试活动',100006,'500905040429','2024-05-01 06:59:34','used','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(71,'xiaofuge',100301,'测试活动',100006,'712386571628','2024-05-01 06:59:34','used','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(72,'xiaofuge',100301,'测试活动',100006,'095923542021','2024-05-01 06:59:34','used','2024-05-01 14:59:34','2024-05-01 14:59:34'),
+	(73,'xiaofuge',100301,'测试活动',100006,'306233708878','2024-05-03 01:00:27','used','2024-05-03 09:00:28','2024-05-03 09:02:17'),
+	(74,'xiaofuge',100301,'测试活动',100006,'690124733440','2024-05-03 01:09:42','used','2024-05-03 09:09:42','2024-05-03 09:09:57'),
+	(75,'xiaofuge',100301,'测试活动',100006,'190487161872','2024-05-03 01:10:28','used','2024-05-03 09:10:28','2024-05-03 09:10:35'),
+	(76,'xiaofuge',100301,'测试活动',100006,'693117324295','2024-05-03 01:11:32','used','2024-05-03 09:11:32','2024-05-03 09:11:38'),
+	(77,'xiaofuge',100301,'测试活动',100006,'216557006872','2024-05-04 01:32:02','used','2024-05-04 09:32:02','2024-05-04 09:32:10'),
+	(78,'xiaofuge',100301,'测试活动',100006,'769208157430','2024-05-04 01:42:11','used','2024-05-04 09:42:11','2024-05-04 09:42:11'),
+	(79,'xiaofuge',100301,'测试活动',100006,'122549611053','2024-05-04 02:06:40','used','2024-05-04 10:06:40','2024-05-04 10:06:40'),
+	(80,'xiaofuge',100301,'测试活动',100006,'098077770962','2024-05-04 02:07:37','used','2024-05-04 10:07:36','2024-05-04 10:07:36'),
+	(81,'xiaofuge',100301,'测试活动',100006,'783440464441','2024-05-04 02:07:45','used','2024-05-04 10:07:44','2024-05-04 10:07:44'),
+	(82,'xiaofuge',100301,'测试活动',100006,'311741760661','2024-05-04 02:15:21','used','2024-05-04 10:15:21','2024-05-04 10:15:21'),
+	(83,'xiaofuge',100301,'测试活动',100006,'882852499238','2024-05-04 02:15:29','used','2024-05-04 10:15:29','2024-05-04 10:15:29'),
+	(84,'xiaofuge',100301,'测试活动',100006,'815259576049','2024-05-04 02:16:51','used','2024-05-04 10:16:51','2024-05-04 10:16:51'),
+	(85,'xiaofuge',100301,'测试活动',100006,'398933081979','2024-05-04 02:17:20','used','2024-05-04 10:17:19','2024-05-04 10:17:19'),
+	(86,'xiaofuge',100301,'测试活动',100006,'724477812186','2024-05-04 02:18:09','used','2024-05-04 10:18:09','2024-05-04 10:18:09'),
+	(87,'xiaofuge',100301,'测试活动',100006,'963415104251','2024-05-04 02:20:46','used','2024-05-04 10:20:46','2024-05-04 10:20:46'),
+	(88,'xiaofuge',100301,'测试活动',100006,'406832687477','2024-05-04 02:20:54','used','2024-05-04 10:20:54','2024-05-04 10:20:54'),
+	(89,'xiaofuge',100301,'测试活动',100006,'683420026858','2024-05-04 02:36:33','used','2024-05-04 10:36:32','2024-05-04 10:36:32'),
+	(90,'xiaofuge',100301,'测试活动',100006,'022379743786','2024-05-04 02:37:25','used','2024-05-04 10:37:25','2024-05-04 10:37:25'),
+	(91,'xiaofuge',100301,'测试活动',100006,'005727284053','2024-05-04 02:37:32','used','2024-05-04 10:37:32','2024-05-04 10:37:32'),
+	(92,'xiaofuge',100301,'测试活动',100006,'157097996505','2024-05-04 02:37:40','used','2024-05-04 10:37:39','2024-05-04 10:37:39'),
+	(93,'xiaofuge',100301,'测试活动',100006,'286115274205','2024-05-04 02:38:41','used','2024-05-04 10:38:41','2024-05-04 10:38:41'),
+	(94,'xiaofuge',100301,'测试活动',100006,'714442509117','2024-05-04 02:38:49','used','2024-05-04 10:38:49','2024-05-04 10:38:49'),
+	(95,'xiaofuge',100301,'测试活动',100006,'124268508437','2024-05-04 03:30:47','used','2024-05-04 11:30:47','2024-05-04 11:30:47'),
+	(96,'xiaofuge',100301,'测试活动',100006,'024028065395','2024-05-04 03:40:10','used','2024-05-04 11:40:09','2024-05-04 11:40:09'),
+	(97,'xiaofuge',100301,'测试活动',100006,'011132554981','2024-05-04 03:40:17','used','2024-05-04 11:40:16','2024-05-04 11:40:17'),
+	(98,'xiaofuge',100301,'测试活动',100006,'748409799526','2024-05-04 04:49:12','used','2024-05-04 12:49:11','2024-05-04 12:49:20'),
+	(99,'xiaofuge',100301,'测试活动',100006,'514483431161','2024-05-04 04:49:30','used','2024-05-04 12:49:30','2024-05-04 12:49:30'),
+	(100,'xiaofuge',100301,'测试活动',100006,'401352928023','2024-05-04 04:49:42','used','2024-05-04 12:49:42','2024-05-04 12:49:42'),
+	(101,'xiaofuge',100301,'测试活动',100006,'569764837195','2024-05-04 04:50:36','used','2024-05-04 12:50:35','2024-05-04 12:50:35'),
+	(102,'xiaofuge',100301,'测试活动',100006,'653239020479','2024-05-04 04:50:44','used','2024-05-04 12:50:44','2024-05-04 12:50:44'),
+	(103,'xiaofuge',100301,'测试活动',100006,'407172497549','2024-05-04 07:29:28','used','2024-05-04 15:29:28','2024-05-04 15:29:28'),
+	(104,'xiaofuge',100301,'测试活动',100006,'799188603085','2024-05-04 07:29:36','used','2024-05-04 15:29:35','2024-05-04 15:29:35'),
+	(105,'xiaofuge',100301,'测试活动',100006,'528987104958','2024-05-04 07:29:43','used','2024-05-04 15:29:42','2024-05-04 15:29:43'),
+	(106,'xiaofuge',100301,'测试活动',100006,'966648280772','2024-05-04 07:29:50','used','2024-05-04 15:29:49','2024-05-04 15:29:49'),
+	(107,'xiaofuge',100301,'测试活动',100006,'087190703146','2024-05-04 07:29:56','used','2024-05-04 15:29:56','2024-05-04 15:29:56'),
+	(108,'liergou',100301,'测试活动',100006,'844440368058','2024-05-04 07:30:36','used','2024-05-04 15:30:36','2024-05-04 15:30:36'),
+	(109,'liergou',100301,'测试活动',100006,'390787212758','2024-05-04 07:31:17','used','2024-05-04 15:31:17','2024-05-04 15:31:17'),
+	(110,'liergou',100301,'测试活动',100006,'640363472357','2024-05-04 07:31:24','used','2024-05-04 15:31:24','2024-05-04 15:31:24'),
+	(111,'liergou',100301,'测试活动',100006,'974075965572','2024-05-04 07:31:31','used','2024-05-04 15:31:31','2024-05-04 15:31:31'),
+	(112,'liergou',100301,'测试活动',100006,'682189502378','2024-05-04 07:31:38','used','2024-05-04 15:31:38','2024-05-04 15:31:38'),
+	(113,'liergou',100301,'测试活动',100006,'267171522488','2024-05-04 07:31:45','used','2024-05-04 15:31:44','2024-05-04 15:31:45'),
+	(114,'liergou',100301,'测试活动',100006,'840617006609','2024-05-04 07:31:52','used','2024-05-04 15:31:51','2024-05-04 15:31:51'),
+	(115,'liergou',100301,'测试活动',100006,'412882808007','2024-05-04 07:31:59','used','2024-05-04 15:31:59','2024-05-04 15:31:59'),
+	(116,'liergou',100301,'测试活动',100006,'909193532035','2024-05-04 07:32:06','used','2024-05-04 15:32:06','2024-05-04 15:32:06'),
+	(117,'liergou',100301,'测试活动',100006,'941421834903','2024-05-04 07:32:13','used','2024-05-04 15:32:13','2024-05-04 15:32:13'),
+	(118,'liergou',100301,'测试活动',100006,'502088692031','2024-05-04 07:32:29','used','2024-05-04 15:32:29','2024-05-04 15:32:29'),
+	(119,'liergou',100301,'测试活动',100006,'983938339728','2024-05-04 07:32:36','used','2024-05-04 15:32:35','2024-05-04 15:32:35'),
+	(120,'liergou',100301,'测试活动',100006,'300359343610','2024-05-04 07:32:42','used','2024-05-04 15:32:42','2024-05-04 15:32:42'),
+	(121,'liergou',100301,'测试活动',100006,'205701271412','2024-05-04 07:34:11','used','2024-05-04 15:34:10','2024-05-04 15:34:10');
 
 /*!40000 ALTER TABLE `user_raffle_order_001` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -772,6 +1172,30 @@ CREATE TABLE `user_raffle_order_002` (
   KEY `idx_user_id_activity_id` (`user_id`,`activity_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户抽奖订单表';
 
+LOCK TABLES `user_raffle_order_002` WRITE;
+/*!40000 ALTER TABLE `user_raffle_order_002` DISABLE KEYS */;
+
+INSERT INTO `user_raffle_order_002` (`id`, `user_id`, `activity_id`, `activity_name`, `strategy_id`, `order_id`, `order_time`, `order_state`, `create_time`, `update_time`)
+VALUES
+	(1,'liergou2',100301,'测试活动',100006,'319771078666','2024-05-04 07:35:56','used','2024-05-04 15:35:56','2024-05-04 15:35:56'),
+	(2,'liergou2',100301,'测试活动',100006,'953580004772','2024-05-04 07:36:03','used','2024-05-04 15:36:03','2024-05-04 15:36:03'),
+	(3,'liergou2',100301,'测试活动',100006,'002033127656','2024-05-04 07:36:10','used','2024-05-04 15:36:10','2024-05-04 15:36:10'),
+	(4,'liergou2',100301,'测试活动',100006,'786106818681','2024-05-04 07:36:22','used','2024-05-04 15:36:21','2024-05-04 15:36:22'),
+	(5,'liergou2',100301,'测试活动',100006,'903521978453','2024-05-04 07:36:33','used','2024-05-04 15:36:32','2024-05-04 15:36:32'),
+	(6,'liergou2',100301,'测试活动',100006,'599563157264','2024-05-04 07:36:40','used','2024-05-04 15:36:39','2024-05-04 15:36:39'),
+	(7,'liergou2',100301,'测试活动',100006,'236230739530','2024-05-04 07:36:47','used','2024-05-04 15:36:46','2024-05-04 15:36:46'),
+	(8,'liergou2',100301,'测试活动',100006,'284065292342','2024-05-04 07:36:53','used','2024-05-04 15:36:53','2024-05-04 15:36:53'),
+	(9,'liergou2',100301,'测试活动',100006,'667428166119','2024-05-04 07:37:00','used','2024-05-04 15:36:59','2024-05-04 15:36:59'),
+	(10,'liergou2',100301,'测试活动',100006,'320484285041','2024-05-04 07:37:06','used','2024-05-04 15:37:06','2024-05-04 15:37:06'),
+	(11,'liergou2',100301,'测试活动',100006,'048048925549','2024-05-04 07:37:13','used','2024-05-04 15:37:13','2024-05-04 15:37:13'),
+	(12,'liergou2',100301,'测试活动',100006,'536732336372','2024-05-04 07:37:21','used','2024-05-04 15:37:20','2024-05-04 15:37:20'),
+	(13,'liergou2',100301,'测试活动',100006,'378120929272','2024-05-04 07:37:28','used','2024-05-04 15:37:28','2024-05-04 15:37:28'),
+	(14,'liergou2',100301,'测试活动',100006,'368599869327','2024-05-04 07:37:38','used','2024-05-04 15:37:37','2024-05-04 15:37:37'),
+	(15,'user003',100301,'测试活动',100006,'248641902208','2024-05-25 02:53:19','used','2024-05-25 10:53:19','2024-05-25 10:53:20'),
+	(16,'user003',100301,'测试活动',100006,'020196190863','2024-05-25 02:54:30','used','2024-05-25 10:54:30','2024-05-25 10:54:31');
+
+/*!40000 ALTER TABLE `user_raffle_order_002` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # 转储表 user_raffle_order_003

@@ -37,6 +37,7 @@ public class RuleLockLogicTreeNode implements ILogicTreeNode {
         // 查询用户抽奖次数 - 当天的；策略ID:活动ID 1:1 的配置，可以直接用 strategyId 查询。
         Integer userRaffleCount = repository.queryTodayUserRaffleCount(userId, strategyId);
 
+
         // 用户抽奖次数大于规则限定值，规则放行
         if (userRaffleCount >= raffleCount) {
             return DefaultTreeFactory.TreeActionEntity.builder()

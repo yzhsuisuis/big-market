@@ -147,6 +147,7 @@ public class RaffleActivityController implements IRaffleActivityService {
                     .awardTitle(raffleAwardEntity.getAwardTitle())
                     .awardTime(new Date())
                     .awardState(AwardStateVO.create)
+                    .awardConfig(raffleAwardEntity.getAwardConfig())
                     .build();
             //4.1 表面这是一个保存订单记录,这中间是还有一层是用来封装一个task表用来,作为消息补偿,来保证一定能发出去
             //userId
@@ -156,6 +157,8 @@ public class RaffleActivityController implements IRaffleActivityService {
             //awardId
             //awardTitle
             //awardState
+
+            // -------------awardConfig 需要用消息,把这个配置发出去
             awardService.saveUserAwardRecord(userAwardRecord);
             // 5. 返回结果
             return Response.<ActivityDrawResponseDTO>builder()
