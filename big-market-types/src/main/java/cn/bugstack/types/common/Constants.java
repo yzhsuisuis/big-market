@@ -28,6 +28,8 @@ public class Constants {
 
         public static String STRATEGY_RULE_WEIGHT_KEY = "strategy_rule_weight_key_";
 
+        public static String ACTIVITY_ACCOUNT_LOCK = "activity_account_lock_";
+
     }
 
 }
