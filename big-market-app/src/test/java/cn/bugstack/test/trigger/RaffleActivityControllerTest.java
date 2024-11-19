@@ -74,7 +74,7 @@ public class RaffleActivityControllerTest {
     public void test_calendarSignRebate () throws InterruptedException {
         Response<Boolean> response = raffleActivityService.calendarSignRebate("xiaofuge");
         log.info("测试结果：{}", JSON.toJSONString(response));
-//        new CountDownLatch(1).await();
+        new CountDownLatch(1).await();
     }
 
     /**
