@@ -1,10 +1,10 @@
 package cn.bugstack.trigger.api;
 
-import cn.bugstack.trigger.api.dto.ActivityDrawRequestDTO;
-import cn.bugstack.trigger.api.dto.ActivityDrawResponseDTO;
-import cn.bugstack.trigger.api.dto.UserActivityAccountRequestDTO;
-import cn.bugstack.trigger.api.dto.UserActivityAccountResponseDTO;
+import cn.bugstack.trigger.api.dto.*;
 import cn.bugstack.types.model.Response;
+
+import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -44,4 +44,10 @@ public interface IRaffleActivityService {
      * @return 返回结果「总额度、月额度、日额度」
      */
     Response<UserActivityAccountResponseDTO> queryUserActivityAccount(UserActivityAccountRequestDTO request);
+
+    Response<List<SkuProductResponseDTO>> querySkuProductListByActivityId(Long request);
+
+    Response<BigDecimal> queryUserCreditAccount(String request);
+
+    Response<Boolean> creditPayExchangeSku(SkuProductShopCartRequestDTO request);
 }

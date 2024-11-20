@@ -19,6 +19,7 @@ import cn.bugstack.middleware.db.router.strategy.IDBRouterStrategy;
 import cn.bugstack.types.common.Constants;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.User;
 import org.redisson.api.RLock;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Component;
@@ -127,5 +128,22 @@ public class CreditRepository implements ICreditRepository {
 
 
 
+    }
+
+    @Override
+    public CreditAccountEntity queryUserCreditAccount(String userId) {
+        UserCreditAccount userCreditAccountReq = new UserCreditAccount();
+        userCreditAccountReq.setUserId(userId);
+        try
+        {
+            dbRouter.doRouter(userId);
+            UserCreditAccount userCreditAccountRes = userCreditAccountDao.queryUserCreditAccount(userCreditAccountReq);
+            return CreditAccountEntity.builder()
+                    .userId(userId)
+                    .adjustAmount(userCreditAccountRes.getAvailableAmount())
+                    .build();
+        }finally {
+            dbRouter.clear();
+        }
     }
 }

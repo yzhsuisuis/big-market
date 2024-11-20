@@ -29,13 +29,12 @@ public abstract class AbstractRaffleActivityAccountQuota extends RaffleActivityA
     }
 
     /**
-     *
      * @param skuRechargeEntity 活动商品充值实体对象
-     * userId ,sku,outBussinessOn
+     *                          userId ,sku,outBussinessOn
      * @return
      */
     @Override
-    public String createOrder(SkuRechargeEntity skuRechargeEntity) {
+    public UnpaidActivityOrderEntity createOrder(SkuRechargeEntity skuRechargeEntity) {
         //这里是属于额度模块,然后createOrder是有有两种的,一种是抽奖的,这里的createOrder属于额度模块
         //这里涉及那三个表
         //raffle_activity_order
@@ -50,6 +49,10 @@ public abstract class AbstractRaffleActivityAccountQuota extends RaffleActivityA
         if (null == sku || StringUtils.isBlank(userId) || StringUtils.isBlank(outBusinessNo)) {
             throw new AppException(ResponseCode.ILLEGAL_PARAMETER.getCode(), ResponseCode.ILLEGAL_PARAMETER.getInfo());
         }
+        // 2. 查询未支付订单「一个月以内的未支付订单
+        //注意这里是查询的是之前创建好的,但没能用
+        UnpaidActivityOrderEntity unpaidCreditOrder =  activityRepository.queryUnpaidActivityOrder(skuRechargeEntity);
+        if (null != unpaidCreditOrder) return unpaidCreditOrder;
 
         // 2. 查询基础信息
         // 2.1 通过sku查询活动信息
@@ -72,8 +75,16 @@ public abstract class AbstractRaffleActivityAccountQuota extends RaffleActivityA
         ITradePolicy tradePolicy = tradePolicyGroup.get(skuRechargeEntity.getOrderTradeType().getCode());
         tradePolicy.trade(createOrderAggregate);
 
+
+        ActivityOrderEntity activityOrderEntity = createOrderAggregate.getActivityOrderEntity();
+
         // 6. 返回单号
-        return createOrderAggregate.getActivityOrderEntity().getOrderId();
+        return UnpaidActivityOrderEntity.builder()
+                .userId(userId)
+                .orderId(activityOrderEntity.getOrderId())
+                .outBusinessNo(activityOrderEntity.getOutBusinessNo())
+                .payAmount(activityOrderEntity.getPayAmount())
+                .build();
     }
 
     protected abstract CreateQuotaOrderAggregate buildOrderAggregate(SkuRechargeEntity skuRechargeEntity, ActivitySkuEntity activitySkuEntity, ActivityEntity activityEntity, ActivityCountEntity activityCountEntity);
