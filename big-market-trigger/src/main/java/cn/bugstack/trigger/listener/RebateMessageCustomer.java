@@ -1,6 +1,7 @@
 package cn.bugstack.trigger.listener;
 
 import cn.bugstack.domain.activity.model.entity.SkuRechargeEntity;
+import cn.bugstack.domain.activity.model.valobj.OrderTradeTypeVO;
 import cn.bugstack.domain.activity.service.IRaffleActivityAccountQuotaService;
 import cn.bugstack.domain.credit.model.entity.TradeEntity;
 import cn.bugstack.domain.credit.model.valobj.TradeNameVO;
@@ -62,6 +63,7 @@ public class RebateMessageCustomer {
                     skuRechargeEntity.setUserId(rebateMessage.getUserId());
                     //这里的返利配置 为 9011
                     skuRechargeEntity.setSku(Long.valueOf(rebateMessage.getRebateConfig()));
+                    skuRechargeEntity.setOrderTradeType(OrderTradeTypeVO.rebate_no_pay_trade);
                     skuRechargeEntity.setOutBusinessNo(rebateMessage.getBizId());
                     raffleActivityAccountQuotaService.createOrder(skuRechargeEntity);
                     break;

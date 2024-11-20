@@ -18,6 +18,7 @@ public abstract class BaseEvent<T> {
     public abstract EventMessage<T> buildEventMessage(T data);
 
     public abstract String topic();
+    //内部定义的对象
 
     @Data
     @Builder
