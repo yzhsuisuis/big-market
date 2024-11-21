@@ -46,7 +46,8 @@ public class SendAwardCustomer {
             log.info("监听用户奖品发送消息，发奖完成 topic: {} message: {}", topic, message);
         } catch (Exception e) {
             log.error("监听用户奖品发送消息，消费失败 topic: {} message: {}", topic, message);
-            throw e;
+            //如果不注释掉的话,会一直刷
+//            throw e;
         }
     }
 
