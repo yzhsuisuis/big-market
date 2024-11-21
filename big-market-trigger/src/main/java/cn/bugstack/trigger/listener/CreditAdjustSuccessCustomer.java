@@ -45,7 +45,8 @@ public class CreditAdjustSuccessCustomer {
             throw e;
         } catch (Exception e) {
             log.error("监听积分账户调整成功消息，进行交易商品发货失败 topic: {} message: {}", topic, message, e);
-            throw e;
+            //监听发奖失败,这里可真的应该是注释掉
+//            throw e;
         }
     }
 
