@@ -32,6 +32,8 @@ public class Constants {
 
         public static String USER_CREDIT_ACCOUNT_LOCK = "user_credit_account_lock_";
 
+        public static String ACTIVITY_ACCOUNT_UPDATE_LOCK = "activity_account_update_lock_";
+
     }
 
 }

@@ -13,3 +13,7 @@
 返利和签到功能
 
 ![image-20241117234319269](https://hahaha310.oss-cn-qingdao.aliyuncs.com/image-20241117234319269.png)
+
+## 3. 第三阶段成果展示
+
+![image-20241120235313793](https://hahaha310.oss-cn-qingdao.aliyuncs.com/image-20241120235313793.png)

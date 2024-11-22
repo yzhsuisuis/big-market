@@ -1,0 +1,49 @@
+24-11-09.20:06:22.961 [main            ] INFO  RaffleStrategyControllerTest - Starting RaffleStrategyControllerTest using Java 1.8.0_181 on yangzihesLaptop with PID 56588 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-11-09.20:06:22.962 [main            ] INFO  RaffleStrategyControllerTest - The following 1 profile is active: "dev"
+24-11-09.20:06:24.402 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-09.20:06:24.406 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-09.20:06:24.493 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 0 Redis repository interfaces.
+24-11-09.20:06:26.856 [main            ] INFO  Version                - Redisson 3.26.0
+24-11-09.20:06:28.024 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-11-09.20:06:28.039 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-11-09.20:06:32.759 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-09.20:06:32.875 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+24-11-09.20:06:32.976 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#46ea78f0:0/SimpleConnection@586486c [delegate=amqp://admin@127.0.0.1:5672/, localPort= 57224]
+24-11-09.20:06:33.096 [main            ] INFO  RaffleStrategyControllerTest - Started RaffleStrategyControllerTest in 10.531 seconds (JVM running for 11.371)
+24-11-09.20:06:33.367 [main            ] INFO  RaffleStrategyController - 查询抽奖奖品列表配开始 userId:xiaofuge activityId：100301
+24-11-09.20:06:33.400 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-09.20:06:33.673 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-09.20:06:33.836 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-09.20:06:33.868 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-09.20:06:34.152 [main            ] INFO  RaffleStrategyController - 查询抽奖奖品列表配置完成 userId:xiaofuge activityId：100301 response: {"code":"0000","data":[{"awardId":101,"isAwardUnlock":true,"sort":1,"waitUnLockCount":0},{"awardId":102,"isAwardUnlock":true,"sort":2,"waitUnLockCount":0},{"awardId":103,"isAwardUnlock":true,"sort":3,"waitUnLockCount":0},{"awardId":104,"isAwardUnlock":true,"sort":4,"waitUnLockCount":0},{"awardId":105,"isAwardUnlock":true,"sort":5,"waitUnLockCount":0},{"awardId":106,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","isAwardUnlock":true,"sort":6,"waitUnLockCount":0},{"awardId":107,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","isAwardUnlock":true,"sort":7,"waitUnLockCount":0},{"awardId":108,"awardRuleLockCount":2,"awardSubtitle":"抽奖2次后解锁","isAwardUnlock":true,"sort":8,"waitUnLockCount":0}],"info":"调用成功"}
+24-11-09.20:06:34.155 [main            ] INFO  RaffleStrategyControllerTest - 请求参数：{"activityId":100301,"userId":"xiaofuge"}
+24-11-09.20:06:34.156 [main            ] INFO  RaffleStrategyControllerTest - 测试结果：{"code":"0000","data":[{"awardId":101,"isAwardUnlock":true,"sort":1,"waitUnLockCount":0},{"awardId":102,"isAwardUnlock":true,"sort":2,"waitUnLockCount":0},{"awardId":103,"isAwardUnlock":true,"sort":3,"waitUnLockCount":0},{"awardId":104,"isAwardUnlock":true,"sort":4,"waitUnLockCount":0},{"awardId":105,"isAwardUnlock":true,"sort":5,"waitUnLockCount":0},{"awardId":106,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","isAwardUnlock":true,"sort":6,"waitUnLockCount":0},{"awardId":107,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","isAwardUnlock":true,"sort":7,"waitUnLockCount":0},{"awardId":108,"awardRuleLockCount":2,"awardSubtitle":"抽奖2次后解锁","isAwardUnlock":true,"sort":8,"waitUnLockCount":0}],"info":"调用成功"}
+24-11-09.20:06:34.182 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-09.20:06:34.184 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-09.20:06:35.092 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-09.20:06:35.093 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-09.20:06:35.095 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-09.20:06:35.095 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-09.20:06:56.102 [main            ] INFO  RaffleActivityControllerTest - Starting RaffleActivityControllerTest using Java 1.8.0_181 on yangzihesLaptop with PID 19452 (started by yangz in D:\jdk8\big-market-231202-xfg-init-project\big-market-app)
+24-11-09.20:06:56.103 [main            ] INFO  RaffleActivityControllerTest - The following 1 profile is active: "dev"
+24-11-09.20:06:57.381 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-09.20:06:57.384 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-09.20:06:57.446 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+24-11-09.20:06:59.679 [main            ] INFO  Version                - Redisson 3.26.0
+24-11-09.20:07:00.921 [redisson-netty-1-4] INFO  ConnectionsHolder      - 1 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-11-09.20:07:00.940 [redisson-netty-1-13] INFO  ConnectionsHolder      - 5 connections initialized for 127.0.0.1/127.0.0.1:16379
+24-11-09.20:07:06.746 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-09.20:07:06.888 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [127.0.0.1:5672]
+24-11-09.20:07:06.987 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#46ea78f0:0/SimpleConnection@586486c [delegate=amqp://admin@127.0.0.1:5672/, localPort= 57476]
+24-11-09.20:07:07.123 [main            ] INFO  RaffleActivityControllerTest - Started RaffleActivityControllerTest in 11.425 seconds (JVM running for 12.291)
+24-11-09.20:07:07.407 [main            ] INFO  RaffleActivityController - 活动装配，数据预热，开始 activityId:100301
+24-11-09.20:07:07.435 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-09.20:07:07.652 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-09.20:07:07.825 [main            ] INFO  RaffleActivityController - 活动装配，数据预热，完成 activityId:100301
+24-11-09.20:07:08.018 [main            ] INFO  RaffleActivityControllerTest - 测试结果：{"code":"0000","data":true,"info":"调用成功"}
+24-11-09.20:07:08.036 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-09.20:07:08.038 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-09.20:07:08.097 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-09.20:07:08.110 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-09.20:07:08.112 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-09.20:07:08.112 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped

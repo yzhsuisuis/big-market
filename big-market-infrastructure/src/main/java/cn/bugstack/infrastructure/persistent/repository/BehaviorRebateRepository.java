@@ -114,6 +114,7 @@ public class BehaviorRebateRepository implements IBehaviorRebateRepository {
                 // 更新数据库记录，task 任务表
                 taskDao.updateTaskSendMessageCompleted(task);
             } catch (Exception e) {
+                //question1
                 log.error("写入返利记录，发送MQ消息失败 userId: {} topic: {}", userId, task.getTopic());
                 taskDao.updateTaskSendMessageFail(task);
             }
