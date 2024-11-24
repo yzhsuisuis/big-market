@@ -23,6 +23,7 @@ public class RuleLuckAwardLogicTreeNode implements ILogicTreeNode {
 
     @Override
     public DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId, String ruleValue, Date endDateTime) {
+        //幸运奖的ruleValue的值-- 101;1,100
         log.info("规则过滤-兜底奖品 userId:{} strategyId:{} awardId:{} ruleValue:{}", userId, strategyId, awardId, ruleValue);
         String[] split = ruleValue.split(Constants.COLON);
         if (split.length == 0) {
@@ -34,6 +35,7 @@ public class RuleLuckAwardLogicTreeNode implements ILogicTreeNode {
         Integer luckAwardId = Integer.valueOf(split[0]);
         String awardRuleValue = split.length > 1 ? split[1] : "";
         // 写入延迟队列，延迟消费更新数据库记录。【在trigger的job；UpdateAwardStockJob 下消费队列，更新数据库记录】
+        //这就是值得揣摩的地方
         strategyRepository.awardStockConsumeSendQueue(StrategyAwardStockKeyVO.builder()
                 .strategyId(strategyId)
                 .awardId(luckAwardId)

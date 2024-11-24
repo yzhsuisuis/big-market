@@ -27,6 +27,7 @@ public class RuleLockLogicTreeNode implements ILogicTreeNode {
     @Override
     public DefaultTreeFactory.TreeActionEntity logic(String userId, Long strategyId, Integer awardId, String ruleValue, Date endDateTime) {
         log.info("规则过滤-次数锁 userId:{} strategyId:{} awardId:{}", userId, strategyId, awardId);
+        //次数锁的参数比较简单粗暴,就是直接的一个数字
 
         long raffleCount = 0L;
         try {
@@ -40,6 +41,7 @@ public class RuleLockLogicTreeNode implements ILogicTreeNode {
 
         // 用户抽奖次数大于规则限定值，规则放行
         if (userRaffleCount >= raffleCount) {
+            //这里有个很细节的地方,次数锁是不会填写奖品的
             return DefaultTreeFactory.TreeActionEntity.builder()
                     .ruleLogicCheckType(RuleLogicCheckTypeVO.ALLOW)
                     .build();

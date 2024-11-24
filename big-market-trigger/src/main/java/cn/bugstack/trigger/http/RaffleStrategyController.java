@@ -78,7 +78,7 @@ public class RaffleStrategyController implements IRaffleStrategyService {
 
     /**
      * 查询奖品列表
-     * * <a href="http://localhost:8091/api/v1/raffle/strategy/query_raffle_award_list">/api/v1/raffle/strategy/query_raffle_award_list</a>
+     * *
      * 请求参数 raw json
      *
      * @param request {"strategyId":1000001}

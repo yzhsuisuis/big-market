@@ -25,8 +25,12 @@ public class BlackListLogicChain extends AbstractLogicChain {
     public DefaultChainFactory.StrategyAwardVO logic(String userId, Long strategyId) {
         log.info("抽奖责任链-黑名单开始 userId: {} strategyId: {} ruleModel: {}", userId, strategyId, ruleModel());
 
-        // 查询规则值配置
+        // 这里直接通过重写的方法获取,该拦截名称对应的code值
         String ruleMod = ruleModel();
+        //查询 strategy_rule表
+        //ruleValue 值
+        //101代表兜底奖励
+        // 101:user001,usr002,user003
         String ruleValue = repository.queryStrategyRuleValue(strategyId, ruleModel());
         String[] splitRuleValue = ruleValue.split(Constants.COLON);
         Integer awardId = Integer.parseInt(splitRuleValue[0]);
@@ -39,6 +43,7 @@ public class BlackListLogicChain extends AbstractLogicChain {
                 return DefaultChainFactory.StrategyAwardVO.builder()
                         .awardId(awardId)
                         .logicModel(ruleModel())
+                        //这里透传一下,这个值的范围,因为在后面监听发奖的配置里面会用到
                         .awardRuleValue("0.01,1")
                         .build();
             }
