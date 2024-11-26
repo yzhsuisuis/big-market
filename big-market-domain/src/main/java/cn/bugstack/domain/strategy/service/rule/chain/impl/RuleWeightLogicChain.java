@@ -38,6 +38,10 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
     public DefaultChainFactory.StrategyAwardVO logic(String userId, Long strategyId) {
         log.info("抽奖责任链-权重开始 userId: {} strategyId: {} ruleModel: {}", userId, strategyId, ruleModel());
 
+        //查询得到
+        // 60 : 102,103,104,105
+        // 200: 106,107
+        //1000: 105
         String ruleValue = repository.queryStrategyRuleValue(strategyId, ruleModel());
 
         // 1. 根据用户ID查询用户抽奖消耗的积分值，本章节我们先写死为固定的值。后续需要从数据库中查询。
@@ -46,7 +50,12 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
             return null;
         }
 
-        // 2. 转换Keys值，并默认排序
+        // 2. 只取group的key值
+        //例
+        //60:102,103
+        //200:106,107
+        //1000:105
+        //group.keySet()即得 60,200,1000
         List<Long> analyticalSortedKeys = new ArrayList<>(analyticalValueGroup.keySet());
         Collections.sort(analyticalSortedKeys);
 
@@ -64,6 +73,8 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
          *      .max(Comparator.naturalOrder())
          *      .orElse(null);
          */
+        //解释一下为啥,这里要传userId和strategyId
+        //用户的额度针对不同的activity_id是不同的
         Integer userScore = repository.queryActivityAccountTotalUseCount(userId, strategyId);
         Long nextValue = analyticalSortedKeys.stream()
                 .sorted(Comparator.reverseOrder())
@@ -88,7 +99,7 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
 
     @Override
     protected String ruleModel() {
-        return "rule_weight";
+        return DefaultChainFactory.LogicModel.RULE_WEIGHT.getCode();
     }
 
     private Map<Long, String> getAnalyticalValue(String ruleValue) {

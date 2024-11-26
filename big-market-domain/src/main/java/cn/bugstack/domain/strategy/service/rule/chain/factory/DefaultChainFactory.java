@@ -31,6 +31,8 @@ public class DefaultChainFactory {
      * @return LogicChain
      */
     public ILogicChain openLogicChain(Long strategyId) {
+        //这里组装成链
+        //strategyid ---> strategy表     strategy_id   rule_models["rule_black"]
         StrategyEntity strategy = repository.queryStrategyEntityByStrategyId(strategyId);
         String[] ruleModels = strategy.ruleModels();
 

@@ -36,7 +36,6 @@ public class ActivitySkuStockActionChain extends AbstractActionChain {
         // true；库存扣减成功
         if (status) {
             log.info("活动责任链-商品库存处理【有效期、状态、库存(sku)】成功。sku:{} activityId:{}", activitySkuEntity.getSku(), activityEntity.getActivityId());
-
             // 写入延迟队列，延迟消费更新库存记录
             activityRepository.activitySkuStockConsumeSendQueue(ActivitySkuStockKeyVO.builder()
                     .sku(activitySkuEntity.getSku())

@@ -168,7 +168,7 @@ public class RaffleActivityController implements IRaffleActivityService {
             //awardTitle
             //awardState
 
-            // -------------awardConfig 需要用消息,把这个配置发出去
+            // -------------awardConfig 这里会干两个事情
             awardService.saveUserAwardRecord(userAwardRecord);
             // 5. 返回结果
             return Response.<ActivityDrawResponseDTO>builder()

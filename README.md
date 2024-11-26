@@ -17,3 +17,7 @@
 ## 3. 第三阶段成果展示
 
 ![image-20241120235313793](https://hahaha310.oss-cn-qingdao.aliyuncs.com/image-20241120235313793.png)
+
+云部署
+
+![image-20241122211521404](C:/Users/yangz/AppData/Roaming/Typora/typora-user-images/image-20241122211521404.png)

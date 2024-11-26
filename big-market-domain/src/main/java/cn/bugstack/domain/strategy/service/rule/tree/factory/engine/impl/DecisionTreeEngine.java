@@ -29,9 +29,10 @@ public class DecisionTreeEngine implements IDecisionTreeEngine {
 
     @Override
     public DefaultTreeFactory.StrategyAwardVO process(String userId, Long strategyId, Integer awardId, Date endDateTime) {
+        //先设置出来返回的奖品
         DefaultTreeFactory.StrategyAwardVO strategyAwardData = null;
 
-        // 获取基础信息
+        // 利用透传过来的ruleTreeVo根节点,获取他对应的规则
         String nextNode = ruleTreeVO.getTreeRootRuleNode();
         Map<String, RuleTreeNodeVO> treeNodeMap = ruleTreeVO.getTreeNodeMap();
 
@@ -48,8 +49,11 @@ public class DecisionTreeEngine implements IDecisionTreeEngine {
             strategyAwardData = logicEntity.getStrategyAwardVO();
             log.info("决策树引擎【{}】treeId:{} node:{} code:{}", ruleTreeVO.getTreeName(), ruleTreeVO.getTreeId(), nextNode, ruleLogicCheckTypeVO.getCode());
 
-            // 获取下个节点
+            // 获取下个节点的rule_key(相当于这个对象的id),
+            // 如果ruleLogicCheckTypeVO.getCode =0001,不受规则引擎影响
+            //当前节点是ALLOW ,然后再传入和该节点相连接的 节点结合
             nextNode = nextNode(ruleLogicCheckTypeVO.getCode(), ruleTreeNode.getTreeNodeLineVOList());
+            //准备切换到下一个节点
             ruleTreeNode = treeNodeMap.get(nextNode);
         }
 
