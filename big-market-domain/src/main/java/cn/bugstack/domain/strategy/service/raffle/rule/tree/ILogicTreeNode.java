@@ -1,6 +1,6 @@
-package cn.bugstack.domain.strategy.service.rule.tree;
+package cn.bugstack.domain.strategy.service.raffle.rule.tree;
 
-import cn.bugstack.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
+import cn.bugstack.domain.strategy.service.raffle.rule.tree.factory.DefaultTreeFactory;
 
 import java.util.Date;
 

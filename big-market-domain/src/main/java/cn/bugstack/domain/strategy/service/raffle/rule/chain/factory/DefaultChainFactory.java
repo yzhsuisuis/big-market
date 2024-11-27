@@ -1,8 +1,8 @@
-package cn.bugstack.domain.strategy.service.rule.chain.factory;
+package cn.bugstack.domain.strategy.service.raffle.rule.chain.factory;
 
 import cn.bugstack.domain.strategy.model.entity.StrategyEntity;
 import cn.bugstack.domain.strategy.repository.IStrategyRepository;
-import cn.bugstack.domain.strategy.service.rule.chain.ILogicChain;
+import cn.bugstack.domain.strategy.service.raffle.rule.chain.ILogicChain;
 import lombok.*;
 import org.springframework.stereotype.Service;
 

@@ -16,6 +16,10 @@ import java.math.MathContext;
 
 /**
  * 用户积分奖品，支持 award_config 透传，满足黑名单积分奖励。
+ * 注意这里只是发放积分,还有别的模型
+ * openai_use_count 正价使用次数等
+ * openai_model openAi增加模型次数
+ *  user_credit_blacklist
  */
 @Component("user_credit_random")
 public class UserCreditRandomAward implements IDistributeAward {

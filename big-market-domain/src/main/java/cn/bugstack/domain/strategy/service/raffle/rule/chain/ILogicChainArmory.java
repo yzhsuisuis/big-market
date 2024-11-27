@@ -1,4 +1,4 @@
-package cn.bugstack.domain.strategy.service.rule.chain;
+package cn.bugstack.domain.strategy.service.raffle.rule.chain;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥

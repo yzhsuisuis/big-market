@@ -6,23 +6,19 @@ import cn.bugstack.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 import cn.bugstack.domain.strategy.service.IRaffleStock;
 import cn.bugstack.domain.strategy.service.IRaffleStrategy;
 import cn.bugstack.domain.strategy.service.armory.IStrategyArmory;
-import cn.bugstack.domain.strategy.service.rule.chain.impl.RuleWeightLogicChain;
-import cn.bugstack.domain.strategy.service.rule.tree.impl.RuleLockLogicTreeNode;
-import cn.bugstack.types.common.Constants;
+import cn.bugstack.domain.strategy.service.raffle.rule.chain.impl.RuleWeightLogicChain;
+import cn.bugstack.domain.strategy.service.raffle.rule.tree.impl.RuleLockLogicTreeNode;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.redisson.api.RBlockingQueue;
-import org.redisson.api.RDelayedQueue;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import javax.annotation.Resource;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥

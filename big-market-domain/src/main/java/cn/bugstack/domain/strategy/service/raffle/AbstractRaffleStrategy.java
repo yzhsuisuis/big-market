@@ -1,12 +1,13 @@
-package cn.bugstack.domain.strategy.service;
+package cn.bugstack.domain.strategy.service.raffle;
 
 import cn.bugstack.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.bugstack.domain.strategy.model.entity.RaffleFactorEntity;
 import cn.bugstack.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.bugstack.domain.strategy.repository.IStrategyRepository;
+import cn.bugstack.domain.strategy.service.IRaffleStrategy;
 import cn.bugstack.domain.strategy.service.armory.IStrategyDispatch;
-import cn.bugstack.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
-import cn.bugstack.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
+import cn.bugstack.domain.strategy.service.raffle.rule.chain.factory.DefaultChainFactory;
+import cn.bugstack.domain.strategy.service.raffle.rule.tree.factory.DefaultTreeFactory;
 import cn.bugstack.types.enums.ResponseCode;
 import cn.bugstack.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +21,7 @@ import java.util.Date;
  * @create 2024-01-06 09:26
  */
 @Slf4j
-public abstract class AbstractRaffleStrategy implements IRaffleStrategy{
+public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
 
     // 策略仓储服务 -> domain层像一个大厨，仓储层提供米面粮油
     protected IStrategyRepository repository;

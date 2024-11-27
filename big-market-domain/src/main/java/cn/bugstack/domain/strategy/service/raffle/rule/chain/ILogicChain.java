@@ -1,6 +1,6 @@
-package cn.bugstack.domain.strategy.service.rule.chain;
+package cn.bugstack.domain.strategy.service.raffle.rule.chain;
 
-import cn.bugstack.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
+import cn.bugstack.domain.strategy.service.raffle.rule.chain.factory.DefaultChainFactory;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥

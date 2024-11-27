@@ -1,8 +1,8 @@
-package cn.bugstack.domain.strategy.service.rule.chain.impl;
+package cn.bugstack.domain.strategy.service.raffle.rule.chain.impl;
 
 import cn.bugstack.domain.strategy.service.armory.IStrategyDispatch;
-import cn.bugstack.domain.strategy.service.rule.chain.AbstractLogicChain;
-import cn.bugstack.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
+import cn.bugstack.domain.strategy.service.raffle.rule.chain.AbstractLogicChain;
+import cn.bugstack.domain.strategy.service.raffle.rule.chain.factory.DefaultChainFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

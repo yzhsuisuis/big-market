@@ -1,4 +1,4 @@
-package cn.bugstack.domain.strategy.service.rule.chain;
+package cn.bugstack.domain.strategy.service.raffle.rule.chain;
 
 import lombok.extern.slf4j.Slf4j;
 
