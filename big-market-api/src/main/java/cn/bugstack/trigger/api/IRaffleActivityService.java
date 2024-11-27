@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
+ * @author Fuzhengwei bugstack.cn yangzihe
  * @description 抽奖活动服务
  * @create 2024-04-13 09:16
  */
